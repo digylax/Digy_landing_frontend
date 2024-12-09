@@ -12,8 +12,10 @@ import { CgAbstract } from "react-icons/cg";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import { BiPhone } from "react-icons/bi";
-import mdmLogo from '../../assets/images/product-logo/mdm-logo.svg';
+import hrmsLogo from '../../assets/images/product-logo/hrms-logo.svg';
+import crmLogo from '../../assets/images/product-logo/crm-logo.svg';
 import digyBooksLogo from '../../assets/images/product-logo/digy-books-logo.svg';
+import mdmLogo from '../../assets/images/product-logo/mdm-logo.svg';
 import serWebApp1 from "../../assets/images/services/service-web-app-1.png";
 import serWebApp2 from "../../assets/images/services/service-web-app-2.png";
 import serUi1 from "../../assets/images/services/service-ui-1.png";
@@ -22,8 +24,10 @@ import serSa1 from "../../assets/images/services/service-sa-1.png";
 import serSa2 from "../../assets/images/services/service-sa-2.png";
 import serMa1 from "../../assets/images/services/service-ma-1.png";
 import serMa2 from "../../assets/images/services/service-ma-2.png";
-import crmProBg from "../../assets/images/crm-p-bg.png";
-import mdmProBg from "../../assets/images/mdm-p-bg.png";
+import hrmsProBg from "../../assets/images/products/hrms-p-bg.png";
+import crmProBg from "../../assets/images/products/crm-p-bg.png";
+import booksProBg from "../../assets/images/products/books-p-bg.png";
+import mdmProBg from "../../assets/images/products/mdm-p-bg.png";
 import videoSecBg from '../../assets/images/home/video-section-bg.jpg'
 import Testimonial from "../../Components/Testimonial";
 import BlogList from "../../Components/BlogList";
@@ -51,8 +55,8 @@ const Home = () => {
                             <div className="col-lg-7">
                                 <h1 className="fw-semibold display-5 banner-title">“Transform Your Business with Smarter SaaS Solutions.”</h1>
                                 <p className="my-3 banner-sub-title">
-                                    A unique and powerful software suite to transform the way you work.
-                                    Designed for businesses of all sizes, built by a company that values your privacy.
+                                    A very powerful suite of applications that will change the way you work for good. 
+                                    Suitable for all businesses and built by an organization that respects your privacy.
                                 </p>
                                 <p className="my-3 pt-3">
                                     <Button variant="primary-digy" size="lg" className='fs-6 icon-link icon-link-hover'>
@@ -73,7 +77,8 @@ const Home = () => {
                                                 <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
                                                     <div className="mt-2">
                                                         <h5 className="d-flex align-items-center mb-1">
-                                                            <HiOutlineUserGroup size={24} color="#FF6FCA" />
+                                                            {/* <HiOutlineUserGroup size={24} color="#FF6FCA" /> */}
+                                                            <img src={hrmsLogo} alt="digyHrmsLogo" width={24} height={24} />
                                                             <span className="ps-2 fw-semibold">HRMS</span>
                                                         </h5>
                                                         <p className="mb-2 ps-4 ms-2 p-list-cont">
@@ -88,7 +93,8 @@ const Home = () => {
                                                 <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
                                                     <div className="mt-2">
                                                         <h5 className="d-flex align-items-center mb-1">
-                                                            <MdOutlineInsertChart size={24} color="#63DC87" />
+                                                            {/* <MdOutlineInsertChart size={24} color="#63DC87" /> */}
+                                                            <img src={crmLogo} alt="DigyCrmLogo" width={24} height={24} />
                                                             <span className="ps-2 fw-semibold">CRM</span>
                                                         </h5>
                                                         <p className="mb-2 ps-4 ms-2 p-list-cont">
@@ -129,12 +135,12 @@ const Home = () => {
                                                     <FaAngleRight size={18} />
                                                 </div>
                                             </a>
-                                            <div className='list-group-item list-group-item-action' aria-current="false">
-                                                <Button variant="outline-primary" size="lg" className='mt-2 w-100 justify-content-center fs-6 icon-link icon-link-hover hover-icon-90deg'>
+                                            {/* <div className='list-group-item list-group-item-action' aria-current="false">
+                                                <Button variant="outline-primary" size="lg" className='mt-2 w-100 justify-content-center fs-6 icon-link icon-link-hover hover-icon--45deg'>
                                                     Explore More Products
                                                     <IoMdArrowRoundForward className="bi fs-6 ms-1" />
                                                 </Button>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -191,7 +197,7 @@ const Home = () => {
                                             <small className="fw-medium text-muted">3-6 WEEKS DELIVERY</small>
                                         </div>
                                         <p>Create a seamless website with smooth functionality and engaging interactivity.</p>
-                                        <Button variant="outline-secondary" className='icon-link icon-link-hover hover-icon-90deg p-1 ps-3 d-inline-flex align-items-center'>
+                                        <Button variant="outline-secondary" className='icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                             View Plans
                                             <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary-subtle rounded-circle" />
                                         </Button>
@@ -218,7 +224,7 @@ const Home = () => {
                                             <small className="fw-medium text-muted">1 WEEK DELIVERY</small>
                                         </div>
                                         <p>Bringing your vision to life with intuitive designs that enhance usability and deliver seamless user experiences.</p>
-                                        <Button variant="outline-secondary" className='icon-link icon-link-hover hover-icon-90deg p-1 ps-3 d-inline-flex align-items-center'>
+                                        <Button variant="outline-secondary" className='icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                             View Plans
                                             <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary-subtle rounded-circle" />
                                         </Button>
@@ -245,7 +251,7 @@ const Home = () => {
                                             <small className="fw-medium text-muted">2-4 WEEKS DELIVERY</small>
                                         </div>
                                         <p>Providing custom software solutions designed to solve specific business challenges and enhance operational efficiency.</p>
-                                        <Button variant="outline-secondary" className='icon-link icon-link-hover hover-icon-90deg p-1 ps-3 d-inline-flex align-items-center'>
+                                        <Button variant="outline-secondary" className='icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                             View Plans
                                             <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary-subtle rounded-circle" />
                                         </Button>
@@ -277,7 +283,7 @@ const Home = () => {
                                                     <small className="fw-medium text-muted">3-6 WEEKS DELIVERY</small>
                                                 </div>
                                                 <p>Building powerful, innovative, and flexible mobile apps that fit your unique needs.</p>
-                                                <Button variant="outline-secondary" className='icon-link icon-link-hover hover-icon-90deg p-1 ps-3 d-inline-flex align-items-center'>
+                                                <Button variant="outline-secondary" className='icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                                     View Plans
                                                     <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary-subtle rounded-circle" />
                                                 </Button>
@@ -320,7 +326,7 @@ const Home = () => {
                                     Our products are designed to meet the needs of businesses
                                     worldwide, ensuring scalability, security, and success in every market.
                                 </p>
-                                <Button variant="primary" className='border-white icon-link icon-link-hover hover-icon-90deg p-1 ps-3 d-inline-flex align-items-center'>
+                                <Button variant="primary" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                     Contact Us
                                     <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-info bg-opacity-50 rounded-circle" />
                                 </Button>
@@ -376,11 +382,67 @@ const Home = () => {
                             </div>
                         </div>
                         {/* // Products Header END // */}
+                        
+                        {/* Product HRMS */}
+                        <div className="row py-5">
 
-                        {/* Product 1 CRM */}
+                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between">
+                                <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
+                                    <FiLayout />
+                                    <span className="ps-2">HRMS</span>
+                                </span>
+                                <h2 className="mt-4 fw-medium me-xxl-5">Human Resource <br />Management System</h2>
+                                <p className="my-3 fs-5 text-secondary">
+                                    Automate HR tasks, manage employee data, and streamline payroll with our HRMS solution.
+                                </p>
+
+                                <div className="row row-cols-2 g-3 mb-4">
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3"> HR-Analytics</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Employee Time Tracking</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Employee Database</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Attendance management</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="mb-5">
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
+                                        Read More About This
+                                        <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
+                                    </Button>
+                                </div>
+
+                            </div>
+
+                            <div className="col-lg-6">
+                                <img src={hrmsProBg} alt="digy-hrms-bg" className="bg-info-subtle rounded-4 img-fluid" />
+                            </div>
+
+                        </div>
+                        {/* // Product HRMS END // */}
+
+                        {/* Product CRM */}
                         <div className="row py-5">
                             <div className="col-lg-6">
-                                <img src={crmProBg} alt="crm-bg" className="bg-success-subtle rounded-4 img-fluid" />
+                                <img src={crmProBg} alt="digy-crm-bg" className="bg-success-subtle rounded-4 img-fluid" />
                             </div>
                             <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between">
                                 <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
@@ -420,7 +482,7 @@ const Home = () => {
                                 </div>
 
                                 <div className="mb-5">
-                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon-90deg p-1 ps-3 d-inline-flex align-items-center'>
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                         Read More About This
                                         <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
                                     </Button>
@@ -428,19 +490,80 @@ const Home = () => {
 
                             </div>
                         </div>
-                        {/* // Product 1 CRM END // */}
+                        {/* // Product CRM END // */}
 
-                        {/* Product 2 MDM */}
+                        {/* Product BOOKS */}
                         <div className="row py-5">
 
                             <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between">
                                 <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                     <FiLayout />
+                                    <span className="ps-2">BOOKS</span>
+                                </span>
+                                <h2 className="mt-4 fw-medium me-xxl-5">Digy BOOKS</h2>
+                                <p className="my-3 fs-5 text-secondary">
+                                    Digybooks streamlines invoicing, billing, sales, and GST compliance, 
+                                    simplifying accounting for growing businesses, Gain real-time insights and 
+                                    manage your finances effortlessly.
+                                </p>
+
+                                <div className="row row-cols-2 g-3 mb-4">
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Invoicing & Billing</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">GST Compliance</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Purchase and Sales Management</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Receivables & Payables</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="mb-5">
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
+                                        Read More About This
+                                        <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
+                                    </Button>
+                                </div>
+
+                            </div>
+
+                            <div className="col-lg-6">
+                                <img src={booksProBg} alt="digy-books-bg" className="bg-primary-subtle rounded-4 img-fluid" />
+                            </div>
+
+                        </div>
+                        {/* // Product BOOKS END // */}
+
+                        {/* Product MDM */}
+                        <div className="row py-5">
+                            <div className="col-lg-6">
+                                <img src={mdmProBg} alt="digy-mdm-bg" className="bg-danger-subtle rounded-4 img-fluid" />
+                            </div>
+                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between">
+                                <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
+                                    <FiLayout />
                                     <span className="ps-2">MDM</span>
                                 </span>
-                                <h2 className="mt-4 fw-medium me-xxl-5">Master Data <br />Management</h2>
+                                <h2 className="mt-4 fw-midium me-xxl-5">Master Data <br /> Management</h2>
                                 <p className="my-3 fs-5 text-secondary">
-                                    Centralize and manage your business data for better decision-making and operational efficiency.
+                                    Centralize and oversee your business information for superior decision-making 
+                                    and operational efficiency.
                                 </p>
 
                                 <div className="row row-cols-2 g-3 mb-4">
@@ -471,20 +594,15 @@ const Home = () => {
                                 </div>
 
                                 <div className="mb-5">
-                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon-90deg p-1 ps-3 d-inline-flex align-items-center'>
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                         Read More About This
                                         <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
                                     </Button>
                                 </div>
 
                             </div>
-
-                            <div className="col-lg-6">
-                                <img src={mdmProBg} alt="crm-bg" className="bg-danger-subtle rounded-4 img-fluid" />
-                            </div>
-
                         </div>
-                        {/* // Product 2 MDM END // */}
+                        {/* // Product MDM END // */}
 
                         {/* Load More btn */}
                         {/* <div className="text-center">
@@ -549,7 +667,7 @@ const Home = () => {
                                 money is from the software license fees you pay us.
                             </p>
                             <div className="mb-5">
-                                <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon-90deg p-1 ps-3 d-inline-flex align-items-center'>
+                                <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                     Get Started
                                     <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
                                 </Button>
@@ -558,11 +676,11 @@ const Home = () => {
                         {/* // Privacy Head section // */}
 
                         {/* <div className="ratio ratio-16x9">
-                    <div className="text-center text-white video-card" role="button" onClick={handleShow}>
-                        <img className="w-100 h-100 rounded-4" src={videoSecBg} alt="video section bg" />
-                        <span className="play-icon position-absolute top-50 start-50 translate-middle"><FaPlayCircle size={64} /></span>
-                    </div>
-                </div> */}
+                            <div className="text-center text-white video-card" role="button" onClick={handleShow}>
+                                <img className="w-100 h-100 rounded-4" src={videoSecBg} alt="video section bg" />
+                                <span className="play-icon position-absolute top-50 start-50 translate-middle"><FaPlayCircle size={64} /></span>
+                            </div>
+                        </div> */}
                     </div>
                 </section>
                 {/* // Privacy & Video Section END // */}
@@ -584,7 +702,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="col-lg-6 col-xl-5 offset-xl-1 mt-3 text-lg-end">
-                                <Button variant="outline-secondary" className='icon-link icon-link-hover hover-icon-90deg p-1 ps-3 d-inline-flex align-items-center'>
+                                <Button variant="outline-secondary" className='icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                     View All
                                     <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary-subtle rounded-circle" />
                                 </Button>
@@ -621,7 +739,7 @@ const Home = () => {
                                             Send Us an Email
                                             <CiLocationArrow1 size={16} className="bi ms-1 p-1 w-auto h-auto bg-info bg-opacity-50 rounded-circle" />
                                         </Button>
-                                        <Button variant="outline-secondary" className='ms-3 icon-link icon-link-hover hover-icon-90deg p-1 ps-3 d-inline-flex align-items-center'>
+                                        <Button variant="outline-secondary" className='ms-3 icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                             Schedule a Call
                                             <BiPhone size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary-subtle rounded-circle" />
                                         </Button>
