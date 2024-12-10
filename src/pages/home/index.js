@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../../assets/css/home.css';
 import { Button, Modal } from "react-bootstrap";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { IoMdArrowRoundDown, IoMdArrowRoundForward, IoMdBook } from "react-icons/io";
 import { FaAngleRight, FaPlayCircle } from "react-icons/fa";
 import { HiCube, HiOutlineUserGroup } from "react-icons/hi2";
@@ -11,6 +13,7 @@ import { TbVectorTriangleOff } from "react-icons/tb";
 import { CgAbstract } from "react-icons/cg";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { IoCheckmarkCircle } from "react-icons/io5";
+import { PiPaperPlaneRight } from "react-icons/pi";
 import { BiPhone } from "react-icons/bi";
 import hrmsLogo from '../../assets/images/product-logo/hrms-logo.svg';
 import crmLogo from '../../assets/images/product-logo/crm-logo.svg';
@@ -44,6 +47,20 @@ const Home = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    // Init AOS Animation
+    useEffect(() => {
+        AOS.init({
+        //   disable: function() {
+        //     var maxWidth = 800;
+        //     return window.innerWidth < maxWidth;
+        //   },
+          disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+          disable: "mobile",
+          duration: 1000,
+          easing: "ease-in-out-back",
+        });
+    }, []);
+
     return (
         <>
             <div className="home-page">
@@ -52,7 +69,7 @@ const Home = () => {
                 <section className="hero-banner d-flex align-items-stretch pb-4 pb-lg-0">
                     <div className="container-lg h-100">
                         <div className="row align-items-center h-100">
-                            <div className="col-lg-7">
+                            <div className="col-lg-7" data-aos="fade-left">
                                 <h1 className="fw-semibold display-5 banner-title">“Transform Your Business with Smarter SaaS Solutions.”</h1>
                                 <p className="my-3 banner-sub-title">
                                     A very powerful suite of applications that will change the way you work for good. 
@@ -63,14 +80,14 @@ const Home = () => {
                                         Contact Us
                                         <IoMdArrowRoundForward className="bi fs-6 ms-1" />
                                     </Button>
-                                    <Button variant="outline-primary" size="lg" className='ms-3 fs-6 icon-link icon-link-hover hover-icon-50deg'>
+                                    <Button variant="outline-primary" size="lg" className='ms-3 fs-6 icon-link icon-link-hover hover-icon-0deg'>
                                         Book a free demo
-                                        <IoMdArrowRoundForward className="bi fs-6 ms-1" />
+                                        <IoMdArrowRoundForward className="bi rotate--45deg fs-6 ms-1" />
                                     </Button>
                                 </p>
                             </div>
                             <div className="col-lg-5">
-                                <div className="card rounded-4">
+                                <div className="card rounded-4" data-aos="fade-right">
                                     <div className="card-body">
                                         <div className="list-group list-group-flush">
                                             <a href="#" className="list-group-item list-group-item-action" aria-current="true">
@@ -151,7 +168,7 @@ const Home = () => {
                 {/* // Hero Banner END // */}
 
                 {/* Clients brand logo Slider */}
-                <section className="py-5 bg-body-tertiary client-logos">
+                <section className="py-5 bg-body-tertiary client-logos" data-aos="fade-up">
                     <div className="client-section center">
                         <h5 className="text-center fw-semibold pb-4 mb-4">Used by the world's most companies</h5>
                         
@@ -166,7 +183,7 @@ const Home = () => {
 
                         {/* services Head section */}
                         <div className="row">
-                            <div className="col-lg-6 col-xl-5">
+                            <div className="col-lg-6 col-xl-5" data-aos="fade-up">
                                 <div>
                                     <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                         <HiCube />
@@ -175,7 +192,7 @@ const Home = () => {
                                     <h2 className="mt-3 mb-0 fw-semibold">"Innovative Services to Fuel Your Business Growth"</h2>
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-xl-5 offset-xl-2 align-self-end mt-3">
+                            <div className="col-lg-6 col-xl-5 offset-xl-2 align-self-end mt-3" data-aos="fade-up">
                                 We offer comprehensive web design and development services, including
                                 custom solutions, e-commerce platforms, responsive designs, and
                                 maintenance, as well as digital marketing, SEO, and IT consulting services.
@@ -185,7 +202,7 @@ const Home = () => {
 
                         {/* Service Card */}
                         <div className="row mt-5">
-                            <div className="col-md-6 col-xl-7">
+                            <div className="col-md-6 col-xl-7" data-aos="fade-right">
                                 <div className="card rounded-4 h-100 overflow-hidden">
 
                                     <div className="card-body">
@@ -214,7 +231,7 @@ const Home = () => {
                             </div>
                             <div className="col-md-6 col-xl-5 mt-4 mt-md-0">
 
-                                <div className="card rounded-4 overflow-hidden">
+                                <div className="card rounded-4 overflow-hidden" data-aos="fade-left">
                                     <div className="card-body position-relative pb-0">
                                         <div className="d-flex justify-content-between align-items-center">
                                             <h5 className="text-primary d-flex align-items-center mb-4">
@@ -240,7 +257,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="card rounded-4 mt-3 overflow-hidden">
+                                <div className="card rounded-4 mt-3 overflow-hidden" data-aos="fade-left">
 
                                     <div className="card-body position-relative pb-0">
                                         <div className="d-flex justify-content-between align-items-center">
@@ -269,7 +286,7 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            <div className="col-12 mt-4">
+                            <div className="col-12 mt-4" data-aos="fade-down">
                                 <div className="card rounded-4 overflow-hidden">
 
                                     <div className="row g-0 align-items-center pt-4 px-4">
@@ -314,7 +331,7 @@ const Home = () => {
                     <div className="container-lg px-xxl-5">
                         <div className="row align-items-center justify-content-md-around">
 
-                            <div className="col-md-6 pe-xl-5">
+                            <div className="col-md-6 pe-xl-5" data-aos="fade-up">
                                 <span className="badge text-bg-primary border border-white rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                     <HiCube />
                                     <span className="ps-2">Stats</span>
@@ -332,7 +349,7 @@ const Home = () => {
                                 </Button>
                             </div>
 
-                            <div className="col-8 col-sm-7 mx-auto col-md-6 ps-xl-5 mt-5 mt-md-0">
+                            <div className="col-8 col-sm-7 mx-auto col-md-6 ps-xl-5 mt-5 mt-md-0" data-aos="fade-up">
                                 <div className="row row-cols-2 gy-5 gx-md-3 gy-md-4">
                                     <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
                                         <div className="display-2 mb-3 fw-semibold">70+</div>
@@ -364,7 +381,7 @@ const Home = () => {
 
                         {/* Products Header */}
                         <div className="row pb-4">
-                            <div className="col-lg-6 col-xl-5">
+                            <div className="col-lg-6 col-xl-5" data-aos="fade-up">
                                 <div>
                                     <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                         <HiCube />
@@ -373,7 +390,7 @@ const Home = () => {
                                     <h2 className="mt-3 mb-0 fw-semibold">“Innovative Software Solutions for Your Business Needs"</h2>
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-xl-5 offset-xl-1 align-self-end mt-3">
+                            <div className="col-lg-6 col-xl-5 offset-xl-1 align-self-end mt-3" data-aos="fade-up">
                                 We offer a suite of software solutions including MDM, CRM, HRMS, and
                                 others designed to streamline operations and enhance business efficiency.
                                 Our products help businesses manage data, improve customer
@@ -386,13 +403,13 @@ const Home = () => {
                         {/* Product HRMS */}
                         <div className="row py-5">
 
-                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between">
+                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-left">
                                 <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                     <FiLayout />
                                     <span className="ps-2">HRMS</span>
                                 </span>
                                 <h2 className="mt-4 fw-medium me-xxl-5">Human Resource <br />Management System</h2>
-                                <p className="my-3 fs-5 text-secondary">
+                                <p className="my-3 fs-18 text-secondary">
                                     Automate HR tasks, manage employee data, and streamline payroll with our HRMS solution.
                                 </p>
 
@@ -432,8 +449,11 @@ const Home = () => {
 
                             </div>
 
-                            <div className="col-lg-6">
-                                <img src={hrmsProBg} alt="digy-hrms-bg" className="bg-info-subtle rounded-4 img-fluid" />
+                            <div className="col-lg-6" data-aos="fade-right">
+                                <div className="pro-hover bg-info-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                    <img src={hrmsProBg} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
+                                </div>
+                                {/* <img src={hrmsProBg} alt="digy-hrms-bg" className="bg-info-subtle rounded-4 img-fluid" /> */}
                             </div>
 
                         </div>
@@ -441,16 +461,19 @@ const Home = () => {
 
                         {/* Product CRM */}
                         <div className="row py-5">
-                            <div className="col-lg-6">
-                                <img src={crmProBg} alt="digy-crm-bg" className="bg-success-subtle rounded-4 img-fluid" />
+                            <div className="col-lg-6" data-aos="fade-left">
+                                <div className="pro-hover bg-success-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                    <img src={crmProBg} alt="digy-crm-bg" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
+                                </div>
+                                {/* <img src={crmProBg} alt="digy-crm-bg" className="bg-success-subtle rounded-4 img-fluid" /> */}
                             </div>
-                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between">
+                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-right">
                                 <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                     <FiLayout />
                                     <span className="ps-2">CRM</span>
                                 </span>
                                 <h2 className="mt-4 fw-midium me-xxl-5">Customer Relationship Management</h2>
-                                <p className="my-3 fs-5 text-secondary">
+                                <p className="my-3 fs-18 text-secondary">
                                     Enhance customer interactions and boost sales with our unified CRM platform.
                                 </p>
 
@@ -495,13 +518,13 @@ const Home = () => {
                         {/* Product BOOKS */}
                         <div className="row py-5">
 
-                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between">
+                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-left">
                                 <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                     <FiLayout />
                                     <span className="ps-2">BOOKS</span>
                                 </span>
                                 <h2 className="mt-4 fw-medium me-xxl-5">Digy BOOKS</h2>
-                                <p className="my-3 fs-5 text-secondary">
+                                <p className="my-3 fs-18 text-secondary">
                                     Digybooks streamlines invoicing, billing, sales, and GST compliance, 
                                     simplifying accounting for growing businesses, Gain real-time insights and 
                                     manage your finances effortlessly.
@@ -543,8 +566,11 @@ const Home = () => {
 
                             </div>
 
-                            <div className="col-lg-6">
-                                <img src={booksProBg} alt="digy-books-bg" className="bg-primary-subtle rounded-4 img-fluid" />
+                            <div className="col-lg-6" data-aos="fade-right">
+                                <div className="pro-hover bg-primary-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                    <img src={booksProBg} alt="digy-books-bg" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
+                                </div>
+                                {/* <img src={booksProBg} alt="digy-books-bg" className="bg-primary-subtle rounded-4 img-fluid" /> */}
                             </div>
 
                         </div>
@@ -552,16 +578,19 @@ const Home = () => {
 
                         {/* Product MDM */}
                         <div className="row py-5">
-                            <div className="col-lg-6">
-                                <img src={mdmProBg} alt="digy-mdm-bg" className="bg-danger-subtle rounded-4 img-fluid" />
+                            <div className="col-lg-6" data-aos="fade-left">
+                                <div className="pro-hover bg-danger-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                    <img src={mdmProBg} alt="digy-mdm-bg2" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
+                                </div>
+                                {/* <img src={mdmProBg} alt="digy-mdm-bg" className="bg-danger-subtle rounded-4 img-fluid" /> */}
                             </div>
-                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between">
+                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-right">
                                 <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                     <FiLayout />
                                     <span className="ps-2">MDM</span>
                                 </span>
                                 <h2 className="mt-4 fw-midium me-xxl-5">Master Data <br /> Management</h2>
-                                <p className="my-3 fs-5 text-secondary">
+                                <p className="my-3 fs-18 text-secondary">
                                     Centralize and oversee your business information for superior decision-making 
                                     and operational efficiency.
                                 </p>
@@ -623,7 +652,7 @@ const Home = () => {
                 <section className="py-5 my-3 px-xxl-5 testimonials">
                     <div className="container-lg px-xxl-5">
 
-                        <div className="mb-4">
+                        <div className="mb-4" data-aos="fade-up">
                             <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                 <HiCube />
                                 <span className="ps-2">Testimonials</span>
@@ -655,7 +684,7 @@ const Home = () => {
                 <section className="py-5 mt-3 px-xxl-5 bg-body-tertiary video-section">
                     <div className="container-lg px-xxl-5">
                         {/* Privacy Head section */}
-                        <div className="mb-4 text-center mx-auto privacy-head">
+                        <div className="mb-4 text-center mx-auto privacy-head" data-aos="fade-down">
                             <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                 <HiCube />
                                 <span className="ps-2">Privacy</span>
@@ -675,7 +704,7 @@ const Home = () => {
                         </div>
                         {/* // Privacy Head section // */}
 
-                        {/* <div className="ratio ratio-16x9">
+                        {/* <div className="ratio ratio-16x9" data-aos="fade-down">
                             <div className="text-center text-white video-card" role="button" onClick={handleShow}>
                                 <img className="w-100 h-100 rounded-4" src={videoSecBg} alt="video section bg" />
                                 <span className="play-icon position-absolute top-50 start-50 translate-middle"><FaPlayCircle size={64} /></span>
@@ -690,7 +719,7 @@ const Home = () => {
                     <div className="container-lg px-xxl-5">
 
                         {/* Blog List Header */}
-                        <div className="row align-items-center pb-4">
+                        <div className="row align-items-center pb-4" data-aos="fade-down">
                             <div className="col-lg-6">
                                 <div>
                                     <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
@@ -722,22 +751,22 @@ const Home = () => {
                         <div className="row">
 
                             <div className="col-md-6 d-flex flex-column justify-content-between">
-                                <div>
+                                <div data-aos="fade-up">
                                     <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                         <HiCube />
                                         <span className="ps-2">FAQs</span>
                                     </span>
                                     <h2 className="mt-3 mb-0 fw-semibold">Frequently Asked <br />Questions!</h2>
                                 </div>
-                                <div className="card px-3 py-4">
+                                <div className="card px-3 py-4" data-aos="fade-down">
                                     <h5 className="card-title fw-semibold">
                                         <div className="text-dark">Can't Find Your Answer Here? </div>
                                         <div className="text-secondary">We Can Help Out!</div>
                                     </h5>
                                     <div className="card-text mt-4">
-                                        <Button variant="primary" href="mailto:suppot@digylax.com" className='border-white icon-link icon-link-hover hover-icon-90deg p-1 ps-3 d-inline-flex align-items-center'>
+                                        <Button variant="primary" href="mailto:suppot@digylax.com" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                             Send Us an Email
-                                            <CiLocationArrow1 size={16} className="bi ms-1 p-1 w-auto h-auto bg-info bg-opacity-50 rounded-circle" />
+                                            <PiPaperPlaneRight size={16} className="bi rotate-45deg- ms-1 p-1 w-auto h-auto bg-info bg-opacity-50 rounded-circle" />
                                         </Button>
                                         <Button variant="outline-secondary" className='ms-3 icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
                                             Schedule a Call

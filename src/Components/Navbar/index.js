@@ -83,7 +83,7 @@ const Header = () => {
     return (
         
         <header
-            className="navbar navbar-expand-lg fixed-top px-2 py-2 top-header">
+            className="navbar navbar-expand-lg fixed-top px-2 py-2 top-header"  data-aos="fade-down">
             <nav className="container-lg shadow-sm flex-wrap flex-lg-nowrap bg-white border rounded-4 px-xl-3 px-xxl-4 py-2 position-relative">
                 {/* Left side Mobile Hamburger icon */}
                 <button className="navbar-toggler border-0" type="button"
@@ -92,7 +92,7 @@ const Header = () => {
                     <FiLayers />
                 </button>
                 {/* Brand Logo */}
-                <a className="navbar-brand py-0 d-flex mx-auto ms-lg-0">
+                <a className="navbar-brand py-0 d-flex mx-auto ms-lg-0" role="button" onClick={() => navigate("/")}>
                     <img src={digyLogo} alt="digylax-logo" width="130" height="24" className="align-self-center" />
                 </a>
 
@@ -194,12 +194,13 @@ const Header = () => {
                                     More
                                 </button>
                                 <ul className="dropdown-menu overflow-auto" aria-labelledby="dropdownThree">
-                                    <li><a className="dropdown-item cursor-pointer">Option 1</a></li>
-                                    <li><a className="dropdown-item cursor-pointer">Option 2</a></li>
+                                    <li><a className="dropdown-item cursor-pointer">About Us</a></li>
+                                    <li><a className="dropdown-item cursor-pointer">Careers</a></li>
                                 </ul>
                             </li>
                         </ul>
-                        <button type="button" className={`btn btn-primary rounded-pill con-btn`}>
+                        <button type="button" className={`btn btn-primary rounded-pill con-btn`} 
+                         onClick={() => navigate("/contact-us")}>
                             Contact Us
                         </button>
                     </div>

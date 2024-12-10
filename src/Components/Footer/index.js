@@ -1,9 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import digyLogo from '../../assets/images/digylax-logo.png';
 import { BsFacebook, BsInstagram, BsLinkedin, BsTwitterX, BsYoutube } from "react-icons/bs";
 
 const Footer = () => {
+
+    const navigate = useNavigate();
+
+    // Init AOS Animation
+    useEffect(() => {
+        AOS.init({
+        //   disable: function() {
+        //     var maxWidth = 800;
+        //     return window.innerWidth < maxWidth;
+        //   },
+          disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+          disable: "mobile",
+          duration: 1000,
+          easing: "ease-in-out-back",
+        });
+    }, []);
+
     return (
         <>
             <footer className="bg-body-tertiary footer main-footer mt-auto">
@@ -12,9 +31,11 @@ const Footer = () => {
                         <div className="row">
 
                             <div className="col-lg-5 mb-3">
-                                <form>
+                                <form data-aos="fade-right" data-aos-delay={0}>
                                     <div className="footer-logo mb-3">
-                                        <img src={digyLogo} alt="digylax-logo" width="130" height="24" className="align-self-center" />
+                                        <a role="button" onClick={() => navigate("/")}>
+                                            <img src={digyLogo} alt="digylax-logo" width="130" height="24" className="align-self-center" />
+                                        </a>
                                     </div>
                                     <p>Join our newsletter to stay up to date on features and releases.</p>
                                     <div className="d-flex flex-column flex-sm-row w-100 gap-2">
@@ -30,7 +51,7 @@ const Footer = () => {
                                 </form>
                             </div>
 
-                            <div className="col-6 col-md-4 col-lg-2 offset-lg-1 gx-lg-0 gx-xl-3 mb-3">
+                            <div className="col-6 col-md-4 col-lg-2 offset-lg-1 gx-lg-0 gx-xl-3 mb-3" data-aos="fade-right" data-aos-delay={400}>
                                 <h6 className="fw-semibold">Company</h6>
                                 <ul className="nav flex-column">
                                     <li className="nav-item mb-2">
@@ -42,13 +63,13 @@ const Footer = () => {
                                             Coimbatore - 641014<br />
                                         </address>
                                     </li>
-                                    <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Events</a></li>
-                                    <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Newsroom</a></li>
-                                    <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Careers</a></li>
+                                    <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">About Us</a></li>
+                                    <li className="nav-item mb-2"><a role="button" onClick={() => navigate("/contact-us")} className="nav-link p-0 text-body-secondary">Contact Us</a></li>
+                                    <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Enterprices</a></li>
                                 </ul>
                             </div>
 
-                            <div className="col-6 col-md-4 col-lg-2 mb-3">
+                            <div className="col-6 col-md-4 col-lg-2 mb-3" data-aos="fade-right" data-aos-delay={800}>
                                 <h6 className="fw-semibold">Contact Sales</h6>
                                 <ul className="nav flex-column">
                                     <li className="nav-item mb-2">
@@ -66,7 +87,7 @@ const Footer = () => {
                                 </ul>
                             </div>
 
-                            <div className="col-6 col-md-4 col-lg-2 mb-3">
+                            <div className="col-6 col-md-4 col-lg-2 mb-3" data-aos="fade-right" data-aos-delay={1200}>
                                 <h6 className="fw-semibold">Follow Us</h6>
                                 <ul className="nav flex-column">
                                     <li className="nav-item mb-2">
@@ -99,7 +120,7 @@ const Footer = () => {
                             
                         </div>
 
-                        <div className="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
+                        <div className="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top" data-aos="fade-down" data-aos-delay="0" data-aos-offset="0">
                             <p>© 2024 Digylax, Inc. All rights reserved.</p>
                             <ul className="list-unstyled d-flex">
                                 <li className="ms-3"><a className="link-body-emphasis text-decoration-underline" href="#">Privacy Policy</a></li>

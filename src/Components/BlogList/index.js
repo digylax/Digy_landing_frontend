@@ -14,6 +14,7 @@ const blogList = [
         content:
             "Not all CRM systems are created equal, and choosing the right one can make or break your sales and ...",
         readMoreLink: "",
+        animationDelay: 0,
     },
     {
         id: 2,
@@ -24,6 +25,7 @@ const blogList = [
         content:
             "Gone are the days of clunky, on-premise software. The SaaS model has revolutionized how ...",
         readMoreLink: "",
+        animationDelay: 500,
     },
     {
         id: 3,
@@ -34,6 +36,7 @@ const blogList = [
         content:
             "Investing in an HRMS isn’t just about convenience—it’s about driving measurable ROI for your business...",
         readMoreLink: "",
+        animationDelay: 1000,
     },
 ];
 
@@ -42,7 +45,7 @@ const BlogList = () => {
         <Row xs={1} sm={2} md={3} className="g-3 g-xl-4">
             {/* {Array.from({ length: 3 }).map((_, idx) => ( */}
             {blogList.map((_, idx) => (
-                <Col key={idx}>
+                <Col key={idx} data-aos="fade-right" data-aos-delay={blogList[idx].animationDelay}>
                     <Card className='h-100 border-0'>
                         <Card.Img variant="top" src={blogList[idx].bgImg} />
                         <Card.Body className='px-0'>

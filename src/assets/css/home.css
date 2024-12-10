@@ -202,8 +202,16 @@
     --bs-icon-link-transform: rotate(-45deg);
 }
 
-.hover-icon-50deg .bi {
-    transform: rotate(-50deg);
+.hover-icon-0deg .bi {
+    --bs-icon-link-transform: rotate(0deg);
+}
+
+.rotate--45deg {
+    transform: rotate(-45deg);
+}
+
+.rotate-45deg {
+    transform: rotate(45deg);
 }
 
 .p-list-item .p-list-cont {
@@ -255,6 +263,19 @@
     max-width: 322px;
 }
 /* // Services // */
+
+/* Products section */
+.pro-hover .hover-img {
+    top: 66px;
+    left: 50px;
+    transition: left 0.5s linear, top 0.5s linear;
+}
+
+.pro-hover:hover .hover-img {
+    top: 1px;
+    left: 1px;
+}
+/* // Products section // */
 
 /* Testimonials */
 /* .tm-nav .btn, .tm-nav-item, .tm-nav-img, .tm-nav-cont {
@@ -403,6 +424,17 @@
 }
 /* // FAQ Section END // */
 
+/* Contact us page */
+.contact-page .hero-banner {
+    height: 50vh;
+}
+
+.bg-hover-opacity-75:hover {
+    --bs-bg-opacity: 0.75;
+}
+
+/* // Contact us page // */
+
 /* Responsive Design */
 @media (min-width: 576px) {
     
@@ -429,6 +461,12 @@
         width: calc(100% - 72px);
         margin-left: 72px;
     }
+
+    /* Contact page */
+    .contact-page .contact-form {
+        max-width: 620px;
+    }
+    /* // Contact page // */
 }
 
 @media (min-width:992px) {

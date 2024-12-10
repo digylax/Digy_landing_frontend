@@ -124,7 +124,7 @@ const Testimonial = () => {
     };
     
     return (
-        <div className="w-100 py-4 px-1 testimonials">
+        <div className="w-100 py-4 px-1 testimonials" data-aos="fade-down">
             {/* Carousel */}
             <div className="position-relative w-100">
 
