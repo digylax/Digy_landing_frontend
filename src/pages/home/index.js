@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import '../../assets/css/home.css';
 import { Button, Modal } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
+// import CountUpNumber from "../../Components/CountUp";
+import CountUp, { useCountUp } from "react-countup";
 import { IoMdArrowRoundDown, IoMdArrowRoundForward, IoMdBook } from "react-icons/io";
 import { FaAngleRight, FaPlayCircle } from "react-icons/fa";
 import { HiCube, HiOutlineUserGroup } from "react-icons/hi2";
@@ -32,20 +34,27 @@ import crmProBg from "../../assets/images/products/crm-p-bg.png";
 import booksProBg from "../../assets/images/products/books-p-bg.png";
 import mdmProBg from "../../assets/images/products/mdm-p-bg.png";
 import videoSecBg from '../../assets/images/home/video-section-bg.jpg'
+import ClientsLogoSlider from "../../Components/ClientsLogoSlider";
 import Testimonial from "../../Components/Testimonial";
 import BlogList from "../../Components/BlogList";
 import FaqAccordion from "../../Components/FaqAccordion";
-import ClientsLogoSlider from "../../Components/ClientsLogoSlider";
 
 const Home = () => {
+    // Scroll in to view
+    const scrollToViewRef = useRef(null);
+    const getStarted = () => {
+        scrollToViewRef.current?.scrollIntoView({
+            behavior: "smooth", block: "start", inline: "start" 
+        });
+    };
 
     const [BtnActiveState, setBtnActiveState] = useState("false");
 
-    const [fullscreen, setFullscreen] = useState(true);
-    const [show, setShow] = useState(false);
+    const [modalFullscreen, setModalFullscreen] = useState(true);
+    const [modalShow, setModalShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleClose = () => setModalShow(false);
+    const handleShow = () => setModalShow(true);
 
     // Init AOS Animation
     useEffect(() => {
@@ -75,12 +84,13 @@ const Home = () => {
                                     A very powerful suite of applications that will change the way you work for good. 
                                     Suitable for all businesses and built by an organization that respects your privacy.
                                 </p>
-                                <p className="my-3 pt-3">
-                                    <Button variant="primary-digy" size="lg" className='fs-6 icon-link icon-link-hover'>
-                                        Contact Us
+                                <p className="my-3 pt-3 d-flex flex-column flex-sm-row align-items-center align-items-sm-start">
+                                    <Button variant="primary-digy" size="lg" className='fs-6 icon-link icon-link-hover' 
+                                     onClick={getStarted}>
+                                        Get Started
                                         <IoMdArrowRoundForward className="bi fs-6 ms-1" />
                                     </Button>
-                                    <Button variant="outline-primary" size="lg" className='ms-3 fs-6 icon-link icon-link-hover hover-icon-0deg'>
+                                    <Button variant="outline-primary" size="lg" className='ms-sm-3 mt-3 mt-sm-0 fs-6 icon-link icon-link-hover hover-icon-0deg'>
                                         Book a free demo
                                         <IoMdArrowRoundForward className="bi rotate--45deg fs-6 ms-1" />
                                     </Button>
@@ -161,9 +171,11 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <div ref={scrollToViewRef}></div>
                             </div>
                         </div>
                     </div>
+                    
                 </section>
                 {/* // Hero Banner END // */}
 
@@ -352,7 +364,9 @@ const Home = () => {
                             <div className="col-8 col-sm-7 mx-auto col-md-6 ps-xl-5 mt-5 mt-md-0" data-aos="fade-up">
                                 <div className="row row-cols-2 gy-5 gx-md-3 gy-md-4">
                                     <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
-                                        <div className="display-2 mb-3 fw-semibold">70+</div>
+                                        <div className="display-2 mb-3 fw-semibold">
+                                            <CountUp start={1} end={70} scrollSpyOnce enableScrollSpy />+
+                                        </div>
                                         <div className="fs-5">Employees Worldwide</div>
                                     </div>
                                     <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
@@ -360,11 +374,15 @@ const Home = () => {
                                         <div className="fs-5">Years in Business</div>
                                     </div>
                                     <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
-                                        <div className="display-2 mb-3 fw-semibold">8+</div>
+                                        <div className="display-2 mb-3 fw-semibold">
+                                            <CountUp start={1} end={8} scrollSpyOnce enableScrollSpy />+
+                                        </div>
                                         <div className="fs-5">Products</div>
                                     </div>
                                     <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
-                                        <div className="display-2 mb-3 fw-semibold">100+</div>
+                                        <div className="display-2 mb-3 fw-semibold">
+                                            <CountUp start={1} end={100} scrollSpyOnce enableScrollSpy />+
+                                        </div>
                                         <div className="fs-5">Global Users</div>
                                     </div>
                                 </div>
@@ -715,11 +733,11 @@ const Home = () => {
                 {/* // Privacy & Video Section END // */}
 
                 {/* Blog List */}
-                <section className="py-5 mb-3 px-xxl-5 bg-white blog-list">
-                    <div className="container-lg px-xxl-5">
+                {/* <section className="py-5 mb-3 px-xxl-5 bg-white blog-list">
+                    <div className="container-lg px-xxl-5"> */}
 
                         {/* Blog List Header */}
-                        <div className="row align-items-center pb-4" data-aos="fade-down">
+                        {/* <div className="row align-items-center pb-4" data-aos="fade-down">
                             <div className="col-lg-6">
                                 <div>
                                     <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
@@ -736,13 +754,13 @@ const Home = () => {
                                     <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary-subtle rounded-circle" />
                                 </Button>
                             </div>
-                        </div>
+                        </div> */}
                         {/* // Blog List Header END // */}
 
-                        <BlogList />
+                        {/* <BlogList /> */}
 
-                    </div>
-                </section>
+                    {/* </div>
+                </section> */}
                 {/* // Blog List END // */}
 
                 {/* FAQ Section */}
@@ -786,7 +804,7 @@ const Home = () => {
 
             </div>
 
-            {/* <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+            {/* <Modal show={modalShow} fullscreen={modalFullscreen} onHide={() => setModalShow(false)}>
                 <Modal.Body className="d-flex align-items-center">
                     <button type="button" className="btn-close p-2 bg-white position-absolute end-0 top-0" aria-label="Close" onClick={handleClose}></button>
                     <div className="ratio ratio-21x9">

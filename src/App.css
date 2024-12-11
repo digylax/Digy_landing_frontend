@@ -331,6 +331,11 @@ body > #root > .App > main.main-panel {
   border: none;
 }
 
+.without-arrow.dropdown-toggle.show .bi {
+  transform: rotate(-180deg);
+  transition: transform 0.35s ease;
+}
+
 .dropdown-toggle[aria-expanded="true"]::after {
   border-top-width: 0;
   border-bottom-width: 0.3em;

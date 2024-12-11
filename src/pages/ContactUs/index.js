@@ -97,30 +97,30 @@ const ContactUs = () => {
                                         <label htmlFor="validationEmail" className="form-label">Email</label>
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div className="col-12">
                                     <div className="form-label-group in-border mb-0">
-                                        <span class="position-absolute h-100 p-2 ps-3 fs-14 d-flex align-items-center" id="inputGroupPrepend">+91</span>
-                                        <input type="text" class="form-control ps-5" id="validationPhone" 
+                                        <span className="position-absolute h-100 p-2 ps-3 fs-14 d-flex align-items-center" id="inputGroupPrepend">+91</span>
+                                        <input type="text" className="form-control ps-5" id="validationPhone" 
                                         aria-describedby="inputGroupPrepend" placeholder="9008007000" required />
-                                        <label htmlFor="validationPhone" class="form-label ps-4 ms-4">Phone Number</label>
+                                        <label htmlFor="validationPhone" className="form-label ps-4 ms-4">Phone Number</label>
                                     </div>
                                 </div>
                                 <div className="col-12">
                                     <div className="form-label-group in-border mb-0">
-                                        <textarea id="validationMsg" class="form-control text-bg-light" placeholder="Leave a message" rows="4"></textarea>
+                                        <textarea id="validationMsg" className="form-control text-bg-light" placeholder="Leave a message" rows="4"></textarea>
                                         <label htmlFor="validationMsg" className="form-label">Leave a message</label>
                                     </div>
                                 </div>
 
                                 <h5 className="py-2 mb-0 fw-medium">Services</h5>
-                                <div class="col-12">
+                                <div className="col-12">
                                     <div className="row row-cols-sm-2 g-3">
                                         <div className="col">
                                             <div className="border p-2 pb-1 bg-body-tertiary">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="serviceOptRadio1"
+                                            <div className="form-check">
+                                                <input className="form-check-input" type="checkbox" id="serviceOptRadio1"
                                                  defaultChecked={true} required />
-                                                <label class="form-check-label" for="serviceOptRadio1">
+                                                <label className="form-check-label" htmlFor="serviceOptRadio1">
                                                     Web Application Development
                                                 </label>
                                                 </div>
@@ -128,9 +128,9 @@ const ContactUs = () => {
                                         </div>
                                         <div className="col">
                                             <div className="border p-2 pb-1 bg-body-tertiary">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="serviceOptRadio2" required />
-                                                <label class="form-check-label" for="serviceOptRadio2">
+                                            <div className="form-check">
+                                                <input className="form-check-input" type="checkbox" id="serviceOptRadio2" required />
+                                                <label className="form-check-label" htmlFor="serviceOptRadio2">
                                                     Mobile Application Development
                                                 </label>
                                                 </div>
@@ -138,9 +138,9 @@ const ContactUs = () => {
                                         </div>
                                         <div className="col">
                                             <div className="border p-2 pb-1 bg-body-tertiary">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="serviceOptRadio3" required />
-                                                <label class="form-check-label" for="serviceOptRadio3">
+                                            <div className="form-check">
+                                                <input className="form-check-input" type="checkbox" id="serviceOptRadio3" required />
+                                                <label className="form-check-label" htmlFor="serviceOptRadio3">
                                                     UI / UX
                                                 </label>
                                                 </div>
@@ -148,9 +148,9 @@ const ContactUs = () => {
                                         </div>
                                         <div className="col">
                                             <div className="border p-2 pb-1 bg-body-tertiary">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="serviceOptRadio4" required />
-                                                <label class="form-check-label" for="serviceOptRadio4">
+                                            <div className="form-check">
+                                                <input className="form-check-input" type="checkbox" id="serviceOptRadio4" required />
+                                                <label className="form-check-label" htmlFor="serviceOptRadio4">
                                                     Digital Marketing
                                                 </label>
                                                 </div>
@@ -159,7 +159,7 @@ const ContactUs = () => {
                                     </div>
                                 </div>
                                 
-                                <div class="col-12 text-center">
+                                <div className="col-12 text-center">
                                     <Button variant="primary-digy" type="submit" size="lg" 
                                      onClick={()=> formValidation()} className='fs-6 icon-link icon-link-hover'>
                                         Send Message

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import digyLogo from '../../assets/images/digylax-logo.png';
 import whatsappIcon from '../../assets/images/header/whatsapp-icon.svg';
 import settingIcon from '../../assets/images/header/setting-icon.svg';
@@ -17,9 +17,10 @@ import mmUser2 from '../../assets/images/header/mm-user-2.png';
 import mmUser3 from '../../assets/images/header/mm-user-3.png';
 import mmUser4 from '../../assets/images/header/mm-user-4.png';
 import { FiLayers } from "react-icons/fi";
-import { Col, Container, ListGroup, Row } from "react-bootstrap";
-import { FaAngleRight } from "react-icons/fa";
+import { Button, Col, Container, ListGroup, Row } from "react-bootstrap";
+import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import { BiSolidQuoteLeft } from "react-icons/bi";
+import { LiaAngleDownSolid } from "react-icons/lia";
 
 const Header = () => {
     const navigate = useNavigate();
@@ -34,6 +35,7 @@ const Header = () => {
     // List of content to be displayed for each list item
     const content = [
         { id: 1, 
+          navLink: "/product-hrms",
           title: "HRMS", 
           logo: hrmsLogo,
           content: "Known for its simplicity and intuitive design, it’s great for small to medium-sized businesses. Features include applicant tracking, employee records management, and performance evaluations.", 
@@ -44,6 +46,7 @@ const Header = () => {
 
         },
         { id: 2, 
+          navLink: ' ',
           title: "CRM", 
           logo: crmLogo,
           content: "Includes AI-powered insights, lead prediction, sales gamification, and extensive customization options. Great for remote teams with tools to foster collaboration and competition​", 
@@ -52,6 +55,7 @@ const Header = () => {
           userDesignation: "Senior Manager, ZenDesk",
         },
         { id: 3, 
+          navLink: ' ',
           title: "Books", 
           logo: digyBooksLogo,
           content: "Users appreciate DigiBooks for its affordability and comprehensive feature set. The platform's integration with other Digylax products is highlighted as a significant advantage.", 
@@ -60,6 +64,7 @@ const Header = () => {
           userDesignation: "Marketing Specialist, Georsk",
         },
         { id: 4, 
+          navLink: ' ',
           title: "MDM", 
           logo: mdmLogo,
           content: "Built for IT teams and managed service providers, NinjaOne offers a unified console for managing various device platforms. Key features include remote management, patching, and security policies​", 
@@ -92,7 +97,8 @@ const Header = () => {
                     <FiLayers />
                 </button>
                 {/* Brand Logo */}
-                <a className="navbar-brand py-0 d-flex mx-auto ms-lg-0" role="button" onClick={() => navigate("/")}>
+                <a href="/" className="navbar-brand py-0 d-flex mx-auto ms-lg-0" role="button">
+                {/*  onClick={() => navigate("/")} */}
                     <img src={digyLogo} alt="digylax-logo" width="130" height="24" className="align-self-center" />
                 </a>
 
@@ -105,35 +111,37 @@ const Header = () => {
                     <div className="offcanvas-body">
                         <ul className="navbar-nav flex-lg-row mx-auto main-links-list">
                             <li className={`nav-item dropdown dropdown-mega position-static text-nowrap`}>
-                                <button type="button" className={`btn btn-link text-decoration-none text-dark with-arrow angle-icon dropdown-toggle`}
+                                <button type="button" 
+                                className={`btn btn-link text-decoration-none text-dark without-arrow d-inline-flex align-items-center dropdown-toggle`}
                                 id="dropdownOne" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Products
+                                    <span className="pe-2">Products</span>
+                                    <LiaAngleDownSolid size={16} className="bi" />
                                 </button>
                                 {/* <ul className="dropdown-menu overflow-auto" aria-labelledby="dropdownOne">
                                     <li><a className="dropdown-item cursor-pointer">Option 1</a></li>
                                     <li><a className="dropdown-item cursor-pointer">Option 2</a></li>
                                 </ul> */}
-                                <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                                <div className="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
                                     <Container>
                                         <Row className="my-4">
                                             {/* Mega menu Left Column ListGroup */}
                                             <Col lg={3}>
                                                 <ListGroup variant="flush">
                                                     {content.map((item, index) => (
-                                                    <ListGroup.Item
+                                                    <ListGroup.Item action href={item.navLink}
                                                         key={item.id}
                                                         onMouseEnter={() => setHoveredIndex(index)}
                                                         onMouseLeave={() => setHoveredIndex(index)}
-                                                        className={`list-item py-3 rounded-2 border ${hoveredIndex === index ? "bg-primary-subtle border-primary" : "border-white"}`}
+                                                        className={`py-3 rounded-2 border ${hoveredIndex === index ? "bg-primary-subtle border-primary" : "border-white"}`}
                                                     >
                                                         
-                                                        <span className="d-flex align-items-center">
+                                                        <span className="d-flex align-items-center icon-link icon-link-hover">
                                                             <img src={item.logo} alt="digy-products-Logo" width={24} height={24} className="align-self-start" />
                                                             <span className="align-self-start ms-3">
                                                                 <span className="fs-6 d-block fw-semibold mb-2">{item.title}</span>
                                                                 <span>{item.title} Platform</span>
                                                             </span>
-                                                            <FaAngleRight size={18} className="ms-auto" />
+                                                            <FaAngleRight size={18} className="bi ms-auto" />
                                                         </span>
                                                     </ListGroup.Item>
                                                     ))}
@@ -168,17 +176,27 @@ const Header = () => {
                                     </Container>
                                 </div>
                             </li>
-                            <li className={`nav-item text-nowrap`}>
+                            {/* <li className={`nav-item text-nowrap`}>
                                 <button type="button" className={`btn btn-link text-decoration-none text-dark`}>
                                     Enterprise
                                 </button>
-                            </li>
+                            </li> */}
                             <li className={`nav-item text-nowrap`}>
                                 <button type="button" className={`btn btn-link text-decoration-none text-dark`}>
                                     Customers
                                 </button>
                             </li>
-                            <li className={`nav-item dropdown text-nowrap`}>
+                            <li className={`nav-item text-nowrap`}>
+                                <button type="button" className={`btn btn-link text-decoration-none text-dark`}>
+                                    About Us
+                                </button>
+                            </li>
+                            <li className={`nav-item text-nowrap`}>
+                                <button type="button" className={`btn btn-link text-decoration-none text-dark`}>
+                                    Careers
+                                </button>
+                            </li>
+                            {/* <li className={`nav-item dropdown text-nowrap`}>
                                 <button type="button" className={`btn btn-link text-decoration-none text-dark with-arrow angle-icon dropdown-toggle`} 
                                 id="dropdownTwo" data-bs-toggle="dropdown" aria-expanded="false">
                                     Company
@@ -197,12 +215,11 @@ const Header = () => {
                                     <li><a className="dropdown-item cursor-pointer">About Us</a></li>
                                     <li><a className="dropdown-item cursor-pointer">Careers</a></li>
                                 </ul>
-                            </li>
+                            </li> */}
                         </ul>
-                        <button type="button" className={`btn btn-primary rounded-pill con-btn`} 
-                         onClick={() => navigate("/contact-us")}>
+                        <Button href="/contact-us" variant="primary" type="button" className={`rounded-pill con-btn`}>
                             Contact Us
-                        </button>
+                        </Button>
                     </div>
                 </div>
                 {/* // Left side menus END // */}

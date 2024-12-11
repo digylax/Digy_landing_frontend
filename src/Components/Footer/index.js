@@ -33,7 +33,8 @@ const Footer = () => {
                             <div className="col-lg-5 mb-3">
                                 <form data-aos="fade-right" data-aos-delay={0}>
                                     <div className="footer-logo mb-3">
-                                        <a role="button" onClick={() => navigate("/")}>
+                                        <a role="button" href="/">
+                                        {/* onClick={() => navigate("/")} */}
                                             <img src={digyLogo} alt="digylax-logo" width="130" height="24" className="align-self-center" />
                                         </a>
                                     </div>
@@ -64,8 +65,9 @@ const Footer = () => {
                                         </address>
                                     </li>
                                     <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">About Us</a></li>
-                                    <li className="nav-item mb-2"><a role="button" onClick={() => navigate("/contact-us")} className="nav-link p-0 text-body-secondary">Contact Us</a></li>
-                                    <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Enterprices</a></li>
+                                    <li className="nav-item mb-2"><a role="button" href="/contact-us" className="nav-link p-0 text-body-secondary">Contact Us</a></li>
+                                    {/* <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Enterprices</a></li> */}
+                                    <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Careers</a></li>
                                 </ul>
                             </div>
 

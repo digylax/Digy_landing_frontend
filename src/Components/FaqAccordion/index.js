@@ -2,7 +2,8 @@ import Accordion from 'react-bootstrap/Accordion';
 
 const FaqAccordion = () => {
     return (
-        <Accordion defaultActiveKey="0" className='custom-icon'>
+        <Accordion className='custom-icon'>
+            {/* defaultActiveKey="0" */}
 
             <Accordion.Item eventKey="0" className='shadow-sm' data-aos="fade-left" data-aos-delay={0}>
                 <Accordion.Header>What is Digylax's core focus?</Accordion.Header>
