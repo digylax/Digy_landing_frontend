@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import { Button, Modal } from "react-bootstrap";
 import { IoMdArrowRoundDown, IoMdArrowRoundForward } from "react-icons/io";
+import { FiLayout } from "react-icons/fi";
 import { FaPlayCircle } from "react-icons/fa";
 import { HiCube } from "react-icons/hi2";
 import { PiPaperPlaneRight } from "react-icons/pi";
@@ -15,6 +16,8 @@ import HrmsTestimonial from "../../Components/HrmsTestimonial";
 import HrmsFaqAccordion from "../../Components/HrmsFaq";
 
 const ProductHrms = () => {
+    const navigate = useNavigate();
+
     const [BtnActiveState, setBtnActiveState] = useState("false");
 
     const [modalFullscreen, setModalFullscreen] = useState(true);
@@ -26,10 +29,6 @@ const ProductHrms = () => {
     // Init AOS Animation
     useEffect(() => {
         AOS.init({
-          disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-          disable: "mobile",
-          duration: 1000,
-          easing: "ease-in-out-cubic",
         });
     }, []);
 
@@ -73,6 +72,81 @@ const ProductHrms = () => {
             </div>
         </section>
         {/* // Clients brand logo Slider END // */}
+
+        {/* Key Features Section */}
+        <section className="py-5 mt-3 px-xxl-5 bg-body-tertiary key-features">
+            <div className="container-lg px-xxl-5">
+                <div className="row">
+                    <div className="col-lg-6">
+
+                        <div className="sticky-top" style={{top: "72px"}}>
+                            <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
+                                <FiLayout />
+                                <span className="ps-2">Key Features</span>
+                            </span>
+                            <h2 className="mt-4 fw-semibold me-xxl-5">Streamline Your HR Operations with <br />These Powerful Tools</h2>
+
+                            <nav id="navbar-example3" className="nav nav-pills flex-column mt-3 overflow-y-auto" >
+                                <a className="nav-link active text-dark bg-transparent border shadow-sm" href="#items-1">Employee Information Management</a>
+                                <a className="nav-link" href="#items-2">Payroll and Tax Compliance</a>
+                                <a className="nav-link" href="#items-3">Attendance and Leave Management</a>
+                                <a className="nav-link" href="#items-4">Recruitment and Onboarding</a>
+                                <a className="nav-link" href="#items-5">Performance Management</a>
+                            </nav>
+                        </div>
+
+                    </div>
+                    <div className="col-lg-6">
+
+                        <div className="position-relative overflow-y-auto" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="72" tabindex="0">
+                            
+                            <h4 id="item-1" className="mt-4 fw-medium fs-2">Employee Information Management</h4>
+                            <p className="my-3 fs-18 text-secondary">
+                                Securely organize and access employee information within a single, centralized platform.
+                            </p>
+                            <div className="pro-hover bg-info-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <img src={hrmsProBg} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                            </div>
+
+                            <h4 id="item-2" className="mt-4 fw-medium fs-2">Payroll and Tax Compliance</h4>
+                            <p className="my-3 fs-18 text-secondary">
+                                Streamline payroll processing and ensure effortless tax compliance.
+                            </p>
+                            <div className="pro-hover bg-info-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <img src={hrmsProBg} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                            </div>
+
+                            <h4 id="item-3" className="mt-4 fw-medium fs-2">Attendance and Leave Management</h4>
+                            <p className="my-3 fs-18 text-secondary">
+                                Securely organize and access employee information within a single, centralized platform.
+                            </p>
+                            <div className="pro-hover bg-info-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <img src={hrmsProBg} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                            </div>
+
+                            <h4 id="item-4" className="mt-4 fw-medium fs-2">Recruitment and Onboarding</h4>
+                            <p className="my-3 fs-18 text-secondary">
+                                Simplify hiring and onboarding with automated recruitment workflows.
+                            </p>
+                            <div className="pro-hover bg-info-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <img src={hrmsProBg} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                            </div>
+
+                            <h4 id="item-5" className="mt-4 fw-medium fs-2">Performance Management</h4>
+                            <p className="my-3 fs-18 text-secondary">
+                                Boost productivity with goal tracking and real-time performance feedback.
+                            </p>
+                            <div className="pro-hover bg-info-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <img src={hrmsProBg} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        {/* // Key Features Section END // */}
 
         {/* Demo Video Section */}
         <section className="py-5 mt-3 px-xxl-5 bg-body-tertiary video-section">

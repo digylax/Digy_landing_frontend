@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import digyLogo from '../../assets/images/digylax-logo.png';
 import { BsFacebook, BsInstagram, BsLinkedin, BsTwitterX, BsYoutube } from "react-icons/bs";
@@ -12,14 +11,6 @@ const Footer = () => {
     // Init AOS Animation
     useEffect(() => {
         AOS.init({
-        //   disable: function() {
-        //     var maxWidth = 800;
-        //     return window.innerWidth < maxWidth;
-        //   },
-          disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-          disable: "mobile",
-          duration: 1000,
-          easing: "ease-in-out-back",
         });
     }, []);
 
@@ -31,10 +22,9 @@ const Footer = () => {
                         <div className="row">
 
                             <div className="col-lg-5 mb-3">
-                                <form data-aos="fade-right" data-aos-delay={0}>
+                                <form data-aos="fade-right">
                                     <div className="footer-logo mb-3">
-                                        <a role="button" href="/">
-                                        {/* onClick={() => navigate("/")} */}
+                                        <a role="button" onClick={() => navigate("/")}>
                                             <img src={digyLogo} alt="digylax-logo" width="130" height="24" className="align-self-center" />
                                         </a>
                                     </div>
@@ -71,7 +61,7 @@ const Footer = () => {
                                 </ul>
                             </div>
 
-                            <div className="col-6 col-md-4 col-lg-2 mb-3" data-aos="fade-right" data-aos-delay={800}>
+                            <div className="col-6 col-md-4 col-lg-2 mb-3" data-aos="fade-right" data-aos-delay={600}>
                                 <h6 className="fw-semibold">Contact Sales</h6>
                                 <ul className="nav flex-column">
                                     <li className="nav-item mb-2">
@@ -89,7 +79,7 @@ const Footer = () => {
                                 </ul>
                             </div>
 
-                            <div className="col-6 col-md-4 col-lg-2 mb-3" data-aos="fade-right" data-aos-delay={1200}>
+                            <div className="col-6 col-md-4 col-lg-2 mb-3" data-aos="fade-right" data-aos-delay={750}>
                                 <h6 className="fw-semibold">Follow Us</h6>
                                 <ul className="nav flex-column">
                                     <li className="nav-item mb-2">
@@ -122,7 +112,7 @@ const Footer = () => {
                             
                         </div>
 
-                        <div className="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top" data-aos="fade-down" data-aos-delay="0" data-aos-offset="0">
+                        <div className="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
                             <p>© 2024 Digylax, Inc. All rights reserved.</p>
                             <ul className="list-unstyled d-flex">
                                 <li className="ms-3"><a className="link-body-emphasis text-decoration-underline" href="#">Privacy Policy</a></li>

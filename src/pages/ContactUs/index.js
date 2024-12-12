@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import { Button } from "react-bootstrap";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { BiPhone } from "react-icons/bi";
@@ -13,14 +12,6 @@ const ContactUs = () => {
     // Init AOS Animation
     useEffect(() => {
         AOS.init({
-        //   disable: function() {
-        //     var maxWidth = 800;
-        //     return window.innerWidth < maxWidth;
-        //   },
-          disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-          disable: "mobile",
-          duration: 1000,
-          easing: "ease-in-out-back",
         });
     }, []);
 
@@ -68,7 +59,7 @@ const ContactUs = () => {
                 <div className="contact-form mx-auto">
                     <div className="container">
                         {/* Form Header */}
-                        <div className="text-center" data-aos="fade-up">
+                        <div className="text-center" data-aos="fade-down">
                             <h2 className="text-center fw-semibold mb-4">Message Us</h2>
                             <p className="mb-4">We will get back to you in 24-hours</p>
                         </div>
@@ -180,7 +171,7 @@ const ContactUs = () => {
                     <div className="row">
                         <div className="col-lg-11 col-xl-10 col-xxl-9 mx-auto">
                             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 text-center fs-6">
-                                <div className="col">
+                                <div className="col" data-aos="fade-up" data-aos-delay="200">
                                     <div className="card card-body rounded-4">
                                         <p className="card-text d-flex align-items-center justify-content-center">
                                             <PiChatCircleTextDuotone size={24} className="text-primary" />
@@ -190,7 +181,7 @@ const ContactUs = () => {
                                         <p className="card-text"><a href="mailto:support@digylax.com" className="text-link">support@digylax.com</a></p>
                                     </div>
                                 </div>
-                                <div className="col">
+                                <div className="col" data-aos="fade-up" data-aos-delay="350">
                                     <div className="card card-body rounded-4">
                                         <p className="card-text d-flex align-items-center justify-content-center">
                                             <TiLocationOutline size={24} className="text-primary" />
@@ -200,7 +191,7 @@ const ContactUs = () => {
                                         <p className="card-text"><a href="" className="text-link">View on Google Map</a></p>
                                     </div>
                                 </div>
-                                <div className="col">
+                                <div className="col" data-aos="fade-up" data-aos-delay="500">
                                     <div className="card card-body rounded-4">
                                         <p className="card-text d-flex align-items-center justify-content-center">
                                             <BiPhone size={24} className="text-primary" />
@@ -219,7 +210,7 @@ const ContactUs = () => {
             {/* // Contact detail boxs END // */}
 
             {/* Free Trail Box */}
-            <section className="py-5 bg-body-tertiary bg-opacity-50">
+            <section className="py-5 bg-body-tertiary bg-opacity-50" data-aos="fade-up">
                 <div className="container rounded-4 bg-primary bg-gradient text-center py-5">
                     <span className="badge text-bg-primary border border-white rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-medium">
                         <HiCube size={20} />

@@ -46,7 +46,7 @@ const Header = () => {
 
         },
         { id: 2, 
-          navLink: ' ',
+          navLink: '/',
           title: "CRM", 
           logo: crmLogo,
           content: "Includes AI-powered insights, lead prediction, sales gamification, and extensive customization options. Great for remote teams with tools to foster collaboration and competition​", 
@@ -55,7 +55,7 @@ const Header = () => {
           userDesignation: "Senior Manager, ZenDesk",
         },
         { id: 3, 
-          navLink: ' ',
+          navLink: '/',
           title: "Books", 
           logo: digyBooksLogo,
           content: "Users appreciate DigiBooks for its affordability and comprehensive feature set. The platform's integration with other Digylax products is highlighted as a significant advantage.", 
@@ -64,7 +64,7 @@ const Header = () => {
           userDesignation: "Marketing Specialist, Georsk",
         },
         { id: 4, 
-          navLink: ' ',
+          navLink: '/',
           title: "MDM", 
           logo: mdmLogo,
           content: "Built for IT teams and managed service providers, NinjaOne offers a unified console for managing various device platforms. Key features include remote management, patching, and security policies​", 
@@ -97,7 +97,7 @@ const Header = () => {
                     <FiLayers />
                 </button>
                 {/* Brand Logo */}
-                <a href="/" className="navbar-brand py-0 d-flex mx-auto ms-lg-0" role="button">
+                <a onClick={() => navigate("/")} className="navbar-brand py-0 d-flex mx-auto ms-lg-0" role="button">
                 {/*  onClick={() => navigate("/")} */}
                     <img src={digyLogo} alt="digylax-logo" width="130" height="24" className="align-self-center" />
                 </a>
@@ -128,7 +128,7 @@ const Header = () => {
                                             <Col lg={3}>
                                                 <ListGroup variant="flush">
                                                     {content.map((item, index) => (
-                                                    <ListGroup.Item action href={item.navLink}
+                                                    <ListGroup.Item action onClick={() => navigate(item.navLink)}
                                                         key={item.id}
                                                         onMouseEnter={() => setHoveredIndex(index)}
                                                         onMouseLeave={() => setHoveredIndex(index)}
@@ -217,7 +217,7 @@ const Header = () => {
                                 </ul>
                             </li> */}
                         </ul>
-                        <Button href="/contact-us" variant="primary" type="button" className={`rounded-pill con-btn`}>
+                        <Button onClick={() => navigate("/contact-us")} variant="primary" type="button" className={`rounded-pill con-btn`}>
                             Contact Us
                         </Button>
                     </div>

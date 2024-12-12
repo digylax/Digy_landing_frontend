@@ -4,10 +4,12 @@ import LandingLayout from "../Layout/Landing";
 import Home from "../pages/home";
 import ProductHrms from "../pages/ProductHrms";
 import ContactUs from "../pages/ContactUs";
+import ScrollToTop from "../Components/ScrollToTop";
 
 const Router = () => {
     return (
         <BrowserRouter future={ { v7_startTransition: true, v7_relativeSplatPath: true,} }>
+            <ScrollToTop/>
             <Routes>
                 <Route element={<LandingLayout />}>
                     <Route path="/" element={<Home />}></Route>

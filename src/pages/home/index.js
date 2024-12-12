@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import '../../assets/css/home.css';
 import { Button, Modal } from "react-bootstrap";
 import AOS from "aos";
-import "aos/dist/aos.css";
 // import CountUpNumber from "../../Components/CountUp";
 import CountUp, { useCountUp } from "react-countup";
 import { IoMdArrowRoundDown, IoMdArrowRoundForward, IoMdBook } from "react-icons/io";
@@ -40,6 +40,9 @@ import BlogList from "../../Components/BlogList";
 import FaqAccordion from "../../Components/FaqAccordion";
 
 const Home = () => {
+
+    const navigate = useNavigate();
+
     // Scroll in to view
     const scrollToViewRef = useRef(null);
     const getStarted = () => {
@@ -59,14 +62,15 @@ const Home = () => {
     // Init AOS Animation
     useEffect(() => {
         AOS.init({
-        //   disable: function() {
-        //     var maxWidth = 800;
-        //     return window.innerWidth < maxWidth;
-        //   },
+          // disable: function() {
+          //   var maxWidth = 800;
+          //   return window.innerWidth < maxWidth;
+          //   },
           disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-          disable: "mobile",
-          duration: 1000,
-          easing: "ease-in-out-back",
+          // duration: 1000,
+          // delay: 0, 
+          offset: 100,
+          // easing: "ease-in-out",
         });
     }, []);
 
@@ -100,7 +104,7 @@ const Home = () => {
                                 <div className="card rounded-4" data-aos="fade-right">
                                     <div className="card-body">
                                         <div className="list-group list-group-flush">
-                                            <a href="#" className="list-group-item list-group-item-action" aria-current="true">
+                                            <a role="button" onClick={() => navigate("/product-hrms")} className="list-group-item list-group-item-action" aria-current="true">
                                                 <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
                                                     <div className="mt-2">
                                                         <h5 className="d-flex align-items-center mb-1">
@@ -116,7 +120,7 @@ const Home = () => {
                                                     <FaAngleRight size={18} />
                                                 </div>
                                             </a>
-                                            <a href="#" className="list-group-item list-group-item-action" aria-current="false">
+                                            <a role="button" onClick={() => navigate("/")} className="list-group-item list-group-item-action" aria-current="false">
                                                 <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
                                                     <div className="mt-2">
                                                         <h5 className="d-flex align-items-center mb-1">
@@ -131,7 +135,7 @@ const Home = () => {
                                                     <FaAngleRight size={18} />
                                                 </div>
                                             </a>
-                                            <a href="#" className="list-group-item list-group-item-action" aria-current="false">
+                                            <a role="button" onClick={() => navigate("/")} className="list-group-item list-group-item-action" aria-current="false">
                                                 <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
                                                     <div className="mt-2">
                                                         <h5 className="d-flex align-items-center mb-1">
@@ -147,7 +151,7 @@ const Home = () => {
                                                     <FaAngleRight size={18} />
                                                 </div>
                                             </a>
-                                            <a href="#" className="list-group-item list-group-item-action" aria-current="false">
+                                            <a role="button" onClick={() => navigate("/")} className="list-group-item list-group-item-action" aria-current="false">
                                                 <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
                                                     <div className="mt-2">
                                                         <h5 className="d-flex align-items-center mb-1">
