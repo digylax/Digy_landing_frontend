@@ -446,8 +446,23 @@
 .bg-hover-opacity-75:hover {
     --bs-bg-opacity: 0.75;
 }
-
 /* // Contact us page // */
+
+/* Product Details */
+.nav-pills.nav-pills-gray .nav-link {
+    background-color: var(--bs-gray-200);
+    color: var(--bs-gray-dark);
+    border: 1px solid transparent;
+}
+
+.nav-pills.nav-pills-gray .nav-link.active, 
+.nav-pills.nav-pills-gray .show>.nav-link {
+  background-color: var(--bs-white);
+  color: var(--bs-gray-dark);
+  font-weight: 500;
+  border-color: var(--bs-gray-600);
+}
+/* // Product Details // */
 
 /* Responsive Design */
 @media (min-width: 576px) {

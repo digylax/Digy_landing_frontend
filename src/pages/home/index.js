@@ -186,7 +186,7 @@ const Home = () => {
                 {/* Clients brand logo Slider */}
                 <section className="py-5 bg-body-tertiary client-logos" data-aos="fade-up">
                     <div className="client-section center">
-                        <h5 className="text-center fw-semibold pb-4 mb-4">Used by the world's most companies</h5>
+                        <h5 className="text-center fw-semibold pb-4 mb-4 mb-xl-5">Used by the world's most companies</h5>
                         
                         <ClientsLogoSlider />
                     </div>

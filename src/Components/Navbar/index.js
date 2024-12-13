@@ -21,6 +21,7 @@ import { Button, Col, Container, ListGroup, Row } from "react-bootstrap";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import { BiSolidQuoteLeft } from "react-icons/bi";
 import { LiaAngleDownSolid } from "react-icons/lia";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const Header = () => {
     const navigate = useNavigate();
@@ -115,7 +116,7 @@ const Header = () => {
                                 className={`btn btn-link text-decoration-none text-dark without-arrow d-inline-flex align-items-center dropdown-toggle`}
                                 id="dropdownOne" data-bs-toggle="dropdown" aria-expanded="false">
                                     <span className="pe-2">Products</span>
-                                    <LiaAngleDownSolid size={16} className="bi" />
+                                    <IoMdArrowDropdown size={24} className="bi" />
                                 </button>
                                 {/* <ul className="dropdown-menu overflow-auto" aria-labelledby="dropdownOne">
                                     <li><a className="dropdown-item cursor-pointer">Option 1</a></li>
@@ -180,7 +181,7 @@ const Header = () => {
                                 <button type="button" className={`btn btn-link text-decoration-none text-dark`}>
                                     Enterprise
                                 </button>
-                            </li> */}
+                            </li>
                             <li className={`nav-item text-nowrap`}>
                                 <button type="button" className={`btn btn-link text-decoration-none text-dark`}>
                                     Customers
@@ -190,7 +191,7 @@ const Header = () => {
                                 <button type="button" className={`btn btn-link text-decoration-none text-dark`}>
                                     About Us
                                 </button>
-                            </li>
+                            </li> */}
                             <li className={`nav-item text-nowrap`}>
                                 <button type="button" className={`btn btn-link text-decoration-none text-dark`}>
                                     Careers
