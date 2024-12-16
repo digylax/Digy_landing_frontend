@@ -462,6 +462,100 @@
   font-weight: 500;
   border-color: var(--bs-gray-600);
 }
+
+/* Pricing Switch design */
+.pricing-switch .fieldset {
+    display: inline-block;
+    position: relative;
+    padding: 4px;
+}
+
+.pricing-switch input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    visibility: hidden;
+}
+
+.pricing-switch label, 
+.pricing-switch .switch {
+    width: 94px;
+    height: 36px;
+}
+
+.pricing-switch label {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    cursor: pointer;
+    color: #262626;
+    text-transform: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 36px;
+    transition-delay: 0.1s;
+    transition: color 0.3s ease;
+}
+
+.pricing-switch input[type=radio]:checked+label {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.pricing-switch .switch {
+    /* floating background */
+    top: 5px;
+    left: 5px;
+    transition: transform 0.3s;
+}
+
+.pricing-switch input[type=radio]:checked+label+.switch,
+.pricing-switch input[type=radio]:checked+label:nth-of-type(n)+.switch {
+    /* use label:nth-of-type(n) to fix a bug on safari with multiple adjacent-sibling selectors*/
+    -webkit-transform: translateX(94px);
+    -moz-transform: translateX(94px);
+    -ms-transform: translateX(94px);
+    -o-transform: translateX(94px);
+    transform: translateX(94px);
+}
+/* // Pricing Switch design // */
+
+.price-switch .price {
+    line-height: 1;
+    margin-bottom: 0;
+    letter-spacing: -.01em;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 48px;
+}
+
+.price-switch .timeframe {
+    letter-spacing: -.01em;
+    font-size: 20px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.pricing-plans .list li {
+    padding-bottom: 1rem;
+}
+
+.pricing-plans .list li:last-of-type {
+    padding-bottom: 0;
+}
+
+.pricing-plans .basic .list li::marker {
+    color: var(--bs-primary);
+}
+
+.pricing-plans .plus .list li::marker {
+    color: var(--bs-success);
+}
+
+.pricing-plans .premium .list li::marker {
+    color: var(--bs-warning);
+}
 /* // Product Details // */
 
 /* Responsive Design */

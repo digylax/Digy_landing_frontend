@@ -10,7 +10,7 @@ const ScrollToTop = (props) => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  return <main>{children}</main>;
+  return <div>{children}</div>;
 };
 
 export default ScrollToTop;

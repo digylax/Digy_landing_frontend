@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import AOS from "aos";
 // import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 import { FaStar } from "react-icons/fa";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
@@ -77,6 +78,7 @@ const HrmsTestimonial = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
     const [direction, setDirection] = useState("");
+    const [autoPlayTimer, setAutoPlayTimer] = useState(null); // State to store the autoplay timer
 
     const nextSlide = () => {
         if (!isAnimating) {
@@ -108,7 +110,8 @@ const HrmsTestimonial = () => {
     // Auto play - Auto-advance slides
     useEffect(() => {
         const timer = setInterval(nextSlide, 5000);
-        return () => clearInterval(timer);
+        setAutoPlayTimer(timer); // Store the timer reference
+        return () => clearInterval(timer); // Cleanup interval when component is unmounted or timer is reset
     }, []);
 
     const renderStars = (rating) => {
@@ -122,11 +125,32 @@ const HrmsTestimonial = () => {
             />
         ));
     };
+
+    // Handle mouse enter and leave for stopping and restarting autoplay
+    const handleMouseEnter = () => {
+        if (autoPlayTimer) {
+            clearInterval(autoPlayTimer); // Stop autoplay when mouse enters
+        }
+    };
+
+    const handleMouseLeave = () => {
+        const timer = setInterval(nextSlide, 5000); // Restart autoplay when mouse leaves
+        setAutoPlayTimer(timer);
+    };
+
+    // Init AOS Animation
+    useEffect(() => {
+        AOS.init({
+        });
+    }, []);
     
     return (
         <div className="w-100 py-4 px-1 testimonials" data-aos="fade-down">
             {/* Carousel */}
-            <div className="position-relative w-100">
+            <div className="position-relative w-100"
+            onMouseEnter={handleMouseEnter} // Stop autoplay
+            onMouseLeave={handleMouseLeave} // Restart autoplay
+            >
 
                 {/* Nav Buttons Section */}
                 <div className="row mb-4 g-0 tm-nav">

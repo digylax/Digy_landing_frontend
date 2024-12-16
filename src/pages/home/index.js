@@ -183,18 +183,334 @@ const Home = () => {
                 </section>
                 {/* // Hero Banner END // */}
 
-                {/* Clients brand logo Slider */}
-                <section className="py-5 bg-body-tertiary client-logos" data-aos="fade-up">
-                    <div className="client-section center">
-                        <h5 className="text-center fw-semibold pb-4 mb-4 mb-xl-5">Used by the world's most companies</h5>
-                        
-                        <ClientsLogoSlider />
+                {/* Products Section */}
+                <section className="py-5 my-3 px-xxl-5 products">
+                    <div className="container-lg px-xxl-5">
+
+                        {/* Products Header */}
+                        <div className="row pb-4">
+                            <div className="col-lg-6 col-xl-5" data-aos="fade-up">
+                                <div>
+                                    <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
+                                        <HiCube />
+                                        <span className="ps-2">Products</span>
+                                    </span>
+                                    <h2 className="mt-3 mb-0 fw-semibold">“Innovative Software Solutions for Your Business Needs"</h2>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-xl-5 offset-xl-1 align-self-end mt-3" data-aos="fade-up">
+                                We offer a suite of software solutions including MDM, CRM, HRMS, and
+                                others designed to streamline operations and enhance business efficiency.
+                                Our products help businesses manage data, improve customer
+                                relationships, and simplify financial processes. Scalable, secure, and
+                                tailored to your needs, they drive growth and productivity.
+                            </div>
+                        </div>
+                        {/* // Products Header END // */}
+
+                        {/* Product MDM */}
+                        <div className="row py-5">
+
+                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-right">
+                                <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
+                                    <FiLayout />
+                                    <span className="ps-2">MDM</span>
+                                </span>
+                                <h2 className="mt-4 fw-midium me-xxl-5">Master Data <br /> Management</h2>
+                                <p className="my-3 fs-18 text-secondary">
+                                    Centralize and oversee your business information for superior decision-making 
+                                    and operational efficiency.
+                                </p>
+
+                                <div className="row row-cols-2 g-3 mb-4">
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Invoicing Software</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Time Tracking</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Task Management Tool</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Database Management Tool</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mb-5">
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
+                                        Read More About This
+                                        <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
+                                    </Button>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-6" data-aos="fade-left">
+                                <div className="pro-hover bg-danger-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                    <img src={mdmProBg} alt="digy-mdm-bg2" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
+                                </div>
+                                {/* <img src={mdmProBg} alt="digy-mdm-bg" className="bg-danger-subtle rounded-4 img-fluid" /> */}
+                            </div>
+
+                        </div>
+                        {/* // Product MDM END // */}
+
+                        {/* Product CRM */}
+                        <div className="row py-5">
+
+                            <div className="col-lg-6" data-aos="fade-left">
+                                <div className="pro-hover bg-success-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                    <img src={crmProBg} alt="digy-crm-bg" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
+                                </div>
+                                {/* <img src={crmProBg} alt="digy-crm-bg" className="bg-success-subtle rounded-4 img-fluid" /> */}
+                            </div>
+
+                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-right">
+                                <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
+                                    <FiLayout />
+                                    <span className="ps-2">CRM</span>
+                                </span>
+                                <h2 className="mt-4 fw-midium me-xxl-5">Customer Relationship Management</h2>
+                                <p className="my-3 fs-18 text-secondary">
+                                    Enhance customer interactions and boost sales with our unified CRM platform.
+                                </p>
+
+                                <div className="row row-cols-2 g-3 mb-4">
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Real-time analytics</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Import CSV Data</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Product information management</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Contract Management</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mb-5">
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
+                                        Read More About This
+                                        <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
+                                    </Button>
+                                </div>
+                            </div>
+
+                        </div>
+                        {/* // Product CRM END // */}
+
+                        {/* Product HRMS */}
+                        <div className="row py-5">
+
+                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-left">
+                                <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
+                                    <FiLayout />
+                                    <span className="ps-2">HRMS</span>
+                                </span>
+                                <h2 className="mt-4 fw-medium me-xxl-5">Human Resource <br />Management System</h2>
+                                <p className="my-3 fs-18 text-secondary">
+                                    Automate HR tasks, manage employee data, and streamline payroll with our HRMS solution.
+                                </p>
+
+                                <div className="row row-cols-2 g-3 mb-4">
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3"> HR-Analytics</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Employee Time Tracking</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Employee Database</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Attendance management</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mb-5">
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
+                                        Read More About This
+                                        <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
+                                    </Button>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-6" data-aos="fade-right">
+                                <div className="pro-hover bg-info-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                    <img src={hrmsProBg} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
+                                </div>
+                                {/* <img src={hrmsProBg} alt="digy-hrms-bg" className="bg-info-subtle rounded-4 img-fluid" /> */}
+                            </div>
+
+                        </div>
+                        {/* // Product HRMS END // */}
+
+                        {/* Product BOOKS */}
+                        <div className="row py-5">
+
+                            <div className="col-lg-6" data-aos="fade-right">
+                                <div className="pro-hover bg-primary-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                    <img src={booksProBg} alt="digy-books-bg" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
+                                </div>
+                                {/* <img src={booksProBg} alt="digy-books-bg" className="bg-primary-subtle rounded-4 img-fluid" /> */}
+                            </div>
+
+                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-left">
+                                <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
+                                    <FiLayout />
+                                    <span className="ps-2">BOOKS</span>
+                                </span>
+                                <h2 className="mt-4 fw-medium me-xxl-5">Digy BOOKS</h2>
+                                <p className="my-3 fs-18 text-secondary">
+                                    Digybooks streamlines invoicing, billing, sales, and GST compliance, 
+                                    simplifying accounting for growing businesses, Gain real-time insights and 
+                                    manage your finances effortlessly.
+                                </p>
+
+                                <div className="row row-cols-2 g-3 mb-4">
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Invoicing & Billing</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">GST Compliance</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Purchase and Sales Management</span>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex align-items-center p-2 border rounded-3">
+                                            <IoCheckmarkCircle className="text-primary" />
+                                            <span className="ps-3">Receivables & Payables</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mb-5">
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
+                                        Read More About This
+                                        <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
+                                    </Button>
+                                </div>
+                            </div>
+
+                        </div>
+                        {/* // Product BOOKS END // */}
+
+                        {/* Load More btn */}
+                        {/* <div className="text-center">
+                            <Button variant="outline-secondary"
+                                className={`icon-link icon-link-hover hover-icon-180deg p-2 ps-3 d-inline-flex align-items-center shadow-sm ${BtnActiveState ? '' : 'active'}`}
+                                onClick={() => setBtnActiveState(!BtnActiveState)}>
+                                <span className="fw-semibold">Load More Products</span>
+                                <IoMdArrowRoundDown size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary-subtle rounded-circle" />
+                            </Button>
+                        </div> */}
+                        {/* // Load More btn // */}
+
                     </div>
                 </section>
-                {/* // Clients brand logo Slider END // */}
+                {/* // Products Section END // */}
+
+                {/* Stats section */}
+                <section className="py-5 my-3 px-xxl-5 bg-primary text-white stats">
+                    <div className="container-lg px-xxl-5">
+                        <div className="row align-items-center justify-content-md-around">
+
+                            <div className="col-md-6 pe-xl-5" data-aos="fade-up">
+                                <span className="badge text-bg-primary border border-white rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
+                                    <HiCube />
+                                    <span className="ps-2">Stats</span>
+                                </span>
+                                <h2 className="mt-3 mt-xl-4 fs-1 fw-semibold">Made in India. <br /> Made for the World.</h2>
+                                <p className="mt-3 my-xl-4">
+                                    At Digylax, we combine the rich heritage of Indian innovation with
+                                    global excellence to craft software solutions that transcend borders.
+                                    Our products are designed to meet the needs of businesses
+                                    worldwide, ensuring scalability, security, and success in every market.
+                                </p>
+                                <Button variant="primary" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
+                                    Contact Us
+                                    <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-info bg-opacity-50 rounded-circle" />
+                                </Button>
+                            </div>
+
+                            <div className="col-8 col-sm-7 mx-auto col-md-6 ps-xl-5 mt-5 mt-md-0" data-aos="fade-up">
+                                <div className="row row-cols-2 gy-5 gx-md-3 gy-md-4">
+                                    <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
+                                        <div className="display-2 mb-3 fw-semibold">
+                                            <CountUp start={1} end={70} suffix="+" scrollSpyOnce enableScrollSpy={true} duration={2}>{({ countUpRef }) => <span ref={countUpRef} />} </CountUp>
+                                        </div>
+                                        <div className="fs-5">Employees Worldwide</div>
+                                    </div>
+                                    <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
+                                        <div className="display-2 mb-3 fw-semibold">1+</div>
+                                        <div className="fs-5">Years in Business</div>
+                                    </div>
+                                    <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
+                                        <div className="display-2 mb-3 fw-semibold">
+                                        <CountUp start={1} end={8} suffix="+" scrollSpyOnce enableScrollSpy={true} duration={2}>{({ countUpRef }) => <span ref={countUpRef} />} </CountUp>
+                                        </div>
+                                        <div className="fs-5">Products</div>
+                                    </div>
+                                    <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
+                                        <div className="display-2 mb-3 fw-semibold">
+                                        <CountUp start={1} end={100} suffix="+" scrollSpyOnce enableScrollSpy={true} duration={2}>{({ countUpRef }) => <span ref={countUpRef} />} </CountUp>
+                                        </div>
+                                        <div className="fs-5">Global Users</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                {/* // Stats section END // */}
 
                 {/* Services section */}
-                <section className="py-5 my-3 px-xxl-5 services">
+                <section className="py-5 mt-3 px-xxl-5 services">
                     <div className="container-lg px-xxl-5">
 
                         {/* services Head section */}
@@ -342,333 +658,15 @@ const Home = () => {
                 </section>
                 {/* Services section END */}
 
-                {/* Stats section */}
-                <section className="py-5 my-3 px-xxl-5 bg-primary text-white stats">
-                    <div className="container-lg px-xxl-5">
-                        <div className="row align-items-center justify-content-md-around">
-
-                            <div className="col-md-6 pe-xl-5" data-aos="fade-up">
-                                <span className="badge text-bg-primary border border-white rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
-                                    <HiCube />
-                                    <span className="ps-2">Stats</span>
-                                </span>
-                                <h2 className="mt-3 mt-xl-4 fs-1 fw-semibold">Made in India. <br /> Made for the World.</h2>
-                                <p className="mt-3 my-xl-4">
-                                    At Digylax, we combine the rich heritage of Indian innovation with
-                                    global excellence to craft software solutions that transcend borders.
-                                    Our products are designed to meet the needs of businesses
-                                    worldwide, ensuring scalability, security, and success in every market.
-                                </p>
-                                <Button variant="primary" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
-                                    Contact Us
-                                    <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-info bg-opacity-50 rounded-circle" />
-                                </Button>
-                            </div>
-
-                            <div className="col-8 col-sm-7 mx-auto col-md-6 ps-xl-5 mt-5 mt-md-0" data-aos="fade-up">
-                                <div className="row row-cols-2 gy-5 gx-md-3 gy-md-4">
-                                    <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
-                                        <div className="display-2 mb-3 fw-semibold">
-                                            <CountUp start={1} end={70} scrollSpyOnce enableScrollSpy />+
-                                        </div>
-                                        <div className="fs-5">Employees Worldwide</div>
-                                    </div>
-                                    <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
-                                        <div className="display-2 mb-3 fw-semibold">1+</div>
-                                        <div className="fs-5">Years in Business</div>
-                                    </div>
-                                    <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
-                                        <div className="display-2 mb-3 fw-semibold">
-                                            <CountUp start={1} end={8} scrollSpyOnce enableScrollSpy />+
-                                        </div>
-                                        <div className="fs-5">Products</div>
-                                    </div>
-                                    <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
-                                        <div className="display-2 mb-3 fw-semibold">
-                                            <CountUp start={1} end={100} scrollSpyOnce enableScrollSpy />+
-                                        </div>
-                                        <div className="fs-5">Global Users</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-                {/* // Stats section END // */}
-
-                {/* Products Section */}
-                <section className="py-5 my-3 px-xxl-5 products">
-                    <div className="container-lg px-xxl-5">
-
-                        {/* Products Header */}
-                        <div className="row pb-4">
-                            <div className="col-lg-6 col-xl-5" data-aos="fade-up">
-                                <div>
-                                    <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
-                                        <HiCube />
-                                        <span className="ps-2">Products</span>
-                                    </span>
-                                    <h2 className="mt-3 mb-0 fw-semibold">“Innovative Software Solutions for Your Business Needs"</h2>
-                                </div>
-                            </div>
-                            <div className="col-lg-6 col-xl-5 offset-xl-1 align-self-end mt-3" data-aos="fade-up">
-                                We offer a suite of software solutions including MDM, CRM, HRMS, and
-                                others designed to streamline operations and enhance business efficiency.
-                                Our products help businesses manage data, improve customer
-                                relationships, and simplify financial processes. Scalable, secure, and
-                                tailored to your needs, they drive growth and productivity.
-                            </div>
-                        </div>
-                        {/* // Products Header END // */}
+                {/* Clients brand logo Slider */}
+                <section className="py-5 bg-body-tertiary client-logos" data-aos="fade-up">
+                    <div className="client-section center">
+                        <h5 className="text-center fw-semibold pb-4 mb-4 mb-xl-5">Used by the world's most companies</h5>
                         
-                        {/* Product HRMS */}
-                        <div className="row py-5">
-
-                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-left">
-                                <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
-                                    <FiLayout />
-                                    <span className="ps-2">HRMS</span>
-                                </span>
-                                <h2 className="mt-4 fw-medium me-xxl-5">Human Resource <br />Management System</h2>
-                                <p className="my-3 fs-18 text-secondary">
-                                    Automate HR tasks, manage employee data, and streamline payroll with our HRMS solution.
-                                </p>
-
-                                <div className="row row-cols-2 g-3 mb-4">
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3"> HR-Analytics</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Employee Time Tracking</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Employee Database</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Attendance management</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="mb-5">
-                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
-                                        Read More About This
-                                        <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
-                                    </Button>
-                                </div>
-
-                            </div>
-
-                            <div className="col-lg-6" data-aos="fade-right">
-                                <div className="pro-hover bg-info-subtle rounded-4 h-100 position-relative overflow-hidden">
-                                    <img src={hrmsProBg} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
-                                </div>
-                                {/* <img src={hrmsProBg} alt="digy-hrms-bg" className="bg-info-subtle rounded-4 img-fluid" /> */}
-                            </div>
-
-                        </div>
-                        {/* // Product HRMS END // */}
-
-                        {/* Product CRM */}
-                        <div className="row py-5">
-                            <div className="col-lg-6" data-aos="fade-left">
-                                <div className="pro-hover bg-success-subtle rounded-4 h-100 position-relative overflow-hidden">
-                                    <img src={crmProBg} alt="digy-crm-bg" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
-                                </div>
-                                {/* <img src={crmProBg} alt="digy-crm-bg" className="bg-success-subtle rounded-4 img-fluid" /> */}
-                            </div>
-                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-right">
-                                <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
-                                    <FiLayout />
-                                    <span className="ps-2">CRM</span>
-                                </span>
-                                <h2 className="mt-4 fw-midium me-xxl-5">Customer Relationship Management</h2>
-                                <p className="my-3 fs-18 text-secondary">
-                                    Enhance customer interactions and boost sales with our unified CRM platform.
-                                </p>
-
-                                <div className="row row-cols-2 g-3 mb-4">
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Real-time analytics</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Import CSV Data</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Product information management</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Contract Management</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="mb-5">
-                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
-                                        Read More About This
-                                        <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
-                                    </Button>
-                                </div>
-
-                            </div>
-                        </div>
-                        {/* // Product CRM END // */}
-
-                        {/* Product BOOKS */}
-                        <div className="row py-5">
-
-                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-left">
-                                <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
-                                    <FiLayout />
-                                    <span className="ps-2">BOOKS</span>
-                                </span>
-                                <h2 className="mt-4 fw-medium me-xxl-5">Digy BOOKS</h2>
-                                <p className="my-3 fs-18 text-secondary">
-                                    Digybooks streamlines invoicing, billing, sales, and GST compliance, 
-                                    simplifying accounting for growing businesses, Gain real-time insights and 
-                                    manage your finances effortlessly.
-                                </p>
-
-                                <div className="row row-cols-2 g-3 mb-4">
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Invoicing & Billing</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">GST Compliance</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Purchase and Sales Management</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Receivables & Payables</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="mb-5">
-                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
-                                        Read More About This
-                                        <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
-                                    </Button>
-                                </div>
-
-                            </div>
-
-                            <div className="col-lg-6" data-aos="fade-right">
-                                <div className="pro-hover bg-primary-subtle rounded-4 h-100 position-relative overflow-hidden">
-                                    <img src={booksProBg} alt="digy-books-bg" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
-                                </div>
-                                {/* <img src={booksProBg} alt="digy-books-bg" className="bg-primary-subtle rounded-4 img-fluid" /> */}
-                            </div>
-
-                        </div>
-                        {/* // Product BOOKS END // */}
-
-                        {/* Product MDM */}
-                        <div className="row py-5">
-                            <div className="col-lg-6" data-aos="fade-left">
-                                <div className="pro-hover bg-danger-subtle rounded-4 h-100 position-relative overflow-hidden">
-                                    <img src={mdmProBg} alt="digy-mdm-bg2" className="hover-img img-fluid rounded-4 shadow-sm position-absolute" />
-                                </div>
-                                {/* <img src={mdmProBg} alt="digy-mdm-bg" className="bg-danger-subtle rounded-4 img-fluid" /> */}
-                            </div>
-                            <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-right">
-                                <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
-                                    <FiLayout />
-                                    <span className="ps-2">MDM</span>
-                                </span>
-                                <h2 className="mt-4 fw-midium me-xxl-5">Master Data <br /> Management</h2>
-                                <p className="my-3 fs-18 text-secondary">
-                                    Centralize and oversee your business information for superior decision-making 
-                                    and operational efficiency.
-                                </p>
-
-                                <div className="row row-cols-2 g-3 mb-4">
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Invoicing Software</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Time Tracking</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Task Management Tool</span>
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="d-flex align-items-center p-2 border rounded-3">
-                                            <IoCheckmarkCircle className="text-primary" />
-                                            <span className="ps-3">Database Management Tool</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="mb-5">
-                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
-                                        Read More About This
-                                        <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
-                                    </Button>
-                                </div>
-
-                            </div>
-                        </div>
-                        {/* // Product MDM END // */}
-
-                        {/* Load More btn */}
-                        {/* <div className="text-center">
-                            <Button variant="outline-secondary"
-                                className={`icon-link icon-link-hover hover-icon-180deg p-2 ps-3 d-inline-flex align-items-center shadow-sm ${BtnActiveState ? '' : 'active'}`}
-                                onClick={() => setBtnActiveState(!BtnActiveState)}>
-                                <span className="fw-semibold">Load More Products</span>
-                                <IoMdArrowRoundDown size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary-subtle rounded-circle" />
-                            </Button>
-                        </div> */}
-                        {/* // Load More btn // */}
-
+                        <ClientsLogoSlider />
                     </div>
                 </section>
-                {/* // Products Section END // */}
+                {/* // Clients brand logo Slider END // */}
 
                 {/* Testimonials Section */}
                 <section className="py-5 my-3 px-xxl-5 testimonials">

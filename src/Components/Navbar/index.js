@@ -98,7 +98,7 @@ const Header = () => {
                     <FiLayers />
                 </button>
                 {/* Brand Logo */}
-                <a onClick={() => navigate("/")} className="navbar-brand py-0 d-flex mx-auto ms-lg-0" role="button">
+                <a onClick={() => navigate("/")} className="navbar-brand py-0 d-flex mx-auto ms-lg-0 me-lg-4" role="button">
                 {/*  onClick={() => navigate("/")} */}
                     <img src={digyLogo} alt="digylax-logo" width="130" height="24" className="align-self-center" />
                 </a>
@@ -110,7 +110,7 @@ const Header = () => {
                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div className="offcanvas-body">
-                        <ul className="navbar-nav flex-lg-row mx-auto main-links-list">
+                        <ul className="navbar-nav flex-lg-row me-auto main-links-list">
                             <li className={`nav-item dropdown dropdown-mega position-static text-nowrap`}>
                                 <button type="button" 
                                 className={`btn btn-link text-decoration-none text-dark without-arrow d-inline-flex align-items-center dropdown-toggle`}

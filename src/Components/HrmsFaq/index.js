@@ -1,6 +1,15 @@
+import AOS from 'aos';
+import React, { useEffect } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 
 const HrmsFaqAccordion = () => {
+    
+    // Init AOS Animation
+    useEffect(() => {
+        AOS.init({
+        });
+    }, []);
+
     return (
         <Accordion className='custom-icon'>
             {/* defaultActiveKey="0" */}

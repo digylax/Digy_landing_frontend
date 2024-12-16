@@ -11,8 +11,8 @@ import Slider from "react-slick";
 // import clientLogo8 from "../../assets/images/home/client-logo/placeholders/8-farmkart.svg";
 
 import clientLogo1 from "../../assets/images/home/client-logo/1-paytm.png";
-import clientLogo2 from "../../assets/images/home/client-logo/2-autotext.png";
-import clientLogo3 from "../../assets/images/home/client-logo/3-mclaren.svg";
+import clientLogo2 from "../../assets/images/home/client-logo/2-autotex.png";
+import clientLogo3 from "../../assets/images/home/client-logo/3-mclaren.png";
 import clientLogo4 from "../../assets/images/home/client-logo/4-gsk-paramedical.png";
 import clientLogo5 from "../../assets/images/home/client-logo/5-kals-group.png";
 import clientLogo6 from "../../assets/images/home/client-logo/6-fosters-lager.png";
