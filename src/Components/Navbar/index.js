@@ -12,6 +12,10 @@ import crmLogo from '../../assets/images/product-logo/crm-logo.svg';
 import digyBooksLogo from '../../assets/images/product-logo/digy-books-logo.svg';
 import mdmLogo from '../../assets/images/product-logo/mdm-logo.svg';
 import mmFeature from '../../assets/images/header/mm-feature.png';
+import mdmFeaImg from '../../assets/images/header/header-mdm-fea.png';
+import crmFeaImg from '../../assets/images/header/header-crm-fea.png';
+import hrmsFeaImg from '../../assets/images/header/header-hrms-fea.png';
+import digyBooksFeaImg from '../../assets/images/header/header-digy-books-fea.png';
 import mmUser1 from '../../assets/images/header/mm-user-1.png';
 import mmUser2 from '../../assets/images/header/mm-user-2.png';
 import mmUser3 from '../../assets/images/header/mm-user-3.png';
@@ -36,42 +40,44 @@ const Header = () => {
     // List of content to be displayed for each list item
     const content = [
         { id: 1, 
-          navLink: "/product-hrms",
-          title: "HRMS", 
-          logo: hrmsLogo,
-          content: "Known for its simplicity and intuitive design, it’s great for small to medium-sized businesses. Features include applicant tracking, employee records management, and performance evaluations.", 
-          userImg: mmUser1,
-          userName: "George Mabey",
-          userDesignation: "CEO, Pixelpay",
-
-
+            navLink: '/',
+            title: "MDM", 
+            logo: mdmLogo, 
+            feaImg: mdmFeaImg,
+            content: "Built for IT teams and managed service providers, NinjaOne offers a unified console for managing various device platforms. Key features include remote management, patching, and security policies​", 
+            userImg: mmUser4,
+            userName: "Craig Schleifer",
+            userDesignation: "Data Engineer, Kojo",
         },
         { id: 2, 
           navLink: '/',
           title: "CRM", 
-          logo: crmLogo,
+          logo: crmLogo, 
+          feaImg: crmFeaImg,
           content: "Includes AI-powered insights, lead prediction, sales gamification, and extensive customization options. Great for remote teams with tools to foster collaboration and competition​", 
           userImg: mmUser2,
           userName: "Kierra Schleifer",
           userDesignation: "Senior Manager, ZenDesk",
         },
         { id: 3, 
+            navLink: "/product-hrms",
+            title: "HRMS", 
+            logo: hrmsLogo, 
+            feaImg: hrmsFeaImg,
+            content: "Known for its simplicity and intuitive design, it’s great for small to medium-sized businesses. Features include applicant tracking, employee records management, and performance evaluations.", 
+            userImg: mmUser1,
+            userName: "George Mabey",
+            userDesignation: "CEO, Pixelpay",
+        },
+        { id: 4, 
           navLink: '/',
-          title: "Books", 
-          logo: digyBooksLogo,
+          title: "Digy Books", 
+          logo: digyBooksLogo, 
+          feaImg: digyBooksFeaImg,
           content: "Users appreciate DigiBooks for its affordability and comprehensive feature set. The platform's integration with other Digylax products is highlighted as a significant advantage.", 
           userImg: mmUser3,
           userName: "Marcus Bergson",
           userDesignation: "Marketing Specialist, Georsk",
-        },
-        { id: 4, 
-          navLink: '/',
-          title: "MDM", 
-          logo: mdmLogo,
-          content: "Built for IT teams and managed service providers, NinjaOne offers a unified console for managing various device platforms. Key features include remote management, patching, and security policies​", 
-          userImg: mmUser4,
-          userName: "Craig Schleifer",
-          userDesignation: "Data Engineer, Kojo",
         },
     ];
 
@@ -156,7 +162,7 @@ const Header = () => {
                                                         key={content[hoveredIndex].id}
                                                         className={`d-flex justify-content-between content-item h-100 fade-content ${hoveredIndex === hoveredIndex || hoveredIndex === null &&  hoveredIndex === 0 ? "visible" : ""}`}
                                                     >
-                                                        <img src={mmFeature} alt="digy-product-feature" className="img-fluid" style={{maxHeight: "374px"}} />
+                                                        <img src={content[hoveredIndex].feaImg} alt="digy-product-feature" className="img-fluid" style={{maxHeight: "374px"}} />
                                                         <div className="ms-3 px-3 d-flex flex-column justify-content-between h-100">
                                                             <div>
                                                                 <BiSolidQuoteLeft size={24} color="#e2e3e5" />

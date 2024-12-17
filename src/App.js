@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import AOS from 'aos';
 import './App.css';
 import Routers from './routes';
+import GoToButton from './Components/GoToTop';
 
 function App() {
+  const backToTop = useRef(null);
 
   // Init AOS Animation
   useEffect(() => {
@@ -12,8 +14,9 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
+    <div className='App' ref={backToTop}>
       <Routers />
+      <GoToButton displayAfter={200} target={backToTop} />
     </div>
   )
 }

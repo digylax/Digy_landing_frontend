@@ -625,9 +625,13 @@
     /* .top-header > nav {
         width: 75%;
     } */
-     .privacy-head {
+    .privacy-head {
         max-width: 620px;
-     }
+    }
+
+    .key-fea-item {
+        height: calc(100vh - 72px);
+    }
 }
 
 @media (min-width:1400px) {

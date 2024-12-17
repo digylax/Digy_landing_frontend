@@ -4,7 +4,7 @@ import '../../assets/css/home.css';
 import { Button, Modal } from "react-bootstrap";
 import AOS from "aos";
 // import CountUpNumber from "../../Components/CountUp";
-import CountUp, { useCountUp } from "react-countup";
+import CountUp from "react-countup";
 import { IoMdArrowRoundDown, IoMdArrowRoundForward, IoMdBook } from "react-icons/io";
 import { FaAngleRight, FaPlayCircle } from "react-icons/fa";
 import { HiCube, HiOutlineUserGroup } from "react-icons/hi2";
@@ -69,10 +69,18 @@ const Home = () => {
           disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
           // duration: 1000,
           // delay: 0, 
-          offset: 100,
+          // offset: 100,
           // easing: "ease-in-out",
         });
     }, []);
+
+    const handleCountUpOnStart = () => {
+        console.log('CountUp animation started');
+    };
+    
+    const handleCountUpOnEnd = () => {
+        console.log('CountUp animation ended');
+    };
 
     return (
         <>
@@ -104,17 +112,16 @@ const Home = () => {
                                 <div className="card rounded-4" data-aos="fade-right">
                                     <div className="card-body">
                                         <div className="list-group list-group-flush">
-                                            <a role="button" onClick={() => navigate("/product-hrms")} className="list-group-item list-group-item-action" aria-current="true">
+                                            <a role="button" onClick={() => navigate("/")} className="list-group-item list-group-item-action" aria-current="false">
                                                 <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
                                                     <div className="mt-2">
                                                         <h5 className="d-flex align-items-center mb-1">
-                                                            {/* <HiOutlineUserGroup size={24} color="#FF6FCA" /> */}
-                                                            <img src={hrmsLogo} alt="digyHrmsLogo" width={24} height={24} />
-                                                            <span className="ps-2 fw-semibold">HRMS</span>
+                                                            {/* <LiaSwatchbookSolid size={24} color="#AD7DFF" /> */}
+                                                            <img src={mdmLogo} alt="digyMdmLogo" width={24} height={24} />
+                                                            <span className="ps-2 fw-semibold">MDM</span>
                                                         </h5>
                                                         <p className="mb-2 ps-4 ms-2 p-list-cont">
-                                                            Streamlines and automates core HR functions such as recruitment,
-                                                            payroll, attendance, and performance management.
+                                                            Centralize your data for smarter decisions and seamless operations."
                                                         </p>
                                                     </div>
                                                     <FaAngleRight size={18} />
@@ -135,6 +142,22 @@ const Home = () => {
                                                     <FaAngleRight size={18} />
                                                 </div>
                                             </a>
+                                            <a role="button" onClick={() => navigate("/product-hrms")} className="list-group-item list-group-item-action" aria-current="true">
+                                                <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
+                                                    <div className="mt-2">
+                                                        <h5 className="d-flex align-items-center mb-1">
+                                                            {/* <HiOutlineUserGroup size={24} color="#FF6FCA" /> */}
+                                                            <img src={hrmsLogo} alt="digyHrmsLogo" width={24} height={24} />
+                                                            <span className="ps-2 fw-semibold">HRMS</span>
+                                                        </h5>
+                                                        <p className="mb-2 ps-4 ms-2 p-list-cont">
+                                                            Streamlines and automates core HR functions such as recruitment,
+                                                            payroll, attendance, and performance management.
+                                                        </p>
+                                                    </div>
+                                                    <FaAngleRight size={18} />
+                                                </div>
+                                            </a>
                                             <a role="button" onClick={() => navigate("/")} className="list-group-item list-group-item-action" aria-current="false">
                                                 <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
                                                     <div className="mt-2">
@@ -142,7 +165,7 @@ const Home = () => {
                                                             {/* <IoMdBook size={24} color="#86A0FF" /> */}
                                                             {/* <LiaSwatchbookSolid size={24} color="#86A0FF" /> */}
                                                             <img src={digyBooksLogo} alt="digyBooksLogo" width={24} height={24} />
-                                                            <span className="ps-2 fw-semibold">Books</span>
+                                                            <span className="ps-2 fw-semibold">Digy Books</span>
                                                         </h5>
                                                         <p className="mb-2 ps-4 ms-2 p-list-cont">
                                                             "Effortless Accounting for Smarter Business Management."
@@ -151,21 +174,7 @@ const Home = () => {
                                                     <FaAngleRight size={18} />
                                                 </div>
                                             </a>
-                                            <a role="button" onClick={() => navigate("/")} className="list-group-item list-group-item-action" aria-current="false">
-                                                <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
-                                                    <div className="mt-2">
-                                                        <h5 className="d-flex align-items-center mb-1">
-                                                            {/* <LiaSwatchbookSolid size={24} color="#AD7DFF" /> */}
-                                                            <img src={mdmLogo} alt="digyMdmLogo" width={24} height={24} />
-                                                            <span className="ps-2 fw-semibold">MDM</span>
-                                                        </h5>
-                                                        <p className="mb-2 ps-4 ms-2 p-list-cont">
-                                                            Centralize your data for smarter decisions and seamless operations."
-                                                        </p>
-                                                    </div>
-                                                    <FaAngleRight size={18} />
-                                                </div>
-                                            </a>
+                                            
                                             {/* <div className='list-group-item list-group-item-action' aria-current="false">
                                                 <Button variant="outline-primary" size="lg" className='mt-2 w-100 justify-content-center fs-6 icon-link icon-link-hover hover-icon--45deg'>
                                                     Explore More Products
@@ -380,7 +389,7 @@ const Home = () => {
                         </div>
                         {/* // Product HRMS END // */}
 
-                        {/* Product BOOKS */}
+                        {/* Product Digy BOOKS */}
                         <div className="row py-5">
 
                             <div className="col-lg-6" data-aos="fade-right">
@@ -393,7 +402,7 @@ const Home = () => {
                             <div className="col-lg-6 pe-xxl-5 d-flex flex-column align-items-start justify-content-between" data-aos="fade-left">
                                 <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                                     <FiLayout />
-                                    <span className="ps-2">BOOKS</span>
+                                    <span className="ps-2">Digy BOOKS</span>
                                 </span>
                                 <h2 className="mt-4 fw-medium me-xxl-5">Digy BOOKS</h2>
                                 <p className="my-3 fs-18 text-secondary">
@@ -437,7 +446,7 @@ const Home = () => {
                             </div>
 
                         </div>
-                        {/* // Product BOOKS END // */}
+                        {/* // Product Digy BOOKS END // */}
 
                         {/* Load More btn */}
                         {/* <div className="text-center">
@@ -455,7 +464,7 @@ const Home = () => {
                 {/* // Products Section END // */}
 
                 {/* Stats section */}
-                <section className="py-5 my-3 px-xxl-5 bg-primary text-white stats">
+                <section className="py-5 mt-3 px-xxl-5 bg-primary text-white stats">
                     <div className="container-lg px-xxl-5">
                         <div className="row align-items-center justify-content-md-around">
 
@@ -481,7 +490,11 @@ const Home = () => {
                                 <div className="row row-cols-2 gy-5 gx-md-3 gy-md-4">
                                     <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
                                         <div className="display-2 mb-3 fw-semibold">
-                                            <CountUp start={1} end={70} suffix="+" scrollSpyOnce enableScrollSpy={true} duration={2}>{({ countUpRef }) => <span ref={countUpRef} />} </CountUp>
+                                            <CountUp start={1} end={70} suffix="+" scrollSpyOnce={true} enableScrollSpy={true} duration={2} 
+                                            onStart={handleCountUpOnStart}
+                                            onEnd={handleCountUpOnEnd}>
+                                                {({ countUpRef }) => <span ref={countUpRef} />} 
+                                            </CountUp>
                                         </div>
                                         <div className="fs-5">Employees Worldwide</div>
                                     </div>
@@ -491,13 +504,21 @@ const Home = () => {
                                     </div>
                                     <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
                                         <div className="display-2 mb-3 fw-semibold">
-                                        <CountUp start={1} end={8} suffix="+" scrollSpyOnce enableScrollSpy={true} duration={2}>{({ countUpRef }) => <span ref={countUpRef} />} </CountUp>
+                                            <CountUp start={1} end={8} suffix="+" scrollSpyOnce enableScrollSpy={true} duration={2} 
+                                            onStart={handleCountUpOnStart}
+                                            onEnd={handleCountUpOnEnd}>
+                                                {({ countUpRef }) => <span ref={countUpRef} />} 
+                                            </CountUp>
                                         </div>
                                         <div className="fs-5">Products</div>
                                     </div>
                                     <div className="col border-start border-white d-flex flex-column justify-content-between ps-4">
                                         <div className="display-2 mb-3 fw-semibold">
-                                        <CountUp start={1} end={100} suffix="+" scrollSpyOnce enableScrollSpy={true} duration={2}>{({ countUpRef }) => <span ref={countUpRef} />} </CountUp>
+                                            <CountUp start={1} end={100} suffix="+" scrollSpyOnce enableScrollSpy={true} duration={2} 
+                                            onStart={handleCountUpOnStart}
+                                            onEnd={handleCountUpOnEnd}>
+                                                {({ countUpRef }) => <span ref={countUpRef} />} 
+                                            </CountUp>
                                         </div>
                                         <div className="fs-5">Global Users</div>
                                     </div>
@@ -510,11 +531,11 @@ const Home = () => {
                 {/* // Stats section END // */}
 
                 {/* Services section */}
-                <section className="py-5 mt-3 px-xxl-5 services">
-                    <div className="container-lg px-xxl-5">
+                {/* <section className="py-5 mt-3 px-xxl-5 services">
+                    <div className="container-lg px-xxl-5"> */}
 
                         {/* services Head section */}
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="col-lg-6 col-xl-5" data-aos="fade-up">
                                 <div>
                                     <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
@@ -529,11 +550,11 @@ const Home = () => {
                                 custom solutions, e-commerce platforms, responsive designs, and
                                 maintenance, as well as digital marketing, SEO, and IT consulting services.
                             </div>
-                        </div>
+                        </div> */}
                         {/* // services Head section // */}
 
                         {/* Service Card */}
-                        <div className="row mt-5">
+                        {/* <div className="row mt-5">
                             <div className="col-md-6 col-xl-7" data-aos="fade-right">
                                 <div className="card rounded-4 h-100 overflow-hidden">
 
@@ -651,11 +672,11 @@ const Home = () => {
                                 </div>
                             </div>
 
-                        </div>
+                        </div> */}
                         {/* // Service Card END // */}
 
-                    </div>
-                </section>
+                    {/* </div>
+                </section> */}
                 {/* Services section END */}
 
                 {/* Clients brand logo Slider */}

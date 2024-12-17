@@ -434,3 +434,15 @@ body > #root > .App > main.main-panel {
   -webkit-transform: rotate(45deg);
 }
 /* // Arrow's END */
+
+.go-top-btn {
+  right: 16px;
+  bottom: 16px;
+  left: auto;
+  transform: scale(1);
+  transition: transform 0.35s ease-in;
+}
+
+.go-top-btn:hover {
+  transform: scale(1.1);
+}

@@ -20,6 +20,14 @@ import hrmsFeaBg7 from "../../assets/images/products/hrms/7-ticket-status.jpg";
 import hrmsFeaBg8 from "../../assets/images/products/hrms/8-travel-expenses.jpg";
 import hrmsFeaBg9 from "../../assets/images/products/hrms/9-productivity-status.jpg";
 import hrmsFeaBg10 from "../../assets/images/products/hrms/10-project-task-management.jpg";
+import hrmsBenefitBg1 from "../../assets/images/products/hrms/benefits/1-automated-payroll-processing.jpg";
+import hrmsBenefitBg2 from "../../assets/images/products/hrms/benefits/2-attendance-and-leave-automation.jpg";
+import hrmsBenefitBg3 from "../../assets/images/products/hrms/benefits/3-self-service-portals.png";
+import hrmsBenefitBg4 from "../../assets/images/products/hrms/benefits/4-performance-tracking.jpg";
+import hrmsBenefitBg5 from "../../assets/images/products/hrms/benefits/5-unified-dashboard.png";
+import hrmsBenefitBg6 from "../../assets/images/products/hrms/benefits/6-integrated-modules.jpg";
+import hrmsBenefitBg7 from "../../assets/images/products/hrms/benefits/7-customizable-workflows.jpg";
+import hrmsBenefitBg8 from "../../assets/images/products/hrms/benefits/8-flexible-user-plans.jpg";
 import videoSecBg from '../../assets/images/home/video-section-bg.jpg'
 import ClientsLogoSlider from "../../Components/ClientsLogoSlider";
 import HrmsTestimonial from "../../Components/HrmsTestimonial";
@@ -50,16 +58,22 @@ const ProductHrms = () => {
                 }
             });
         }, { threshold: 0.5 }); // Trigger when 50% of section is visible
-
-        // Observe each section
+    
+        // Observe each section if the reference exists
         Object.keys(sectionRefs).forEach((key) => {
-            observer.observe(sectionRefs[key].current);
+            const currentRef = sectionRefs[key].current;
+            if (currentRef) {
+                observer.observe(currentRef);
+            }
         });
-
+    
         return () => {
             // Cleanup observer on unmount
             Object.keys(sectionRefs).forEach((key) => {
-                observer.unobserve(sectionRefs[key].current);
+                const currentRef = sectionRefs[key].current;
+                if (currentRef) {
+                    observer.unobserve(currentRef); // Unobserve if valid
+                }
             });
         };
     }, []);
@@ -69,7 +83,7 @@ const ProductHrms = () => {
         const element = document.getElementById(sectionId);
         if (element) {
             window.scrollTo({
-                top: element.offsetTop - -750, // Adjust for offset
+                top: element.offsetTop + (window.innerHeight + 150), // Adjust for offset
                 behavior: "smooth",
             });
         }
@@ -236,93 +250,93 @@ const ProductHrms = () => {
                           data-bs-root-margin="0px 0px -40%" 
                           data-bs-smooth-scroll="true" tabIndex="0" */}
                             
-                            <div ref={sectionRefs.item1} id="item1">
-                                <h4 className="mt-4 fw-medium fs-2">Employee Information Management</h4>
+                            <div ref={sectionRefs.item1} id="item1" className="pt-xxl-5 key-fea-item">
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Employee Information Management</h4>
                                 <p className="fs-18 text-secondary">
                                     Securely organize and access employee information within a single, centralized platform.
                                 </p>
-                                <div className="pro-hover bg-primary-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <div className="pro-hover bg-primary-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg1} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
-                            <div ref={sectionRefs.item2} id="item2">
-                                <h4 className="mt-4 fw-medium fs-2">Payroll and Tax Compliance</h4>
+                            <div ref={sectionRefs.item2} id="item2" className="pt-xxl-5 key-fea-item">
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Payroll and Tax Compliance</h4>
                                 <p className="fs-18 text-secondary">
                                     Streamline payroll processing and ensure effortless tax compliance.
                                 </p>
-                                <div className="pro-hover bg-success-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <div className="pro-hover bg-success-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg2} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
-                            <div ref={sectionRefs.item3} id="item3">
-                                <h4 className="mt-4 fw-medium fs-2">Attendance Management</h4>
+                            <div ref={sectionRefs.item3} id="item3" className="pt-xxl-5 key-fea-item">
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Attendance Management</h4>
                                 <p className="fs-18 text-secondary">
                                     Securely organize and access employee information within a single, centralized platform.
                                 </p>
-                                <div className="pro-hover bg-danger-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <div className="pro-hover bg-danger-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg3} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
-                            <div ref={sectionRefs.item4} id="item4">
-                                <h4 className="mt-4 fw-medium fs-2">Recruitment and Onboarding</h4>
+                            <div ref={sectionRefs.item4} id="item4" className="pt-xxl-5 key-fea-item">
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Recruitment and Onboarding</h4>
                                 <p className="fs-18 text-secondary">
                                     Simplify hiring and onboarding with automated recruitment workflows.
                                 </p>
-                                <div className="pro-hover bg-warning-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <div className="pro-hover bg-warning-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg4} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
-                            <div ref={sectionRefs.item5} id="item5">
-                                <h4 className="mt-4 fw-medium fs-2">Leave Management</h4>
+                            <div ref={sectionRefs.item5} id="item5" className="pt-xxl-5 key-fea-item">
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Leave Management</h4>
                                 <p className="fs-18 text-secondary">
                                     Boost productivity with goal tracking and real-time performance feedback.
                                 </p>
-                                <div className="pro-hover bg-info-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <div className="pro-hover bg-info-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg5} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
-                            <div ref={sectionRefs.item6} id="item6">
-                                <h4 className="mt-4 fw-medium fs-2">Compensation Management</h4>
+                            <div ref={sectionRefs.item6} id="item6" className="pt-xxl-5 key-fea-item">
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Compensation Management</h4>
                                 <p className="fs-18 text-secondary">
                                     Empower employee growth with personalized training and skill development.
                                 </p>
-                                <div className="pro-hover bg-primary-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <div className="pro-hover bg-primary-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg6} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
-                            <div ref={sectionRefs.item7} id="item7">
-                                <h4 className="mt-4 fw-medium fs-2">Ticket Status</h4>
+                            <div ref={sectionRefs.item7} id="item7" className="pt-xxl-5 key-fea-item">
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Ticket Status</h4>
                                 <p className="fs-18 text-secondary">
                                     Make data-driven decisions with real-time HR analytics and custom reports.
                                 </p>
-                                <div className="pro-hover bg-success-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <div className="pro-hover bg-success-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg7} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
-                            <div ref={sectionRefs.item8} id="item8">
-                                <h4 className="mt-4 fw-medium fs-2">Travel and Expence</h4>
+                            <div ref={sectionRefs.item8} id="item8" className="pt-xxl-5 key-fea-item">
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Travel and Expence</h4>
                                 <p className="fs-18 text-secondary">
                                     Ensure adherence to labor laws and regulations with automated compliance tools.
                                 </p>
-                                <div className="pro-hover bg-danger-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <div className="pro-hover bg-danger-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg8} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
-                            <div ref={sectionRefs.item9} id="item9">
-                                <h4 className="mt-4 fw-medium fs-2">Productivity Status</h4>
+                            <div ref={sectionRefs.item9} id="item9" className="pt-xxl-5 key-fea-item">
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Productivity Status</h4>
                                 <p className="fs-18 text-secondary">
                                     Access and manage HR tasks on the go with our mobile-friendly platform.
                                 </p>
-                                <div className="pro-hover bg-warning-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <div className="pro-hover bg-warning-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg9} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
-                            <div ref={sectionRefs.item10} id="item10">
-                                <h4 className="mt-4 fw-medium fs-2">Project and Task Management</h4>
+                            <div ref={sectionRefs.item10} id="item10" className="pt-xxl-5 key-fea-item">
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Project and Task Management</h4>
                                 <p className="fs-18 text-secondary">
                                     Advaced integration capabilites enable seamless connectivty with existing systems to streamline oerpations and boost efficiency.
                                 </p>
-                                <div className="pro-hover bg-info-subtle rounded-4 h-100 position-relative overflow-hidden">
+                                <div className="pro-hover bg-info-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg10} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
@@ -362,32 +376,32 @@ const ProductHrms = () => {
                         data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" 
                         aria-controls="pills-1" aria-selected="true" 
                         onClick={() => handleTabChange('pills-1')}>
-                            Automation
+                            Save Time with Automation
                         </button>
                         <button className="nav-link rounded-5 me-3" id="pills-2-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" 
                         aria-controls="pills-2" aria-selected="false" 
                         onClick={() => handleTabChange('pills-2')}>
-                            Ensure compliance 
+                            Scale with Your Business
                         </button>
                         <button className="nav-link rounded-5 me-3" id="pills-3-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" 
                         aria-controls="pills-3" aria-selected="false" 
                         onClick={() => handleTabChange('pills-3')}>
-                            Productivity
+                            Enhance Employee Productivity
                         </button>
                         <button className="nav-link rounded-5 me-3" id="pills-4-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" 
                         aria-controls="pills-4" aria-selected="false" 
                         onClick={() => handleTabChange('pills-4')}>
-                            Employee Engagement
+                            Centralize HR Processes
                         </button>
-                        <button className="nav-link rounded-5 me-3" id="pills-5-tab" 
+                        {/* <button className="nav-link rounded-5 me-3" id="pills-5-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-5" type="button" role="tab" 
                         aria-controls="pills-5" aria-selected="false" 
                         onClick={() => handleTabChange('pills-5')}>
                             Centralize HR Processes
-                        </button>
+                        </button> */}
                     </div>
 
                     <div className='tab-content mt-4' id="pills-tabContent">
@@ -396,7 +410,7 @@ const ProductHrms = () => {
                             <div className="row">
                                 <div className={`col-md-6 animate__animated ${activeTab === 'pills-1' ? 'animate__fadeInRight' : ''}`}>
                                     <div className="pro-hover bg-success-subtle border rounded-4 h-100 position-relative overflow-hidden">
-                                        <img src={hrmsFeaBg2} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                                        <img src={hrmsBenefitBg1} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
                                             <div className="card-title h4">Automated Payroll Processing</div>
                                             <p className="card-text">
@@ -409,7 +423,7 @@ const ProductHrms = () => {
                                 <div className={`col-md-6 animate__animated ${activeTab === 'pills-1' ? 'animate__fadeInLeft' : ''}`}>
                                     <div className="pro-hover bg-danger-subtle border rounded-4 h-100 position-relative overflow-hidden" 
                                      data-aos="fade-left">
-                                        <img src={hrmsFeaBg3} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                                        <img src={hrmsBenefitBg2} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
                                             <div className="card-title h4">Attendance and Leave Automation</div>
                                             <p className="card-text">
@@ -426,12 +440,13 @@ const ProductHrms = () => {
                             <div className="row">
                                 <div className={`col-md-6 animate__animated ${activeTab === 'pills-2' ? 'animate__fadeInRight' : ''}`}>
                                     <div className="pro-hover bg-warning-subtle border rounded-4 h-100 position-relative overflow-hidden">
-                                        <img src={hrmsFeaBg2} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                                        <img src={hrmsBenefitBg3} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Ensure Compliance</div>
+                                            <div className="card-title h4">Self-Service Portals</div>
                                             <p className="card-text">
-                                                Effortlessly manage compliance with real-time updates on labor laws, 
-                                                tax regulations, and industry standards.
+                                                Empower employees to manage their attendance, leaves, and personal 
+                                                information independently, reducing HR workload and fostering 
+                                                ownership.
                                             </p>
                                         </div>
                                     </div>
@@ -439,12 +454,12 @@ const ProductHrms = () => {
                                 <div className={`col-md-6 animate__animated ${activeTab === 'pills-2' ? 'animate__fadeInLeft' : ''}`}>
                                     <div className="pro-hover bg-info-subtle border rounded-4 h-100 position-relative overflow-hidden" 
                                      data-aos="fade-left">
-                                        <img src={hrmsFeaBg3} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                                        <img src={hrmsBenefitBg4} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Ensure Compliance</div>
+                                            <div className="card-title h4">Performance Tracking</div>
                                             <p className="card-text">
-                                                Effortlessly manage compliance with real-time updates on labor laws, 
-                                                tax regulations, and industry standards.
+                                                Set clear goals, track progress, and provide regular feedback to keep 
+                                                employees motivated and aligned with organizational objectives.
                                             </p>
                                         </div>
                                     </div>
@@ -456,11 +471,11 @@ const ProductHrms = () => {
                             <div className="row">
                                 <div className={`col-md-6 animate__animated ${activeTab === 'pills-3' ? 'animate__fadeInRight' : ''}`}>
                                     <div className="pro-hover bg-primary-subtle border rounded-4 h-100 position-relative overflow-hidden">
-                                        <img src={hrmsFeaBg5} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                                        <img src={hrmsBenefitBg5} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Productivity</div>
+                                            <div className="card-title h4">Unified Dashboard</div>
                                             <p className="card-text">
-                                                Boost productivity with continuous feedback and effective performance tracking.
+                                                Manage all HR operations from a single, intuitive platform.
                                             </p>
                                         </div>
                                     </div>
@@ -468,11 +483,11 @@ const ProductHrms = () => {
                                 <div className={`col-md-6 animate__animated ${activeTab === 'pills-3' ? 'animate__fadeInLeft' : ''}`}>
                                     <div className="pro-hover bg-success-subtle border rounded-4 h-100 position-relative overflow-hidden" 
                                      data-aos="fade-left">
-                                        <img src={hrmsFeaBg6} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                                        <img src={hrmsBenefitBg6} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Productivity</div>
+                                            <div className="card-title h4">Integrated Modules</div>
                                             <p className="card-text">
-                                                Boost productivity with continuous feedback and effective performance tracking.
+                                                Link payroll, attendance, and performance management seamlessly.
                                             </p>
                                         </div>
                                     </div>
@@ -484,12 +499,11 @@ const ProductHrms = () => {
                             <div className="row">
                                 <div className={`col-md-6 animate__animated ${activeTab === 'pills-4' ? 'animate__fadeInRight' : ''}`}>
                                     <div className="pro-hover bg-danger-subtle border rounded-4 h-100 position-relative overflow-hidden">
-                                        <img src={hrmsFeaBg7} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                                        <img src={hrmsBenefitBg7} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Employee Engagement</div>
+                                            <div className="card-title h4">Customizable Workflows</div>
                                             <p className="card-text">
-                                                Foster a positive work environment with features that promote 
-                                                employee feedback and development.
+                                                Adapt processes and features to suit growing organizational needs.
                                             </p>
                                         </div>
                                     </div>
@@ -497,24 +511,23 @@ const ProductHrms = () => {
                                 <div className={`col-md-6 animate__animated ${activeTab === 'pills-4' ? 'animate__fadeInLeft' : ''}`}>
                                     <div className="pro-hover bg-warning-subtle border rounded-4 h-100 position-relative overflow-hidden" 
                                      data-aos="fade-left">
-                                        <img src={hrmsFeaBg8} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                                        <img src={hrmsBenefitBg8} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Employee Engagement</div>
+                                            <div className="card-title h4">Flexible User Plans</div>
                                             <p className="card-text">
-                                                Foster a positive work environment with features that promote 
-                                                employee feedback and development.
+                                                Scale up or down with pricing plans designed for businesses of all sizes.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="tab-pane fade" id="pills-5" role="tabpanel" 
+                        {/* <div className="tab-pane fade" id="pills-5" role="tabpanel" 
                          aria-labelledby="pills-5-tab" tabIndex="0" data-aos="fade-down">
                             <div className="row">
                                 <div className={`col-md-6 animate__animated ${activeTab === 'pills-5' ? 'animate__fadeInRight' : ''}`}>
                                     <div className="pro-hover bg-info-subtle border rounded-4 h-100 position-relative overflow-hidden">
-                                        <img src={hrmsFeaBg9} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                                        <img src={hrmsFeaBg1} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
                                             <div className="card-title h4">Centralize HR Processes</div>
                                             <p className="card-text">
@@ -527,7 +540,7 @@ const ProductHrms = () => {
                                 <div className={`col-md-6 animate__animated ${activeTab === 'pills-5' ? 'animate__fadeInLeft' : ''}`}>
                                     <div className="pro-hover bg-primary-subtle border rounded-4 h-100 position-relative overflow-hidden" 
                                      data-aos="fade-left">
-                                        <img src={hrmsFeaBg10} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
+                                        <img src={hrmsFeaBg1} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
                                             <div className="card-title h4">Centralize HR Processes</div>
                                             <p className="card-text">
@@ -538,7 +551,7 @@ const ProductHrms = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
@@ -548,9 +561,9 @@ const ProductHrms = () => {
         {/* // Benefits Section END // */}
 
         {/* Demo Video Section */}
-        <section className="py-5 mt-3 px-xxl-5 video-section">
+        {/* <section className="py-5 mt-3 px-xxl-5 video-section">
             <div className="container-lg px-xxl-5">
-                {/* Head section */}
+                
                 <div className="mb-4 text-center mx-auto privacy-head" data-aos="fade-down">
                     <span className="badge text-primary border rounded-pill d-inline-flex px-3 py-2 align-items-center fs-6 fw-semibold">
                         <HiCube />
@@ -562,7 +575,6 @@ const ProductHrms = () => {
                         simplifies HR processes and boosts efficiency in real-time.
                     </p>
                 </div>
-                {/* // Head section // */}
 
                 <div className="ratio ratio-16x9" data-aos="fade-down">
                     <div className="text-center text-white video-card" role="button" onClick={handleShow}>
@@ -571,7 +583,7 @@ const ProductHrms = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> */}
         {/* // Demo Video Section END // */}
 
         {/* Testimonials Section */}
@@ -622,15 +634,15 @@ const ProductHrms = () => {
                 </div>
                 {/* // Head section // */}
 
-                <div class="pricing-switch text-center mb-4">
-                    <div class="fieldset rounded-pill bg-light border border-secondary-subtle">
+                <div className="pricing-switch text-center mb-4">
+                    <div className="fieldset rounded-pill bg-light border border-secondary-subtle">
                         <input type="radio" name="price-plan" value="monthly" id="monthly" 
                         checked={!isYearly} onChange={togglePricing} />
                         <label htmlFor="monthly">Monthly</label>
                         <input type="radio" name="price-plan" value="yearly" id="yearly" 
                         checked={isYearly} onChange={togglePricing} />
                         <label htmlFor="yearly">Yearly</label>
-                        <span class="switch rounded-pill bg-dark position-absolute"></span>
+                        <span className="switch rounded-pill bg-dark position-absolute"></span>
                     </div>
                 </div>
 
@@ -763,7 +775,7 @@ const ProductHrms = () => {
 
     </div>
 
-    <Modal show={modalShow} fullscreen={modalFullscreen} onHide={() => setModalShow(false)}>
+    {/* <Modal show={modalShow} fullscreen={modalFullscreen} onHide={() => setModalShow(false)}>
         <Modal.Body className="d-flex align-items-center">
             <button type="button" className="btn-close p-2 bg-white position-absolute end-0 top-0" aria-label="Close" onClick={handleClose}></button>
             <div className="ratio ratio-21x9">
@@ -772,7 +784,7 @@ const ProductHrms = () => {
                 </div>
             </div>
         </Modal.Body>
-    </Modal>
+    </Modal> */}
     </> );
 }
  

@@ -58,8 +58,8 @@ const Footer = () => {
                                     {/* <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Enterprices</a></li>
                                     <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Customers</a></li>
                                     <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">About Us</a></li> */}
-                                    <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Careers</a></li>
-                                    <li className="nav-item mb-2"><a role="button" href="/contact-us" className="nav-link p-0 text-body-secondary">Contact Us</a></li>
+                                    <li className="nav-item mb-2"><a role="button" onClick={()=> navigate("/")} className="nav-link p-0 text-body-secondary">Careers</a></li>
+                                    <li className="nav-item mb-2"><a role="button" onClick={()=> navigate("/contact-us")} className="nav-link p-0 text-body-secondary">Contact Us</a></li>
                                     
                                     
                                 </ul>
@@ -119,9 +119,9 @@ const Footer = () => {
                         <div className="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
                             <p>© 2024 Digylax, Inc. All rights reserved.</p>
                             <ul className="list-unstyled d-flex">
-                                <li className="ms-3"><a className="link-body-emphasis text-decoration-underline" href="#">Privacy Policy</a></li>
-                                <li className="ms-3"><a className="link-body-emphasis text-decoration-underline" href="#">Terms of Service</a></li>
-                                <li className="ms-3"><a className="link-body-emphasis text-decoration-underline" href="#">Cookies Settings</a></li>
+                                <li className="ms-3"><a className="link-body-emphasis text-decoration-underline" role="button" onClick={()=> navigate("/")}>Privacy Policy</a></li>
+                                <li className="ms-3"><a className="link-body-emphasis text-decoration-underline" role="button" onClick={()=> navigate("/")}>Terms of Service</a></li>
+                                <li className="ms-3"><a className="link-body-emphasis text-decoration-underline" role="button" onClick={()=> navigate("/")}>Cookies Settings</a></li>
                             </ul>
                         </div>
                     </footer>
