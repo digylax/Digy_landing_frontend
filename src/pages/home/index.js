@@ -112,7 +112,7 @@ const Home = () => {
                                 <div className="card rounded-4" data-aos="fade-right">
                                     <div className="card-body">
                                         <div className="list-group list-group-flush">
-                                            <a role="button" onClick={() => navigate("/")} className="list-group-item list-group-item-action" aria-current="false">
+                                            <a role="button" onClick={() => navigate("/product-mdm")} className="list-group-item list-group-item-action" aria-current="false">
                                                 <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
                                                     <div className="mt-2">
                                                         <h5 className="d-flex align-items-center mb-1">
@@ -127,7 +127,7 @@ const Home = () => {
                                                     <FaAngleRight size={18} />
                                                 </div>
                                             </a>
-                                            <a role="button" onClick={() => navigate("/")} className="list-group-item list-group-item-action" aria-current="false">
+                                            <a role="button" onClick={() => navigate("/product-crm")} className="list-group-item list-group-item-action" aria-current="false">
                                                 <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
                                                     <div className="mt-2">
                                                         <h5 className="d-flex align-items-center mb-1">
@@ -158,7 +158,7 @@ const Home = () => {
                                                     <FaAngleRight size={18} />
                                                 </div>
                                             </a>
-                                            <a role="button" onClick={() => navigate("/")} className="list-group-item list-group-item-action" aria-current="false">
+                                            <a role="button" onClick={() => navigate("/product-digybooks")} className="list-group-item list-group-item-action" aria-current="false">
                                                 <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
                                                     <div className="mt-2">
                                                         <h5 className="d-flex align-items-center mb-1">
@@ -258,7 +258,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="mb-5">
-                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center' 
+                                     onClick={() => navigate("/product-mdm")}>
                                         Read More About This
                                         <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
                                     </Button>
@@ -322,7 +323,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="mb-5">
-                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center' 
+                                     onClick={() => navigate("/product-crm")}>
                                         Read More About This
                                         <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
                                     </Button>
@@ -372,7 +374,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="mb-5">
-                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center' 
+                                     onClick={() => navigate("/product-hrms")}>
                                         Read More About This
                                         <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
                                     </Button>
@@ -438,7 +441,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="mb-5">
-                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center'>
+                                    <Button variant="dark" className='border-white icon-link icon-link-hover hover-icon--45deg p-1 ps-3 d-inline-flex align-items-center' 
+                                     onClick={() => navigate("/product-digybooks")}>
                                         Read More About This
                                         <IoMdArrowRoundForward size={16} className="bi ms-1 p-1 w-auto h-auto bg-secondary bg-opacity-75 rounded-circle" />
                                     </Button>
