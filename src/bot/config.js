@@ -14,11 +14,11 @@ const config = {
   },
   initialMessages: [
     createChatBotMessage(`Hi, hello, Welcome to our Digylax Pvt Ltd`),
+    // createChatBotMessage(
+    //   "Digylax Pvt Ltd.",
+    // ), 
     createChatBotMessage(
-      "Digylax Pvt Ltd.",
-    ), 
-    createChatBotMessage(
-      "How can I help you with you... Type 'Hello'",
+      "How can I help with you... Type 'Hello'",
     )
   ],
   customComponents: { botAvatar: (props) => <DigyAiBotAvatar {...props} /> },
