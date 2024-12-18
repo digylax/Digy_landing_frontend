@@ -25,7 +25,7 @@ const testimonials = [
         role: "",
         company: "Acme Corp.",
         content:
-            "Digylax’s HRMS has simplified our HR processes, making payroll and performance management seamless and hassle-free.",
+            "Digybooks has streamlined our accounting processes, ensuring accurate records and smooth tax management. It has enabled our team to make quicker, more confident financial decisions.",
         rating: 5,
     },
     {
@@ -58,7 +58,7 @@ const testimonials = [
         role: "",
         company: "Apex Design Lab",
         content:
-            "Digylax’s HRMS has simplified our HR processes, making payroll and performance management seamless and hassle-free.",
+            "Digybooks has simplified our accounting processes, making payroll and user management seamless and hassle-free.",
         rating: 5,
     },
     {
@@ -69,7 +69,7 @@ const testimonials = [
         role: "",
         company: "Sparkle Creative Agency",
         content:
-            "Digylax’s HRMS has simplified our HR processes, making payroll and performance management seamless and hassle-free.",
+            "Digybooks has streamlined our accounting processes, ensuring accurate records and smooth tax management. It has enabled our team to make quicker, more confident financial decisions.",
         rating: 5,        
     },
 ];

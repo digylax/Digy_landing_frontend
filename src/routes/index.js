@@ -8,6 +8,7 @@ import ProductHrms from "../pages/ProductHrms";
 import ProductDigyBooks from "../pages/ProductDigyBooks";
 import ContactUs from "../pages/ContactUs";
 import ScrollToTop from "../Components/ScrollToTop";
+import Careers from "../pages/Careers";
 
 const Router = () => {
     return (
@@ -21,6 +22,9 @@ const Router = () => {
                     <Route path="/product-hrms" element={<ProductHrms />}></Route>
                     <Route path="/product-digybooks" element={<ProductDigyBooks />}></Route>
                     <Route path="/contact-us" element={<ContactUs />}></Route>
+                    <Route path="/careers" element={<Careers />}>
+                        
+                    </Route>
                 </Route>    
             </Routes>
         </BrowserRouter>
