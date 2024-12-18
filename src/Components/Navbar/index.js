@@ -40,7 +40,7 @@ const Header = () => {
     // List of content to be displayed for each list item
     const content = [
         { id: 1, 
-            navLink: '/',
+            navLink: '/product-mdm',
             title: "MDM", 
             logo: mdmLogo, 
             feaImg: mdmFeaImg,
@@ -50,7 +50,7 @@ const Header = () => {
             userDesignation: "Data Engineer, Kojo",
         },
         { id: 2, 
-          navLink: '/',
+          navLink: '/product-crm',
           title: "CRM", 
           logo: crmLogo, 
           feaImg: crmFeaImg,
@@ -70,7 +70,7 @@ const Header = () => {
             userDesignation: "CEO, Pixelpay",
         },
         { id: 4, 
-          navLink: '/',
+          navLink: '/product-digybooks',
           title: "Digy Books", 
           logo: digyBooksLogo, 
           feaImg: digyBooksFeaImg,
