@@ -147,10 +147,10 @@ const ProductMdm = () => {
             <div className="container-fluid h-100 px-lg-0">
                 <div className="row align-items-center gx-lg-0 h-100">
                     <div className="col-lg-6 offset-lg-1" data-aos="fade-left">
-                        <h1 className="fw-semibold display-5 banner-title">“Transform the Way You Manage Your Workforce!”</h1>
+                        <h1 className="fw-semibold display-5 banner-title">“Centralize your data for smarter decisions and seamless operations.”</h1>
                         <p className="my-3 banner-sub-title">
-                            A holistic solution for Onboarding, time management, payroll, 
-                            performance management, and task management, and more.
+                            "Our MDM solution delivers accurate, consistent business data to drive informed decisions 
+                            and fuel business growth with confidence."
                         </p>
                         <p className="my-3 pt-3 d-flex flex-column flex-sm-row align-items-center align-items-sm-start">
                             <Button variant="primary-digy" size="lg" className='fs-6 icon-link icon-link-hover'>
@@ -193,48 +193,48 @@ const ProductMdm = () => {
                                 <FiLayout />
                                 <span className="ps-2">Key Features</span>
                             </span>
-                            <h2 className="mt-4 fw-semibold">Streamline Your HR Operations with <br />These Powerful Tools</h2>
+                            <h2 className="mt-4 fw-semibold">Unlock the True Value of Your <br />Data with Advanced MDM Features</h2>
 
                             <nav id="navbar-example3" className="nav nav-pills flex-column mt-3 overflow-y-auto" >
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item1' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item1')}>
-                                    Employee Information Management
+                                    Customer Experience
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item2' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item2')}>
-                                    Payroll and Tax Compliance
+                                    Advanced Analytics and Personalization
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item3' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item3')}>
-                                    Attendance Management
+                                    Governance and Compliance
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item4' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item4')}>
-                                    Recruitment and Onboarding
+                                    Merger and Acquisition
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item5' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item5')}>
-                                    Leave Management
+                                    Operational Efficiency
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item6' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item6')}>
-                                    Compensation Management
+                                    Data Reconciliation
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item7' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item7')}>
-                                    Ticket Status
+                                    Data Integration
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item8' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item8')}>
-                                    Travel and Expence
+                                    Data Quality Management
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item9' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item9')}>
-                                    Productivity Status
+                                    Artical Master
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item10' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item10')}>
-                                    Project and Task Management
+                                    Master Management
                                 </button>
                             </nav>
                         </div>
@@ -251,72 +251,72 @@ const ProductMdm = () => {
                           data-bs-smooth-scroll="true" tabIndex="0" */}
                             
                             <div ref={sectionRefs.item1} id="item1" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Employee Information Management</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Customer Experience</h4>
                                 <p className="fs-18 text-secondary">
-                                    Securely organize and access employee information within a single, centralized platform.
+                                    Provide tailored and smooth customer interactions with unified, accurate data.
                                 </p>
                                 <div className="pro-hover bg-primary-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg1} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
                             <div ref={sectionRefs.item2} id="item2" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Payroll and Tax Compliance</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Advanced Analytics and Personalization</h4>
                                 <p className="fs-18 text-secondary">
-                                    Streamline payroll processing and ensure effortless tax compliance.
+                                    Unlock actionable insights and tailor solutions with advanced analytics.
                                 </p>
                                 <div className="pro-hover bg-success-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg2} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
                             <div ref={sectionRefs.item3} id="item3" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Attendance Management</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Governance and Compliance</h4>
                                 <p className="fs-18 text-secondary">
-                                    Securely organize and access employee information within a single, centralized platform.
+                                    Enforce data management policies and ensure adherence to industry regulations and standards.
                                 </p>
                                 <div className="pro-hover bg-danger-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg3} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
                             <div ref={sectionRefs.item4} id="item4" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Recruitment and Onboarding</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Merger and Acquisition</h4>
                                 <p className="fs-18 text-secondary">
-                                    Simplify hiring and onboarding with automated recruitment workflows.
+                                    Streamline data integration for smoother transitions during mergers and acquisitions.
                                 </p>
                                 <div className="pro-hover bg-warning-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg4} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
                             <div ref={sectionRefs.item5} id="item5" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Leave Management</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Operational Efficiency</h4>
                                 <p className="fs-18 text-secondary">
-                                    Boost productivity with goal tracking and real-time performance feedback.
+                                    Break data silos and automate workflows to maximize operational efficiency.
                                 </p>
                                 <div className="pro-hover bg-info-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg5} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
                             <div ref={sectionRefs.item6} id="item6" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Compensation Management</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Data Reconciliation</h4>
                                 <p className="fs-18 text-secondary">
-                                    Empower employee growth with personalized training and skill development.
+                                    Resolve data inconsistencies with intelligent reconciliation tools for accuracy.
                                 </p>
                                 <div className="pro-hover bg-primary-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg6} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
                             <div ref={sectionRefs.item7} id="item7" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Ticket Status</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Data Integration</h4>
                                 <p className="fs-18 text-secondary">
-                                    Make data-driven decisions with real-time HR analytics and custom reports.
+                                    Integrate data from multiple sources into a unified, real-time platform.
                                 </p>
                                 <div className="pro-hover bg-success-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg7} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
                             <div ref={sectionRefs.item8} id="item8" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Travel and Expence</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Data Quality Management</h4>
                                 <p className="fs-18 text-secondary">
-                                    Ensure adherence to labor laws and regulations with automated compliance tools.
+                                    Ensure reliable data with automated validation, deduplication, and enrichment.
                                 </p>
                                 <div className="pro-hover bg-danger-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg8} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
@@ -359,10 +359,11 @@ const ProductMdm = () => {
                         <HiCube />
                         <span className="ps-2">Benifits</span>
                     </span>
-                    <h2 className="mt-3 mb-0 fw-semibold">Why Choose Our HRMS?</h2>
+                    <h2 className="mt-3 mb-0 fw-semibold">Why Choose Our Master Data Management (MDM)?</h2>
                     <p className="fs-6 my-4">
-                        Simplify HR operations with automation, boost productivity, and enhance 
-                        employee engagement—all on a scalable, user-friendly platform.
+                        Our MDM solution centralizes your business data, ensuring accuracy, consistency, 
+                        and effortless access. With easy integration, better data control, and real-time insights, 
+                        it helps you make smarter decisions and improve overall business efficiency.
                     </p>
                 </div>
                 {/* // Head section // */}
@@ -376,25 +377,25 @@ const ProductMdm = () => {
                         data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" 
                         aria-controls="pills-1" aria-selected="true" 
                         onClick={() => handleTabChange('pills-1')}>
-                            Save Time with Automation
+                            Data Consistency
                         </button>
                         <button className="nav-link rounded-5 me-3" id="pills-2-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" 
                         aria-controls="pills-2" aria-selected="false" 
                         onClick={() => handleTabChange('pills-2')}>
-                            Scale with Your Business
+                            Integration
                         </button>
                         <button className="nav-link rounded-5 me-3" id="pills-3-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" 
                         aria-controls="pills-3" aria-selected="false" 
                         onClick={() => handleTabChange('pills-3')}>
-                            Enhance Employee Productivity
+                            Customizable Modules
                         </button>
                         <button className="nav-link rounded-5 me-3" id="pills-4-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" 
                         aria-controls="pills-4" aria-selected="false" 
                         onClick={() => handleTabChange('pills-4')}>
-                            Centralize HR Processes
+                            Purchase Info Records
                         </button>
                         {/* <button className="nav-link rounded-5 me-3" id="pills-5-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-5" type="button" role="tab" 
@@ -412,10 +413,10 @@ const ProductMdm = () => {
                                     <div className="pro-hover bg-success-subtle border rounded-4 h-100 position-relative overflow-hidden">
                                         <img src={hrmsBenefitBg1} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Automated Payroll Processing</div>
+                                            <div className="card-title h4">Data Consistency</div>
                                             <p className="card-text">
-                                                Eliminate manual calculations with precise and timely payroll 
-                                                generation, including tax deductions and compliance.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Suspendisse varius enim in eros.
                                             </p>
                                         </div>
                                     </div>
@@ -425,10 +426,10 @@ const ProductMdm = () => {
                                      data-aos="fade-left">
                                         <img src={hrmsBenefitBg2} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Attendance and Leave Automation</div>
+                                            <div className="card-title h4">Customizable Modules</div>
                                             <p className="card-text">
-                                                Seamlessly track employee attendance, leaves, and shifts with 
-                                                real-time updates and automated approvals.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Suspendisse varius enim in eros.
                                             </p>
                                         </div>
                                     </div>
@@ -442,11 +443,10 @@ const ProductMdm = () => {
                                     <div className="pro-hover bg-warning-subtle border rounded-4 h-100 position-relative overflow-hidden">
                                         <img src={hrmsBenefitBg3} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Self-Service Portals</div>
+                                            <div className="card-title h4">Article Master</div>
                                             <p className="card-text">
-                                                Empower employees to manage their attendance, leaves, and personal 
-                                                information independently, reducing HR workload and fostering 
-                                                ownership.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Suspendisse varius enim in eros.
                                             </p>
                                         </div>
                                     </div>
@@ -456,10 +456,10 @@ const ProductMdm = () => {
                                      data-aos="fade-left">
                                         <img src={hrmsBenefitBg4} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Performance Tracking</div>
+                                            <div className="card-title h4">Purchase Info Records</div>
                                             <p className="card-text">
-                                                Set clear goals, track progress, and provide regular feedback to keep 
-                                                employees motivated and aligned with organizational objectives.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Suspendisse varius enim in eros.
                                             </p>
                                         </div>
                                     </div>
@@ -473,9 +473,10 @@ const ProductMdm = () => {
                                     <div className="pro-hover bg-primary-subtle border rounded-4 h-100 position-relative overflow-hidden">
                                         <img src={hrmsBenefitBg5} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Unified Dashboard</div>
+                                            <div className="card-title h4">360° Customer View</div>
                                             <p className="card-text">
-                                                Manage all HR operations from a single, intuitive platform.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Suspendisse varius enim in eros.
                                             </p>
                                         </div>
                                     </div>
@@ -485,9 +486,10 @@ const ProductMdm = () => {
                                      data-aos="fade-left">
                                         <img src={hrmsBenefitBg6} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Integrated Modules</div>
+                                            <div className="card-title h4">Lead Management</div>
                                             <p className="card-text">
-                                                Link payroll, attendance, and performance management seamlessly.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Suspendisse varius enim in eros.
                                             </p>
                                         </div>
                                     </div>
@@ -501,9 +503,10 @@ const ProductMdm = () => {
                                     <div className="pro-hover bg-danger-subtle border rounded-4 h-100 position-relative overflow-hidden">
                                         <img src={hrmsBenefitBg7} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Customizable Workflows</div>
+                                            <div className="card-title h4">Sales Automation</div>
                                             <p className="card-text">
-                                                Adapt processes and features to suit growing organizational needs.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Suspendisse varius enim in eros.
                                             </p>
                                         </div>
                                     </div>
@@ -513,9 +516,10 @@ const ProductMdm = () => {
                                      data-aos="fade-left">
                                         <img src={hrmsBenefitBg8} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Flexible User Plans</div>
+                                            <div className="card-title h4">Purchase Info Records</div>
                                             <p className="card-text">
-                                                Scale up or down with pricing plans designed for businesses of all sizes.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                Suspendisse varius enim in eros.
                                             </p>
                                         </div>
                                     </div>
@@ -571,8 +575,8 @@ const ProductMdm = () => {
                     </span>
                     <h2 className="mt-3 mb-0 fw-semibold">See How It Works?</h2>
                     <p className="fs-6 my-4">
-                        Discover the full potential of our HRMS with a customized demo. See how our solution 
-                        simplifies HR processes and boosts efficiency in real-time.
+                        Discover the full potential of our MDM solution through an interactive demo. 
+                        See how easy it is to centralize, integrate, and manage your data seamlessly.
                     </p>
                 </div>
 
@@ -596,7 +600,7 @@ const ProductMdm = () => {
                         <span className="ps-2">Testimonials</span>
                     </span>
                     <h2 className="mt-3 mb-0 fw-semibold">
-                        <div>Trusted by <br/><span className="text-primary">HR Leaders</span> Everywhere </div>
+                        <div>Trusted by <br/><span className="text-primary">Our Happy</span> Clients</div>
                     </h2>
                 </div>
 

@@ -25,7 +25,7 @@ const testimonials = [
         role: "",
         company: "Acme Corp.",
         content:
-            "Digylax’s HRMS has simplified our HR processes, making payroll and performance management seamless and hassle-free.",
+            "Digylax's MDM solution has transformed our data management, ensuring uniformity and precision across all platforms. It’s empowered our team to make faster, more informed decisions.",
         rating: 5,
     },
     {
@@ -58,18 +58,18 @@ const testimonials = [
         role: "",
         company: "Apex Design Lab",
         content:
-            "Digylax’s HRMS has simplified our HR processes, making payroll and performance management seamless and hassle-free.",
+            "Digylax’s MDM has simplified our HR processes, making payroll and performance management seamless and hassle-free.",
         rating: 5,
     },
     {
         id: 5,
-        name: "Lily Patel",
+        name: "Joanna Clark",
         image: tmUserImg5,
         navImg: tmNavImg5,
         role: "",
         company: "Sparkle Creative Agency",
         content:
-            "Digylax’s HRMS has simplified our HR processes, making payroll and performance management seamless and hassle-free.",
+            "Digylax’s MDM solution has simplified our data management, ensuring consistency and accuracy across our systems. It’s empowered our team to make faster, more informed decisions.",
         rating: 5,        
     },
 ];

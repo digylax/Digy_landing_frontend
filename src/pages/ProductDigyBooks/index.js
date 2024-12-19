@@ -147,10 +147,11 @@ const ProductDigyBooks = () => {
             <div className="container-fluid h-100 px-lg-0">
                 <div className="row align-items-center gx-lg-0 h-100">
                     <div className="col-lg-6 offset-lg-1" data-aos="fade-left">
-                        <h1 className="fw-semibold display-5 banner-title">“Transform the Way You Manage Your Workforce!”</h1>
+                        <h1 className="fw-semibold display-5 banner-title">“Effortless Accounting for Smarter Business Management.”</h1>
                         <p className="my-3 banner-sub-title">
-                            A holistic solution for Onboarding, time management, payroll, 
-                            performance management, and task management, and more.
+                            Digybooks streamlines invoicing, billing, sales, and GST compliance, simplifying 
+                            accounting for growing businesses, Gain real-time insights and manage 
+                            your finances effortlessly.
                         </p>
                         <p className="my-3 pt-3 d-flex flex-column flex-sm-row align-items-center align-items-sm-start">
                             <Button variant="primary-digy" size="lg" className='fs-6 icon-link icon-link-hover'>
@@ -193,30 +194,30 @@ const ProductDigyBooks = () => {
                                 <FiLayout />
                                 <span className="ps-2">Key Features</span>
                             </span>
-                            <h2 className="mt-4 fw-semibold">Streamline Your HR Operations with <br />These Powerful Tools</h2>
+                            <h2 className="mt-4 fw-semibold">Streamline Your Accounting <br />These Powerful Tools</h2>
 
                             <nav id="navbar-example3" className="nav nav-pills flex-column mt-3 overflow-y-auto" >
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item1' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item1')}>
-                                    Employee Information Management
+                                    Invoicing & Billing
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item2' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item2')}>
-                                    Payroll and Tax Compliance
+                                    GST Compliance
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item3' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item3')}>
-                                    Attendance Management
+                                    Purchase and Sales Management
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item4' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item4')}>
-                                    Recruitment and Onboarding
+                                    Receivables & Payables
                                 </button>
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item5' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item5')}>
-                                    Leave Management
+                                    Multi-currency Support
                                 </button>
-                                <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item6' ? 'active shadow-sm text-primary' : 'text-dark'}`}
+                                {/* <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item6' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item6')}>
                                     Compensation Management
                                 </button>
@@ -235,7 +236,7 @@ const ProductDigyBooks = () => {
                                 <button className={`nav-link mb-3 bg-transparent border text-start ${activeSection === 'item10' ? 'active shadow-sm text-primary' : 'text-dark'}`}
                                  onClick={() => scrollToSection('item10')}>
                                     Project and Task Management
-                                </button>
+                                </button> */}
                             </nav>
                         </div>
 
@@ -251,51 +252,52 @@ const ProductDigyBooks = () => {
                           data-bs-smooth-scroll="true" tabIndex="0" */}
                             
                             <div ref={sectionRefs.item1} id="item1" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Employee Information Management</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Invoicing & Billing</h4>
                                 <p className="fs-18 text-secondary">
-                                    Securely organize and access employee information within a single, centralized platform.
+                                    Create and send professional invoices and manage billing with ease to keep track of payments.
                                 </p>
                                 <div className="pro-hover bg-primary-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg1} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
                             <div ref={sectionRefs.item2} id="item2" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Payroll and Tax Compliance</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">GST Compliance</h4>
                                 <p className="fs-18 text-secondary">
-                                    Streamline payroll processing and ensure effortless tax compliance.
+                                    Automate GST calculations and filing for effortless tax compliance.
                                 </p>
                                 <div className="pro-hover bg-success-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg2} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
                             <div ref={sectionRefs.item3} id="item3" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Attendance Management</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Purchase and Sales Management</h4>
                                 <p className="fs-18 text-secondary">
-                                    Securely organize and access employee information within a single, centralized platform.
+                                    Monitor and manage purchases and sales with precision for accurate financial records.
                                 </p>
                                 <div className="pro-hover bg-danger-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg3} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
                             <div ref={sectionRefs.item4} id="item4" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Recruitment and Onboarding</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Receivables & Payables</h4>
                                 <p className="fs-18 text-secondary">
-                                    Simplify hiring and onboarding with automated recruitment workflows.
+                                    Easily manage and track outstanding payments (receivables) and liabilities (payables) 
+                                    for better cash flow control.
                                 </p>
                                 <div className="pro-hover bg-warning-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg4} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
                             <div ref={sectionRefs.item5} id="item5" className="pt-xxl-5 key-fea-item">
-                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Leave Management</h4>
+                                <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Multi-currency Support</h4>
                                 <p className="fs-18 text-secondary">
-                                    Boost productivity with goal tracking and real-time performance feedback.
+                                    Handle transactions in multiple currencies for businesses with international dealings.
                                 </p>
                                 <div className="pro-hover bg-info-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg5} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
                             </div>
-                            <div ref={sectionRefs.item6} id="item6" className="pt-xxl-5 key-fea-item">
+                            {/* <div ref={sectionRefs.item6} id="item6" className="pt-xxl-5 key-fea-item">
                                 <h4 className="mt-4 mt-xxl-5 fw-medium fs-2">Compensation Management</h4>
                                 <p className="fs-18 text-secondary">
                                     Empower employee growth with personalized training and skill development.
@@ -339,7 +341,7 @@ const ProductDigyBooks = () => {
                                 <div className="pro-hover bg-info-subtle rounded-4 position-relative overflow-hidden">
                                     <img src={hrmsFeaBg10} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                 </div>
-                            </div>
+                            </div> */}
 
                         </div>
 
@@ -359,10 +361,11 @@ const ProductDigyBooks = () => {
                         <HiCube />
                         <span className="ps-2">Benifits</span>
                     </span>
-                    <h2 className="mt-3 mb-0 fw-semibold">Why Choose Our HRMS?</h2>
+                    <h2 className="mt-3 mb-0 fw-semibold">Why Choose Our Digybooks?</h2>
                     <p className="fs-6 my-4">
-                        Simplify HR operations with automation, boost productivity, and enhance 
-                        employee engagement—all on a scalable, user-friendly platform.
+                        Digybooks centralizes your finances, delivering accurate records and seamless integration. 
+                        With real-time insights, simplified accounting, and streamlined processes, it helps you make 
+                        smarter financial decisions and boost operational efficiency.
                     </p>
                 </div>
                 {/* // Head section // */}
@@ -376,25 +379,25 @@ const ProductDigyBooks = () => {
                         data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" 
                         aria-controls="pills-1" aria-selected="true" 
                         onClick={() => handleTabChange('pills-1')}>
-                            Save Time with Automation
+                            Simplify Accounting
                         </button>
                         <button className="nav-link rounded-5 me-3" id="pills-2-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" 
                         aria-controls="pills-2" aria-selected="false" 
                         onClick={() => handleTabChange('pills-2')}>
-                            Scale with Your Business
+                            Ensure GST Compliance
                         </button>
                         <button className="nav-link rounded-5 me-3" id="pills-3-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" 
                         aria-controls="pills-3" aria-selected="false" 
                         onClick={() => handleTabChange('pills-3')}>
-                            Enhance Employee Productivity
+                            Real-time Financial Control
                         </button>
                         <button className="nav-link rounded-5 me-3" id="pills-4-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" 
                         aria-controls="pills-4" aria-selected="false" 
                         onClick={() => handleTabChange('pills-4')}>
-                            Centralize HR Processes
+                            Scalability for Growing Businesses
                         </button>
                         {/* <button className="nav-link rounded-5 me-3" id="pills-5-tab" 
                         data-bs-toggle="pill" data-bs-target="#pills-5" type="button" role="tab" 
@@ -412,10 +415,9 @@ const ProductDigyBooks = () => {
                                     <div className="pro-hover bg-success-subtle border rounded-4 h-100 position-relative overflow-hidden">
                                         <img src={hrmsBenefitBg1} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Automated Payroll Processing</div>
+                                            <div className="card-title h4">Simplify Accounting</div>
                                             <p className="card-text">
-                                                Eliminate manual calculations with precise and timely payroll 
-                                                generation, including tax deductions and compliance.
+                                                Easily manage your finances with automated features that save time and reduce errors.
                                             </p>
                                         </div>
                                     </div>
@@ -425,10 +427,9 @@ const ProductDigyBooks = () => {
                                      data-aos="fade-left">
                                         <img src={hrmsBenefitBg2} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Attendance and Leave Automation</div>
+                                            <div className="card-title h4">Ensure GST Compliance</div>
                                             <p className="card-text">
-                                                Seamlessly track employee attendance, leaves, and shifts with 
-                                                real-time updates and automated approvals.
+                                                Stay up to date with GST laws and streamline tax filing with automatic calculations.
                                             </p>
                                         </div>
                                     </div>
@@ -442,11 +443,9 @@ const ProductDigyBooks = () => {
                                     <div className="pro-hover bg-warning-subtle border rounded-4 h-100 position-relative overflow-hidden">
                                         <img src={hrmsBenefitBg3} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Self-Service Portals</div>
+                                            <div className="card-title h4">Ensure GST Compliance</div>
                                             <p className="card-text">
-                                                Empower employees to manage their attendance, leaves, and personal 
-                                                information independently, reducing HR workload and fostering 
-                                                ownership.
+                                                Stay up to date with GST laws and streamline tax filing with automatic calculations.
                                             </p>
                                         </div>
                                     </div>
@@ -456,10 +455,9 @@ const ProductDigyBooks = () => {
                                      data-aos="fade-left">
                                         <img src={hrmsBenefitBg4} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Performance Tracking</div>
+                                            <div className="card-title h4">Real-time Financial Control</div>
                                             <p className="card-text">
-                                                Set clear goals, track progress, and provide regular feedback to keep 
-                                                employees motivated and aligned with organizational objectives.
+                                                Access up-to-date financial data, helping you make better decisions with clear insights.
                                             </p>
                                         </div>
                                     </div>
@@ -473,9 +471,9 @@ const ProductDigyBooks = () => {
                                     <div className="pro-hover bg-primary-subtle border rounded-4 h-100 position-relative overflow-hidden">
                                         <img src={hrmsBenefitBg5} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Unified Dashboard</div>
+                                            <div className="card-title h4">Real-time Financial Control</div>
                                             <p className="card-text">
-                                                Manage all HR operations from a single, intuitive platform.
+                                                Access up-to-date financial data, helping you make better decisions with clear insights.
                                             </p>
                                         </div>
                                     </div>
@@ -485,9 +483,9 @@ const ProductDigyBooks = () => {
                                      data-aos="fade-left">
                                         <img src={hrmsBenefitBg6} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Integrated Modules</div>
+                                            <div className="card-title h4">Efficient Receivables and Payables Management</div>
                                             <p className="card-text">
-                                                Link payroll, attendance, and performance management seamlessly.
+                                                Track outstanding payments and manage liabilities seamlessly, ensuring smooth cash flow.
                                             </p>
                                         </div>
                                     </div>
@@ -501,9 +499,9 @@ const ProductDigyBooks = () => {
                                     <div className="pro-hover bg-danger-subtle border rounded-4 h-100 position-relative overflow-hidden">
                                         <img src={hrmsBenefitBg7} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Customizable Workflows</div>
+                                            <div className="card-title h4">Scalability for Growing Businesses</div>
                                             <p className="card-text">
-                                                Adapt processes and features to suit growing organizational needs.
+                                                Adaptable to your evolving needs, supporting both small and growing businesses.
                                             </p>
                                         </div>
                                     </div>
@@ -513,9 +511,9 @@ const ProductDigyBooks = () => {
                                      data-aos="fade-left">
                                         <img src={hrmsBenefitBg8} alt="digy-hrms-bg" className="hover-img img-fluid rounded-4 shadow-sm position-relative" />
                                         <div className="card card-body rounded-top-0 rounded-bottom-4 border-0 position-absolute bottom-0 start-0 end-0">
-                                            <div className="card-title h4">Flexible User Plans</div>
+                                            <div className="card-title h4">Efficient Receivables and Payables Management</div>
                                             <p className="card-text">
-                                                Scale up or down with pricing plans designed for businesses of all sizes.
+                                                Track outstanding payments and manage liabilities seamlessly, ensuring smooth cash flow.
                                             </p>
                                         </div>
                                     </div>
@@ -571,8 +569,8 @@ const ProductDigyBooks = () => {
                     </span>
                     <h2 className="mt-3 mb-0 fw-semibold">See How It Works?</h2>
                     <p className="fs-6 my-4">
-                        Discover the full potential of our HRMS with a customized demo. See how our solution 
-                        simplifies HR processes and boosts efficiency in real-time.
+                        See how effortlessly you can manage your finances, track transactions, and ensure 
+                        compliance all in one place.
                     </p>
                 </div>
 
@@ -596,7 +594,7 @@ const ProductDigyBooks = () => {
                         <span className="ps-2">Testimonials</span>
                     </span>
                     <h2 className="mt-3 mb-0 fw-semibold">
-                        <div>Trusted by <br/><span className="text-primary">HR Leaders</span> Everywhere </div>
+                        <div>Customer's about <br/><span className="text-primary">Digybooks</span></div>
                     </h2>
                 </div>
 

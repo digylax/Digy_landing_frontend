@@ -58,7 +58,7 @@ const Footer = () => {
                                     {/* <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Enterprices</a></li>
                                     <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Customers</a></li>
                                     <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">About Us</a></li> */}
-                                    <li className="nav-item mb-2"><a role="button" onClick={()=> navigate("/")} className="nav-link p-0 text-body-secondary">Careers</a></li>
+                                    <li className="nav-item mb-2"><a role="button" onClick={()=> navigate("/careers")} className="nav-link p-0 text-body-secondary">Careers</a></li>
                                     <li className="nav-item mb-2"><a role="button" onClick={()=> navigate("/contact-us")} className="nav-link p-0 text-body-secondary">Contact Us</a></li>
                                     
                                     
