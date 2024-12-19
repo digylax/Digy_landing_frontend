@@ -199,7 +199,7 @@ const Header = () => {
                                 </button>
                             </li> */}
                             <li className={`nav-item text-nowrap`}>
-                                <button type="button" className={`btn btn-link text-decoration-none text-dark`}>
+                                <button onClick={()=> navigate('/careers')} type="button" className={`btn btn-link text-decoration-none text-dark`}>
                                     Careers
                                 </button>
                             </li>

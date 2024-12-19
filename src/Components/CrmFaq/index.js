@@ -15,38 +15,42 @@ const CrmFaqAccordion = () => {
             {/* defaultActiveKey="0" */}
 
             <Accordion.Item eventKey="0" className='shadow-sm' data-aos="fade-left" data-aos-delay={0}>
-                <Accordion.Header>What is HRMS and how can it help my business?</Accordion.Header>
+                <Accordion.Header>What is Digylax CRM?</Accordion.Header>
                 <Accordion.Body className='pt-1'>
-                    HRMS simplifies HR tasks like payroll, attendance, and performance management. 
-                    It automates processes, increases efficiency, and ensures compliance.
+                    Digylax CRM is a platform designed to help businesses manage customer interactions, 
+                    optimize sales workflows, and enhance customer satisfaction.
                 </Accordion.Body>
             </Accordion.Item>
 
             <Accordion.Item eventKey="1" className='shadow-sm' data-aos="fade-left" data-aos-delay={500}>
-                <Accordion.Header>Is the HRMS platform customizable?</Accordion.Header>
+                <Accordion.Header>How can Digylax CRM help my business?</Accordion.Header>
                 <Accordion.Body className='pt-1'>
-                    Yes, our HRMS can be customized to suit your business needs, adjusting settings and workflows as required.
+                    Digylax CRM integrates customer data, streamlines workflows, and provides actionable insights, 
+                    enabling your team to foster stronger relationships and close deals more efficiently.
                 </Accordion.Body>
             </Accordion.Item>
 
             <Accordion.Item eventKey="2" className='shadow-sm' data-aos="fade-left" data-aos-delay={500}>
-                <Accordion.Header>How secure is my data with your HRMS?</Accordion.Header>
+                <Accordion.Header>Can I integrate Digylax CRM with other tools?</Accordion.Header>
                 <Accordion.Body className='pt-1'>
-                    Your data is secure with advanced encryption and cloud storage, ensuring confidentiality and safety.
+                    Yes, Digylax CRM offers integration capabilities with various third-party applications, 
+                    ensuring seamless workflows across your business.
                 </Accordion.Body>
             </Accordion.Item>
 
             <Accordion.Item eventKey="3" className='shadow-sm' data-aos="fade-left" data-aos-delay={500}>
-                <Accordion.Header>Can I access the HRMS on mobile devices?</Accordion.Header>
+                <Accordion.Header>Does Digylax CRM support mobile access?</Accordion.Header>
                 <Accordion.Body className='pt-1'>
-                    Yes, our HRMS is mobile-friendly, allowing you to manage HR tasks from any device.
+                    Yes, Digylax CRM is mobile-friendly, allowing you to manage customer relationships and 
+                    sales on-the-go from any device.
                 </Accordion.Body>
             </Accordion.Item>
 
             <Accordion.Item eventKey="4" className='shadow-sm' data-aos="fade-left" data-aos-delay={500}>
-                <Accordion.Header>How can I get started with your HRMS?</Accordion.Header>
+                <Accordion.Header>Is my data secure with Digylax CRM?</Accordion.Header>
                 <Accordion.Body className='pt-1'>
-                    Simply schedule a demo or choose a pricing plan, and our team will guide you through the setup process.
+                    Absolutely. We prioritize data security with encrypted connections, secure storage, 
+                    and regular backups to keep your customer data safe.
                 </Accordion.Body>
             </Accordion.Item>
 

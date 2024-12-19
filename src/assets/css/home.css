@@ -439,7 +439,7 @@
 /* // FAQ Section END // */
 
 /* Contact us page */
-.contact-page .hero-banner {
+.contact-page .hero-banner, .other-pages .hero-banner {
     height: 50vh;
 }
 
@@ -558,6 +558,22 @@
 }
 /* // Product Details // */
 
+/* Career page */
+.career-page .banner-icons .b-icon-1 {
+    left: 2%;
+    top: 20px;
+}
+
+.career-page .banner-icons .b-icon-2 {
+    right: 8%;
+    bottom: 40px;
+}
+
+.join-us .job-cards .card:hover {
+    border-color: var(--bs-primary);
+}
+/* // Career page // */
+
 /* Responsive Design */
 @media (min-width: 576px) {
     
@@ -619,6 +635,9 @@
         top: 41px;
     }
 
+    .h-lg-auto {
+        height: auto;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -675,6 +694,12 @@
         height: auto;
     }
     /* Hero Banner END */
+}
+
+@media (max-width:767.98px) {
+    .career-page .hero-banner {
+        min-height: auto;
+    }
 }
 
 /* @media (min-height:920px) {

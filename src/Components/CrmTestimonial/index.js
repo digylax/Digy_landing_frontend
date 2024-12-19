@@ -25,7 +25,7 @@ const testimonials = [
         role: "",
         company: "Acme Corp.",
         content:
-            "Digylax’s HRMS has simplified our HR processes, making payroll and performance management seamless and hassle-free.",
+            "Since we started using Digylax CRM, managing our customer relationships has been much easier. It’s simple to use, helps us stay organized, and has definitely improved our sales process.",
         rating: 5,
     },
     {
@@ -58,7 +58,7 @@ const testimonials = [
         role: "",
         company: "Apex Design Lab",
         content:
-            "Digylax’s HRMS has simplified our HR processes, making payroll and performance management seamless and hassle-free.",
+            "Digylax’s CRM has simplified our processes, making Leads and deals management seamless and hassle-free.",
         rating: 5,
     },
     {
@@ -69,7 +69,7 @@ const testimonials = [
         role: "",
         company: "Sparkle Creative Agency",
         content:
-            "Digylax’s HRMS has simplified our HR processes, making payroll and performance management seamless and hassle-free.",
+            "Since we started using Digylax CRM, managing our customer relationships has been much easier. It’s simple to use, helps us stay organized, and has definitely improved our sales process.",
         rating: 5,        
     },
 ];
