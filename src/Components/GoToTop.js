@@ -28,7 +28,7 @@ const GoToButton = ({ displayAfter, target }) => {
   };
 
   if (showButton) {
-    return <Button variant="primary" className="rounded-pill shadow-sm p-2 fixed-bottom d-flex align-self-end go-top-btn" 
+    return <Button variant="primary" className="border-white rounded-pill shadow-sm p-2 fixed-bottom d-flex align-self-end go-top-btn" 
     onClick={() => scrollToRef(target)}>
         <FaAngleDoubleUp size={24} />
     </Button>;

@@ -1,14 +1,14 @@
-import AOS from 'aos';
+// import AOS from 'aos';
 import React, { useEffect } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 
 const MdmFaqAccordion = () => {
     
     // Init AOS Animation
-    useEffect(() => {
-        AOS.init({
-        });
-    }, []);
+    // useEffect(() => {
+    //     AOS.init({
+    //     });
+    // }, []);
 
     return (
         <Accordion className='custom-icon'>

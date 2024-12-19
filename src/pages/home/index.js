@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import '../../assets/css/home.css';
 import { Button, Modal } from "react-bootstrap";
-import AOS from "aos";
+// import AOS from "aos";
 // import CountUpNumber from "../../Components/CountUp";
 import CountUp from "react-countup";
 import { IoMdArrowRoundDown, IoMdArrowRoundForward, IoMdBook } from "react-icons/io";
@@ -60,19 +60,10 @@ const Home = () => {
     const handleShow = () => setModalShow(true);
 
     // Init AOS Animation
-    useEffect(() => {
-        AOS.init({
-          // disable: function() {
-          //   var maxWidth = 800;
-          //   return window.innerWidth < maxWidth;
-          //   },
-          disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-          // duration: 1000,
-          // delay: 0, 
-          // offset: 100,
-          // easing: "ease-in-out",
-        });
-    }, []);
+    // useEffect(() => {
+    //     AOS.init({
+    //     });
+    // }, []);
 
     const handleCountUpOnStart = () => {
         console.log('CountUp animation started');

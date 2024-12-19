@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AOS from "aos";
+// import AOS from "aos";
 // import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 import { FaStar } from "react-icons/fa";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
@@ -139,10 +139,10 @@ const DigyBooksTestimonial = () => {
     };
 
     // Init AOS Animation
-    useEffect(() => {
-        AOS.init({
-        });
-    }, []);
+    // useEffect(() => {
+    //     AOS.init({
+    //     });
+    // }, []);
     
     return (
         <div className="w-100 py-4 px-1 testimonials" data-aos="fade-down">
