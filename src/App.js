@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
-// import AOS from 'aos';
+import AOS from 'aos';
 import './App.css';
 import Routers from './routes';
 import GoToButton from './Components/GoToTop';
@@ -14,10 +14,20 @@ function App() {
   const [showBot, toggleBot] = useState(false);
 
   // Init AOS Animation
-  // useEffect(() => {
-  //     AOS.init({
-  //     });
-  // }, []);
+  useEffect(() => {
+    AOS.init({
+      disable: function () {
+        var maxWidth = 992;
+        return window.innerWidth < maxWidth;
+      },
+      // disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      // duration: 1000, // Animation duration in ms
+      // once: false, // Ensure animations are triggered every time
+      // delay: 0,
+      // offset: 100,
+      // easing: "ease-in-out",
+    });
+  }, []);
 
   return (
     <div className='App' ref={backToTop}>

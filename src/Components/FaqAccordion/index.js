@@ -1,14 +1,14 @@
 import Accordion from 'react-bootstrap/Accordion';
-import AOS from "aos";
+// import AOS from "aos";
 import React, {useEffect} from 'react';
 
 const FaqAccordion = () => {
 
     // Init AOS Animation
-    useEffect(() => {
-        AOS.init({
-        });
-    }, []);
+    // useEffect(() => {
+    //     AOS.init({
+    //     });
+    // }, []);
 
     return (
         <Accordion className='custom-icon'>
