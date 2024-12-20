@@ -232,6 +232,10 @@
     max-width: 92%;
 }
 
+.p-list-item .title {
+    line-height: 40px;
+}
+
 .btn-outline-secondary.icon-link>.bi {
     fill: var(--bs-secondary-rgb);
 }

@@ -7,10 +7,11 @@ import qmarkIcon from '../../assets/images/header/question-mark-icon.svg';
 import bellIcon from '../../assets/images/header/bell-icon.svg';
 import profilePicture from '../../assets/images/user-img.png';
 import companyLogo from '../../assets/images/header/McAfee.png';
+import mdmLogo from '../../assets/images/product-logo/mdm-logo-icon.svg';
+import { ReactComponent as CrmLogo} from '../../assets/images/product-logo/crm-logo-icon.svg';
+// import crmLogo from '../../assets/images/product-logo/crm-logo.svg';
 import hrmsLogo from '../../assets/images/product-logo/hrms-logo.svg';
-import crmLogo from '../../assets/images/product-logo/crm-logo.svg';
 import digyBooksLogo from '../../assets/images/product-logo/digy-books-logo.svg';
-import mdmLogo from '../../assets/images/product-logo/mdm-logo.svg';
 import mmFeature from '../../assets/images/header/mm-feature.png';
 import mdmFeaImg from '../../assets/images/header/header-mdm-fea.png';
 import crmFeaImg from '../../assets/images/header/header-crm-fea.png';
@@ -52,7 +53,7 @@ const Header = () => {
         { id: 2, 
           navLink: '/product-crm',
           title: "CRM", 
-          logo: crmLogo, 
+          logo: CrmLogo, 
           feaImg: crmFeaImg,
           content: "Includes AI-powered insights, lead prediction, sales gamification, and extensive customization options. Great for remote teams with tools to foster collaboration and competition​", 
           userImg: mmUser2,
@@ -143,7 +144,15 @@ const Header = () => {
                                                     >
                                                         
                                                         <span className="d-flex align-items-center icon-link icon-link-hover">
-                                                            <img src={item.logo} alt="digy-products-Logo" width={24} height={24} className="align-self-start" />
+                                                            {item.logo === CrmLogo ?
+                                                                <>
+                                                                <CrmLogo width={40} height={40} className="align-self-start rounded-2" />
+                                                                </>
+                                                                :
+                                                                <>
+                                                                <img src={item.logo} alt="digy-products-Logo" width={40} height={40} className="align-self-start" />
+                                                                </>
+                                                            }
                                                             <span className="align-self-start ms-3">
                                                                 <span className="fs-6 d-block fw-semibold mb-2">{item.title}</span>
                                                                 <span>{item.title} Platform</span>

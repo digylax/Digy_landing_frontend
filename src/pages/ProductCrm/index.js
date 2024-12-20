@@ -9,6 +9,7 @@ import { HiCube } from "react-icons/hi2";
 import { PiPaperPlaneRight } from "react-icons/pi";
 import { BiPhone } from "react-icons/bi";
 import hrmsBannerBg from "../../assets/images/products/hrms-banner-bg.png";
+import { ReactComponent as CrmLogo} from '../../assets/images/product-logo/crm-logo-final.svg';
 import hrmsProBg from "../../assets/images/products/hrms-p-bg.png";
 import hrmsFeaBg1 from "../../assets/images/products/hrms/1-employee-information-management.jpg";
 import hrmsFeaBg2 from "../../assets/images/products/hrms/2-pay-roll.jpg";
@@ -145,7 +146,11 @@ const ProductCrm = () => {
             <div className="container-fluid h-100 px-lg-0">
                 <div className="row align-items-center gx-lg-0 h-100">
                     <div className="col-lg-6 offset-lg-1" data-aos="fade-left">
-                        <h1 className="fw-semibold display-5 banner-title">“Unleash Power of Seamless Customer Engagement!”</h1>
+                        <CrmLogo width={140} height={56} className="crm-logo" />
+                        <h1 className="fw-semibold display-5 banner-title mt-4">“Unleash Power of Seamless
+                            <br/> 
+                            <span className="ps-4">Customer Engagement!”</span>
+                        </h1>
                         <p className="my-3 banner-sub-title">
                             Empower your business with a robust CRM platform to enhance customer relationships, 
                             drive sales, and improve satisfaction. Simplify workflows with a centralized 
