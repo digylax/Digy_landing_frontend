@@ -101,10 +101,8 @@ const ProductCrm = () => {
 
     // Init AOS Animation
     useEffect(() => {
-        AOS.init({
-          duration: 1000, // Animation duration in ms
-          once: false,    // Ensure animations are triggered every time
-        });
+        // AOS.init({
+        // });
     
         // Re-initialize AOS animations when a tab is changed
         const tabEl = document.getElementById('pills-tab');

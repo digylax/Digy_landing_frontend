@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AOS from "aos";
+// import AOS from "aos";
 import { Button } from "react-bootstrap";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { BiPhone } from "react-icons/bi";
@@ -10,29 +10,17 @@ import { HiCube } from "react-icons/hi2";
 const ContactUs = () => {
 
     // Init AOS Animation
-    useEffect(() => {
-        AOS.init({
-        });
-    }, []);
+    // useEffect(() => {
+    //     AOS.init({
+    //     });
+    // }, []);
 
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-   const formValidation = () => {
+    const [wasValidate, setwasValidate] = useState(false);
+
+    // disabling form submissions if there are invalid fields
+    const formValidation = () => {
         'use strict'
-    
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        const forms = document.querySelectorAll('.needs-validation')
-    
-        // Loop over them and prevent submission
-        Array.from(forms).forEach(form => {
-            form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-                }
-        
-                form.classList.add('was-validated')
-            }, false)
-        })
+        setwasValidate(true);
     }
 
     return ( 
@@ -66,7 +54,7 @@ const ContactUs = () => {
                         
                         {/* Form Box */}
                         <div className="bg-white rounded-3 p-3 p-xl-4 pb-0" data-aos="fade-up">
-                            <form className="row g-3 g-xl-4 needs-validation">
+                            <form className={`row g-3 g-xl-4 needs-validation ${wasValidate ? 'was-validated':''}`}>
                                 {/* Submit button click function - above form add this class 'was-validated' for form validation design */}
                                 <div className="col-sm-6">
                                     <div className="form-label-group in-border mb-0">
@@ -103,7 +91,7 @@ const ContactUs = () => {
                                     </div>
                                 </div>
 
-                                <h5 className="py-2 mb-0 fw-medium">Services</h5>
+                                <h5 className="py-2 mb-0 fw-medium">Products</h5>
                                 <div className="col-12">
                                     <div className="row row-cols-sm-2 g-3">
                                         <div className="col">
@@ -112,7 +100,7 @@ const ContactUs = () => {
                                                 <input className="form-check-input" type="checkbox" id="serviceOptRadio1"
                                                  defaultChecked={true} required />
                                                 <label className="form-check-label" htmlFor="serviceOptRadio1">
-                                                    Web Application Development
+                                                    Master Data Management (MDM)
                                                 </label>
                                                 </div>
                                             </div>
@@ -120,9 +108,9 @@ const ContactUs = () => {
                                         <div className="col">
                                             <div className="border p-2 pb-1 bg-body-tertiary">
                                             <div className="form-check">
-                                                <input className="form-check-input" type="checkbox" id="serviceOptRadio2" required />
+                                                <input className="form-check-input" type="checkbox" id="serviceOptRadio2" />
                                                 <label className="form-check-label" htmlFor="serviceOptRadio2">
-                                                    Mobile Application Development
+                                                    CRM Platform
                                                 </label>
                                                 </div>
                                             </div>
@@ -130,9 +118,9 @@ const ContactUs = () => {
                                         <div className="col">
                                             <div className="border p-2 pb-1 bg-body-tertiary">
                                             <div className="form-check">
-                                                <input className="form-check-input" type="checkbox" id="serviceOptRadio3" required />
+                                                <input className="form-check-input" type="checkbox" id="serviceOptRadio3" />
                                                 <label className="form-check-label" htmlFor="serviceOptRadio3">
-                                                    UI / UX
+                                                    HRMS Platform
                                                 </label>
                                                 </div>
                                             </div>
@@ -140,9 +128,9 @@ const ContactUs = () => {
                                         <div className="col">
                                             <div className="border p-2 pb-1 bg-body-tertiary">
                                             <div className="form-check">
-                                                <input className="form-check-input" type="checkbox" id="serviceOptRadio4" required />
+                                                <input className="form-check-input" type="checkbox" id="serviceOptRadio4" />
                                                 <label className="form-check-label" htmlFor="serviceOptRadio4">
-                                                    Digital Marketing
+                                                    Digy Books
                                                 </label>
                                                 </div>
                                             </div>

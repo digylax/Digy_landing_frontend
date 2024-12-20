@@ -3,7 +3,7 @@ import blogBg1 from "../../assets/images/blog/1-blog-bg.jpg";
 import blogBg2 from "../../assets/images/blog/2-blog-bg.jpg";
 import blogBg3 from "../../assets/images/blog/3-blog-bg.jpg";
 import { MdKeyboardArrowRight } from 'react-icons/md';
-import AOS from 'aos';
+// import AOS from 'aos';
 import React, { useEffect } from 'react';
 
 const blogList = [
@@ -45,10 +45,10 @@ const blogList = [
 const BlogList = () => {
 
     // Init AOS Animation
-    useEffect(() => {
-        AOS.init({
-        });
-    }, []);
+    // useEffect(() => {
+    //     AOS.init({
+    //     });
+    // }, []);
 
     return (
         <Row xs={1} sm={2} md={3} className="g-3 g-xl-4">

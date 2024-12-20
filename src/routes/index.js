@@ -7,8 +7,10 @@ import ProductCrm from "../pages/ProductCrm";
 import ProductHrms from "../pages/ProductHrms";
 import ProductDigyBooks from "../pages/ProductDigyBooks";
 import ContactUs from "../pages/ContactUs";
-import ScrollToTop from "../Components/ScrollToTop";
 import Careers from "../pages/Careers";
+import JobDescription from "../pages/Careers/JobDescription";
+import JobApplication from "../pages/Careers/JobApplication";
+import ScrollToTop from "../Components/ScrollToTop";
 
 const Router = () => {
     return (
@@ -22,9 +24,9 @@ const Router = () => {
                     <Route path="/product-hrms" element={<ProductHrms />}></Route>
                     <Route path="/product-digybooks" element={<ProductDigyBooks />}></Route>
                     <Route path="/contact-us" element={<ContactUs />}></Route>
-                    <Route path="/careers" element={<Careers />}>
-                        
-                    </Route>
+                    <Route path="/careers" element={<Careers />}></Route>
+                    <Route path="/careers/job-description" element={<JobDescription />}></Route>
+                    <Route path="/careers/job-application" element={<JobApplication />}></Route>
                 </Route>    
             </Routes>
         </BrowserRouter>

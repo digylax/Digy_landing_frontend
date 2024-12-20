@@ -95,7 +95,7 @@ const Header = () => {
     return (
         
         <header
-            className="navbar navbar-expand-lg fixed-top px-2 py-2 top-header"  data-aos="fade-down">
+            className="navbar navbar-expand-lg fixed-top px-2 py-2 top-header" data-aos="light-in">
             <nav className="container-lg shadow-sm flex-wrap flex-lg-nowrap bg-white border rounded-4 px-xl-3 px-xxl-4 py-2 position-relative">
                 {/* Left side Mobile Hamburger icon */}
                 <button className="navbar-toggler border-0" type="button"

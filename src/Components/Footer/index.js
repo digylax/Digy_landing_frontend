@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AOS from "aos";
+// import AOS from "aos";
 import { useNavigate } from "react-router-dom";
 import digyLogo from '../../assets/images/digylax-logo.png';
 import { BsFacebook, BsInstagram, BsLinkedin, BsTwitterX, BsYoutube } from "react-icons/bs";
@@ -9,10 +9,10 @@ const Footer = () => {
     const navigate = useNavigate();
 
     // Init AOS Animation
-    useEffect(() => {
-        AOS.init({
-        });
-    }, []);
+    // useEffect(() => {
+    //     AOS.init({
+    //     });
+    // }, []);
 
     return (
         <>
