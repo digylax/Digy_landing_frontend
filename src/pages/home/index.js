@@ -18,9 +18,11 @@ import { IoCheckmarkCircle } from "react-icons/io5";
 import { PiPaperPlaneRight } from "react-icons/pi";
 import { BiPhone } from "react-icons/bi";
 import hrmsLogo from '../../assets/images/product-logo/hrms-logo.svg';
+import { ReactComponent as CrmLogoIcon} from '../../assets/images/product-logo/crm-logo-icon.svg';
 import crmLogo from '../../assets/images/product-logo/crm-logo.svg';
 import digyBooksLogo from '../../assets/images/product-logo/digy-books-logo.svg';
-import mdmLogo from '../../assets/images/product-logo/mdm-logo.svg';
+// import mdmLogo from '../../assets/images/product-logo/mdm-logo.svg';
+import { ReactComponent as MdmLogoIcon} from '../../assets/images/product-logo/mdm-logo-icon.svg';
 import serWebApp1 from "../../assets/images/services/service-web-app-1.png";
 import serWebApp2 from "../../assets/images/services/service-web-app-2.png";
 import serUi1 from "../../assets/images/services/service-ui-1.png";
@@ -104,65 +106,64 @@ const Home = () => {
                                     <div className="card-body">
                                         <div className="list-group list-group-flush">
                                             <a role="button" onClick={() => navigate("/product-mdm")} className="list-group-item list-group-item-action" aria-current="false">
-                                                <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
-                                                    <div className="mt-2">
-                                                        <h5 className="d-flex align-items-center mb-1">
-                                                            {/* <LiaSwatchbookSolid size={24} color="#AD7DFF" /> */}
-                                                            <img src={mdmLogo} alt="digyMdmLogo" width={24} height={24} />
-                                                            <span className="ps-2 fw-semibold">MDM</span>
-                                                        </h5>
-                                                        <p className="mb-2 ps-4 ms-2 p-list-cont">
-                                                            Centralize your data for smarter decisions and seamless operations."
-                                                        </p>
+                                                <div className="d-flex w-100 align-items-center justify-content-between icon-link icon-link-hover p-list-item">
+                                                    <div className="d-flex mt-2">
+                                                        {/* <img src={mdmLogo} alt="digyMdmLogo" className="align-self-start rounded-2" width={40} height={40} /> */}
+                                                        <MdmLogoIcon width={40} height={40} className="align-self-start rounded-2" />
+                                                        <div className="ps-2">
+                                                            <h5 className="mb-1 fw-semibold title">MDM</h5>
+                                                            <p className="mb-2 p-list-cont">
+                                                                Centralize your data for smarter decisions and seamless operations."
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <FaAngleRight size={18} />
+                                                    <FaAngleRight size={18} className="bi fs-18" />
                                                 </div>
                                             </a>
                                             <a role="button" onClick={() => navigate("/product-crm")} className="list-group-item list-group-item-action" aria-current="false">
-                                                <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
-                                                    <div className="mt-2">
-                                                        <h5 className="d-flex align-items-center mb-1">
-                                                            {/* <MdOutlineInsertChart size={24} color="#63DC87" /> */}
-                                                            <img src={crmLogo} alt="DigyCrmLogo" width={24} height={24} />
-                                                            <span className="ps-2 fw-semibold">CRM</span>
-                                                        </h5>
-                                                        <p className="mb-2 ps-4 ms-2 p-list-cont">
-                                                            "Unleash the Power of Seamless Customer Engagement!"
-                                                        </p>
+                                                <div className="d-flex w-100 align-items-center justify-content-between icon-link icon-link-hover p-list-item">
+                                                    <div className="d-flex mt-2">
+                                                        {/* <img src={crmLogo} alt="DigyCrmLogo" className="align-self-start rounded-2" width={40} height={40} /> */}
+                                                        <CrmLogoIcon width={40} height={40} className="align-self-start rounded-2" />
+                                                        <div className="ps-2">
+                                                            <h5 className="mb-1 fw-semibold title">CRM</h5>
+                                                            <p className="mb-2 p-list-cont">
+                                                                Unleash the Power of Seamless Customer Engagement!
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <FaAngleRight size={18} />
+                                                    <FaAngleRight size={18} className="bi fs-18" />
                                                 </div>
                                             </a>
                                             <a role="button" onClick={() => navigate("/product-hrms")} className="list-group-item list-group-item-action" aria-current="true">
-                                                <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
-                                                    <div className="mt-2">
-                                                        <h5 className="d-flex align-items-center mb-1">
-                                                            {/* <HiOutlineUserGroup size={24} color="#FF6FCA" /> */}
-                                                            <img src={hrmsLogo} alt="digyHrmsLogo" width={24} height={24} />
-                                                            <span className="ps-2 fw-semibold">HRMS</span>
-                                                        </h5>
-                                                        <p className="mb-2 ps-4 ms-2 p-list-cont">
-                                                            Streamlines and automates core HR functions such as recruitment,
-                                                            payroll, attendance, and performance management.
-                                                        </p>
+                                                <div className="d-flex w-100 align-items-center justify-content-between icon-link icon-link-hover p-list-item">
+                                                    <div className="d-flex mt-2">
+                                                        <img src={hrmsLogo} alt="digyHrmsLogo" className="align-self-start rounded-2" width={40} height={40} />
+                                                        {/* <CrmLogoIcon width={40} height={40} className="align-self-start rounded-2" /> */}
+                                                        <div className="ps-2">
+                                                            <h5 className="mb-1 fw-semibold title">HRMS</h5>
+                                                            <p className="mb-2 p-list-cont">
+                                                                Streamlines and automates core HR functions such as recruitment,
+                                                                payroll, attendance, and performance management.
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <FaAngleRight size={18} />
+                                                    <FaAngleRight size={18} className="bi fs-18" />
                                                 </div>
                                             </a>
                                             <a role="button" onClick={() => navigate("/product-digybooks")} className="list-group-item list-group-item-action" aria-current="false">
-                                                <div className="d-flex w-100 align-items-center justify-content-between p-list-item">
-                                                    <div className="mt-2">
-                                                        <h5 className="d-flex align-items-center mb-1">
-                                                            {/* <IoMdBook size={24} color="#86A0FF" /> */}
-                                                            {/* <LiaSwatchbookSolid size={24} color="#86A0FF" /> */}
-                                                            <img src={digyBooksLogo} alt="digyBooksLogo" width={24} height={24} />
-                                                            <span className="ps-2 fw-semibold">Digy Books</span>
-                                                        </h5>
-                                                        <p className="mb-2 ps-4 ms-2 p-list-cont">
-                                                            "Effortless Accounting for Smarter Business Management."
-                                                        </p>
+                                                <div className="d-flex w-100 align-items-center justify-content-between icon-link icon-link-hover p-list-item">
+                                                    <div className="d-flex mt-2">
+                                                        <img src={digyBooksLogo} alt="digyBooksLogo" className="align-self-start rounded-2" width={40} height={40} />
+                                                        {/* <CrmLogoIcon width={40} height={40} className="align-self-start rounded-2" /> */}
+                                                        <div className="ps-2">
+                                                            <h5 className="mb-1 fw-semibold title">Digy Books</h5>
+                                                            <p className="mb-2 p-list-cont">
+                                                                Effortless Accounting for Smarter Business Management.
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <FaAngleRight size={18} />
+                                                    <FaAngleRight size={18} className="bi fs-18" />
                                                 </div>
                                             </a>
                                             

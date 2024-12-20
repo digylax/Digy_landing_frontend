@@ -10,6 +10,7 @@ import { PiPaperPlaneRight } from "react-icons/pi";
 import { BiPhone } from "react-icons/bi";
 import hrmsBannerBg from "../../assets/images/products/hrms-banner-bg.png";
 import hrmsProBg from "../../assets/images/products/hrms-p-bg.png";
+import { ReactComponent as MdmLogo} from '../../assets/images/product-logo/mdm-logo-final.svg';
 import hrmsFeaBg1 from "../../assets/images/products/hrms/1-employee-information-management.jpg";
 import hrmsFeaBg2 from "../../assets/images/products/hrms/2-pay-roll.jpg";
 import hrmsFeaBg3 from "../../assets/images/products/hrms/3-attendence-management.jpg";
@@ -145,7 +146,12 @@ const ProductMdm = () => {
             <div className="container-fluid h-100 px-lg-0">
                 <div className="row align-items-center gx-lg-0 h-100">
                     <div className="col-lg-6 offset-lg-1" data-aos="fade-left">
-                        <h1 className="fw-semibold display-5 banner-title">“Centralize your data for smarter decisions and seamless operations.”</h1>
+                        <MdmLogo width={140} height={56} className="crm-logo" />
+                        <h1 className="fw-semibold display-5 mt-4 banner-title">
+                            “Centralize your data for <br/>
+                            <span className="ps-4">smarter decisions and</span>  <br/>
+                            <span className="ps-4">seamless operations.”</span>
+                        </h1>
                         <p className="my-3 banner-sub-title">
                             "Our MDM solution delivers accurate, consistent business data to drive informed decisions 
                             and fuel business growth with confidence."
