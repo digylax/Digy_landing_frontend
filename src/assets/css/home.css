@@ -228,6 +228,11 @@
     transform: rotate(45deg);
 }
 
+.p-list-item .logo-icon {
+    min-width: 40px;
+    max-height: 40px;
+}
+
 .p-list-item .p-list-cont {
     max-width: 92%;
 }
