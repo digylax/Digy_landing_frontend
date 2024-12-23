@@ -17,12 +17,14 @@ import { CiLocationArrow1 } from "react-icons/ci";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import { PiPaperPlaneRight } from "react-icons/pi";
 import { BiPhone } from "react-icons/bi";
-import hrmsLogo from '../../assets/images/product-logo/hrms-logo.svg';
-import { ReactComponent as CrmLogoIcon} from '../../assets/images/product-logo/crm-logo-icon.svg';
-import crmLogo from '../../assets/images/product-logo/crm-logo.svg';
-import digyBooksLogo from '../../assets/images/product-logo/digy-books-logo.svg';
-// import mdmLogo from '../../assets/images/product-logo/mdm-logo.svg';
 import { ReactComponent as MdmLogoIcon} from '../../assets/images/product-logo/mdm-logo-icon.svg';
+import { ReactComponent as CrmLogoIcon} from '../../assets/images/product-logo/crm-logo-icon.svg';
+import { ReactComponent as HrmsLogoIcon} from '../../assets/images/product-logo/hrms-logo-icon.svg';
+import { ReactComponent as DigyBooksLogoIcon} from '../../assets/images/product-logo/digy-books-logo-icon.svg';
+// import hrmsLogo from '../../assets/images/product-logo/hrms-logo.svg';
+// import digyBooksLogo from '../../assets/images/product-logo/digy-books-logo.svg';
+// import mdmLogo from '../../assets/images/product-logo/mdm-logo.svg';
+// import crmLogo from '../../assets/images/product-logo/crm-logo.svg';
 import serWebApp1 from "../../assets/images/services/service-web-app-1.png";
 import serWebApp2 from "../../assets/images/services/service-web-app-2.png";
 import serUi1 from "../../assets/images/services/service-ui-1.png";
@@ -109,7 +111,7 @@ const Home = () => {
                                                 <div className="d-flex w-100 align-items-center justify-content-between icon-link icon-link-hover p-list-item">
                                                     <div className="d-flex mt-2">
                                                         {/* <img src={mdmLogo} alt="digyMdmLogo" className="align-self-start rounded-2" width={40} height={40} /> */}
-                                                        <MdmLogoIcon width={40} height={40} className="align-self-start rounded-2" />
+                                                        <MdmLogoIcon width={40} height={40} className="align-self-start rounded-2 logo-icon" />
                                                         <div className="ps-2">
                                                             <h5 className="mb-1 fw-semibold title">MDM</h5>
                                                             <p className="mb-2 p-list-cont">
@@ -124,7 +126,7 @@ const Home = () => {
                                                 <div className="d-flex w-100 align-items-center justify-content-between icon-link icon-link-hover p-list-item">
                                                     <div className="d-flex mt-2">
                                                         {/* <img src={crmLogo} alt="DigyCrmLogo" className="align-self-start rounded-2" width={40} height={40} /> */}
-                                                        <CrmLogoIcon width={40} height={40} className="align-self-start rounded-2" />
+                                                        <CrmLogoIcon width={40} height={40} className="align-self-start rounded-2 logo-icon" />
                                                         <div className="ps-2">
                                                             <h5 className="mb-1 fw-semibold title">CRM</h5>
                                                             <p className="mb-2 p-list-cont">
@@ -138,8 +140,8 @@ const Home = () => {
                                             <a role="button" onClick={() => navigate("/product-hrms")} className="list-group-item list-group-item-action" aria-current="true">
                                                 <div className="d-flex w-100 align-items-center justify-content-between icon-link icon-link-hover p-list-item">
                                                     <div className="d-flex mt-2">
-                                                        <img src={hrmsLogo} alt="digyHrmsLogo" className="align-self-start rounded-2" width={40} height={40} />
-                                                        {/* <CrmLogoIcon width={40} height={40} className="align-self-start rounded-2" /> */}
+                                                        {/* <img src={hrmsLogo} alt="digyHrmsLogo" className="align-self-start rounded-2" width={40} height={40} /> */}
+                                                        <HrmsLogoIcon width={40} height={40} className="align-self-start rounded-2 logo-icon" />
                                                         <div className="ps-2">
                                                             <h5 className="mb-1 fw-semibold title">HRMS</h5>
                                                             <p className="mb-2 p-list-cont">
@@ -154,8 +156,8 @@ const Home = () => {
                                             <a role="button" onClick={() => navigate("/product-digybooks")} className="list-group-item list-group-item-action" aria-current="false">
                                                 <div className="d-flex w-100 align-items-center justify-content-between icon-link icon-link-hover p-list-item">
                                                     <div className="d-flex mt-2">
-                                                        <img src={digyBooksLogo} alt="digyBooksLogo" className="align-self-start rounded-2" width={40} height={40} />
-                                                        {/* <CrmLogoIcon width={40} height={40} className="align-self-start rounded-2" /> */}
+                                                        {/* <img src={digyBooksLogo} alt="digyBooksLogo" className="align-self-start rounded-2" width={40} height={40} /> */}
+                                                        <DigyBooksLogoIcon width={40} height={40} className="align-self-start rounded-2 logo-icon" />
                                                         <div className="ps-2">
                                                             <h5 className="mb-1 fw-semibold title">Digy Books</h5>
                                                             <p className="mb-2 p-list-cont">
