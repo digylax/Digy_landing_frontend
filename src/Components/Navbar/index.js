@@ -7,11 +7,14 @@ import qmarkIcon from '../../assets/images/header/question-mark-icon.svg';
 import bellIcon from '../../assets/images/header/bell-icon.svg';
 import profilePicture from '../../assets/images/user-img.png';
 import companyLogo from '../../assets/images/header/McAfee.png';
-import mdmLogo from '../../assets/images/product-logo/mdm-logo-icon.svg';
-import { ReactComponent as CrmLogo} from '../../assets/images/product-logo/crm-logo-icon.svg';
+// import mdmLogo from '../../assets/images/product-logo/mdm-logo-icon.svg';
 // import crmLogo from '../../assets/images/product-logo/crm-logo.svg';
-import hrmsLogo from '../../assets/images/product-logo/hrms-logo.svg';
-import digyBooksLogo from '../../assets/images/product-logo/digy-books-logo.svg';
+// import hrmsLogo from '../../assets/images/product-logo/hrms-logo.svg';
+// import digyBooksLogo from '../../assets/images/product-logo/digy-books-logo.svg';
+import { ReactComponent as MdmLogo} from '../../assets/images/product-logo/mdm-logo-icon.svg';
+import { ReactComponent as CrmLogo} from '../../assets/images/product-logo/crm-logo-icon.svg';
+import { ReactComponent as HrmsLogo} from '../../assets/images/product-logo/hrms-logo-icon.svg';
+import { ReactComponent as DigyBooksLogo} from '../../assets/images/product-logo/digy-books-logo-icon.svg';
 import mmFeature from '../../assets/images/header/mm-feature.png';
 import mdmFeaImg from '../../assets/images/header/header-mdm-fea.png';
 import crmFeaImg from '../../assets/images/header/header-crm-fea.png';
@@ -43,7 +46,7 @@ const Header = () => {
         { id: 1, 
             navLink: '/product-mdm',
             title: "MDM", 
-            logo: mdmLogo, 
+            logo: MdmLogo, 
             feaImg: mdmFeaImg,
             content: "Built for IT teams and managed service providers, NinjaOne offers a unified console for managing various device platforms. Key features include remote management, patching, and security policies​", 
             userImg: mmUser4,
@@ -63,7 +66,7 @@ const Header = () => {
         { id: 3, 
             navLink: "/product-hrms",
             title: "HRMS", 
-            logo: hrmsLogo, 
+            logo: HrmsLogo, 
             feaImg: hrmsFeaImg,
             content: "Known for its simplicity and intuitive design, it’s great for small to medium-sized businesses. Features include applicant tracking, employee records management, and performance evaluations.", 
             userImg: mmUser1,
@@ -73,7 +76,7 @@ const Header = () => {
         { id: 4, 
           navLink: '/product-digybooks',
           title: "Digy Books", 
-          logo: digyBooksLogo, 
+          logo: DigyBooksLogo, 
           feaImg: digyBooksFeaImg,
           content: "Users appreciate DigiBooks for its affordability and comprehensive feature set. The platform's integration with other Digylax products is highlighted as a significant advantage.", 
           userImg: mmUser3,
@@ -144,14 +147,25 @@ const Header = () => {
                                                     >
                                                         
                                                         <span className="d-flex align-items-center icon-link icon-link-hover">
-                                                            {item.logo === CrmLogo ?
-                                                                <>
-                                                                <CrmLogo width={40} height={40} className="align-self-start rounded-2" />
-                                                                </>
+                                                            {item.logo === MdmLogo ?
+                                                                <MdmLogo width={40} height={40} className="align-self-start rounded-2" />
                                                                 :
-                                                                <>
-                                                                <img src={item.logo} alt="digy-products-Logo" width={40} height={40} className="align-self-start" />
-                                                                </>
+                                                                ''
+                                                            }
+                                                            {item.logo === CrmLogo ?
+                                                                <CrmLogo width={40} height={40} className="align-self-start rounded-2" />
+                                                                :
+                                                                ''
+                                                            }
+                                                            {item.logo === HrmsLogo ? 
+                                                                <HrmsLogo width={40} height={40} className="align-self-start rounded-2" />
+                                                                :
+                                                                ''
+                                                            }
+                                                            {item.logo === DigyBooksLogo ? 
+                                                                <DigyBooksLogo width={40} height={40} className="align-self-start rounded-2" />
+                                                                :
+                                                                ''
                                                             }
                                                             <span className="align-self-start ms-3">
                                                                 <span className="fs-6 d-block fw-semibold mb-2">{item.title}</span>

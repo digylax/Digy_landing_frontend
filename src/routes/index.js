@@ -11,6 +11,7 @@ import Careers from "../pages/Careers";
 import JobDescription from "../pages/Careers/JobDescription";
 import JobApplication from "../pages/Careers/JobApplication";
 import ScrollToTop from "../Components/ScrollToTop";
+import AboutUs from "../pages/AboutUs";
 
 const Router = () => {
     return (
@@ -24,6 +25,7 @@ const Router = () => {
                     <Route path="/product-hrms" element={<ProductHrms />}></Route>
                     <Route path="/product-digybooks" element={<ProductDigyBooks />}></Route>
                     <Route path="/contact-us" element={<ContactUs />}></Route>
+                    <Route path="/about-us" element={<AboutUs />}></Route>
                     <Route path="/careers" element={<Careers />}></Route>
                     <Route path="/careers/job-description" element={<JobDescription />}></Route>
                     <Route path="/careers/job-application" element={<JobApplication />}></Route>
