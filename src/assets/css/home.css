@@ -583,6 +583,73 @@
 }
 /* // Career page // */
 
+/* About us page */
+.aboutus-page .banner-icons .b-icon-1 {
+    top: auto;
+    bottom: 40px;
+}
+
+.aboutus-page .banner-icons .b-icon-2 {
+    top: 40px;
+    bottom: auto;
+}
+
+.team-member-card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    /* background-color: #c2c6f745; */
+}
+
+.team-member-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.team-member-card:hover img {
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+.team-member-card:hover .member-info .member-name {
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.team-member-card .member-info .member-name {
+    font-weight: 500;
+}
+
+.social-icons {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    transform: translate(0, -50%);
+    background-color: #00000085;
+    opacity: 0;
+    padding: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.team-member-card:hover .social-icons {
+    opacity: 1;
+}
+
+.social-icons a {
+    margin: 8px 0;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* .member-info{
+    border-bottom: 3px solid #062f3c;
+} */
+/* // About us page // */
+
 /* Responsive Design */
 @media (min-width: 576px) {
     
@@ -670,6 +737,10 @@
 
     .key-fea-item {
         height: calc(100vh - 72px);
+    }
+
+    .features .fea-item img {
+        width: 100%;
     }
 }
 

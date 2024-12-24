@@ -1,6 +1,9 @@
 {
+  "manifest_version": 3,
   "short_name": "Digylax Pvt Ltd",
   "name": "Digylax Landing App",
+  "version": "1.0.0",
+  "description": "Transform Your Business with Smarter SaaS Solutions. very powerful suite of applications that will change the way you work for good.",
   "icons": [
     {
       "src": "favicon.ico",
