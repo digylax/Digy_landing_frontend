@@ -153,8 +153,8 @@ const ProductMdm = () => {
                             <span className="ps-4">seamless operations.”</span>
                         </h1>
                         <p className="my-3 banner-sub-title">
-                            "Our MDM solution delivers accurate, consistent business data to drive informed decisions 
-                            and fuel business growth with confidence."
+                            Our MDM solution delivers accurate, consistent business data to drive informed decisions 
+                            and fuel business growth with confidence.
                         </p>
                         <p className="my-3 pt-3 d-flex flex-column flex-sm-row align-items-center align-items-sm-start">
                             <Button variant="primary-digy" size="lg" className='fs-6 icon-link icon-link-hover'>
