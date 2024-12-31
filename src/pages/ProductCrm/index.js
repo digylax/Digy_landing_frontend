@@ -23,9 +23,9 @@ import hrmsFeaBg9 from "../../assets/images/products/hrms/9-productivity-status.
 import hrmsFeaBg10 from "../../assets/images/products/hrms/10-project-task-management.jpg";
 import hrmsBenefitBg1 from "../../assets/images/products/hrms/benefits/1-automated-payroll-processing.jpg";
 import hrmsBenefitBg2 from "../../assets/images/products/hrms/benefits/2-attendance-and-leave-automation.jpg";
-import hrmsBenefitBg3 from "../../assets/images/products/hrms/benefits/3-self-service-portals.png";
+import hrmsBenefitBg3 from "../../assets/images/products/hrms/benefits/3-self-service-portals.jpg";
 import hrmsBenefitBg4 from "../../assets/images/products/hrms/benefits/4-performance-tracking.jpg";
-import hrmsBenefitBg5 from "../../assets/images/products/hrms/benefits/5-unified-dashboard.png";
+import hrmsBenefitBg5 from "../../assets/images/products/hrms/benefits/5-unified-dashboard.jpg";
 import hrmsBenefitBg6 from "../../assets/images/products/hrms/benefits/6-integrated-modules.jpg";
 import hrmsBenefitBg7 from "../../assets/images/products/hrms/benefits/7-customizable-workflows.jpg";
 import hrmsBenefitBg8 from "../../assets/images/products/hrms/benefits/8-flexible-user-plans.jpg";
